@@ -1,0 +1,279 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Aarav Patel",
+      "email": "aarav@example.com",
+      "password": "password123",
+      "role": "customer"
+    },
+    {
+      "id": "u2",
+      "name": "Chef Admin",
+      "email": "admin@feastforward.com",
+      "password": "secureadmin",
+      "role": "admin"
+    }
+  ],
+  "menu": [
+    {
+      "id": "m1",
+      "name": {
+        "en": "Premium Butter Paneer",
+        "gu": "પ્રીમિયમ બટર પનીર",
+        "hi": "प्रीमियम बटर पनीर",
+        "pa": "ਪ੍ਰੀਮੀਅਮ ਬਟਰ ਪਨੀਰ",
+        "fr": "Paneer au Beurre Premium",
+        "es": "Paneer de Mantequilla Premium"
+      },
+      "category": "Mains",
+      "price": 320,
+      "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "m2",
+      "name": {
+        "en": "Garlic Naan Platter",
+        "gu": "ગાર્લિક નાન પ્લેટર",
+        "hi": "गાર્લિક નાન પ્લેટર",
+        "pa": "ਗਾਰਲિક ਨਾਨ ਪਲੇਟਰ",
+        "fr": "Plateau de Naan à l'Ail",
+        "es": "Plato de Naan de Ajo"
+      },
+      "category": "Bread",
+      "price": 120,
+      "image": "https://t4.ftcdn.net/jpg/07/18/16/87/360_F_718168709_mc2zfZw46fQxI81ifoYBEWhJwpsL5iPY.jpg"
+    },
+    {
+      "id": "m3",
+      "name": {
+        "en": "Crispy Samosa Trio",
+        "gu": "ક્રિસ્પી સમોસા ટ્રિઓ",
+        "hi": "क्रिस्पी समोसा तिकड़ी",
+        "pa": "ਕ੍ਰਿਸਪੀ ਸਮੋਸਾ ਤਿਕੜੀ",
+        "fr": "Trio de Samoussas Croustillants",
+        "es": "Trío de Samosas Crujientes"
+      },
+      "category": "Starters",
+      "price": 150,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVv3VpfKirsjhvdcEDmdTNzyhrN8ctYc2NMy_7Qz0GoG8r1ABMxqcSnc&s=10"
+    },
+    {
+      "id": "m4",
+      "name": {
+        "en": "Tandoori Paneer Tikka",
+        "gu": "તંદુરી પનીર ટીક્કા",
+        "hi": "तंदूरी पनीर टिक्का",
+        "pa": "ਤੰਦੂਰੀ ਪਨੀਰ ਟਿੱਕਾ",
+        "fr": "Paneer Tikka Tandoori",
+        "es": "Paneer Tikka Tandoori"
+      },
+      "category": "Starters",
+      "price": 280,
+      "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "m5",
+      "name": {
+        "en": "Veg Biryani Feast",
+        "gu": "વેજ બિરયાની ફિસ્ટ",
+        "hi": "वेज बिरयानी दावत",
+        "pa": "ਵੇਜ ਬਿਰਯਾਨੀ ਦਾਵਤ",
+        "fr": "Festin de Biryani aux Légumes",
+        "es": "Festín de Biryani de Verduras"
+      },
+      "category": "Mains",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "m6",
+      "name": {
+        "en": "Dal Makhani Grand",
+        "gu": "દાલ મખની ગ્રાન્ડ",
+        "hi": "दाल मखनी ग्रैंड",
+        "pa": "ਦਾਲ ਮਖਣੀ ਗ੍ਰੈਂਡ",
+        "fr": "Dal Makhani Grand",
+        "es": "Dal Makhani Grand"
+      },
+      "category": "Mains",
+      "price": 290,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpw7uSocm8OMJjZKEcwdGubqejrQDDEujfRv_VdutwLA&s=10"
+    },
+    {
+      "id": "m7",
+      "name": {
+        "en": "Chana Masala Twist",
+        "gu": "ચના મસાલા ટ્વિસ્ટ",
+        "hi": "चना मसाला ट्विस्ट",
+        "pa": "ਚਨਾ ਮਸਾਲਾ ਟਵਿਸਟ",
+        "fr": "Chana Masala Twist",
+        "es": "Chana Masala Twist"
+      },
+      "category": "Mains",
+      "price": 240,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSANmhatsf45uftbimfxRjVmWUht44sbmT00OKOmqcGA&s=10"
+    },
+    {
+      "id": "m8",
+      "name": {
+        "en": "Butter Roti Basket",
+        "gu": "બટર રોટલી બાસ્કેટ",
+        "hi": "बटर रोटी टोकरी",
+        "pa": "ਮੱਖਣ ਰੋਟੀ ਟੋਕਰੀ",
+        "fr": "Panier de Roti au Beurre",
+        "es": "Canasta de Roti de Mantequilla"
+      },
+      "category": "Bread",
+      "price": 80,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtApGsd9gP-eZXo2UX55yV_ISUL5xIUJKG2z8XdEjig&s=10"
+    },
+    {
+      "id": "m9",
+      "name": {
+        "en": "Laccha Paratha",
+        "gu": "લચ્છા પરાઠા",
+        "hi": "लच्छा पराठा",
+        "pa": "ਲੱਛਾ ਪਰਾਠਾ",
+        "fr": "Laccha Paratha",
+        "es": "Laccha Paratha"
+      },
+      "category": "Bread",
+      "price": 60,
+      "image": "https://simpleindianmeals.com/wp-content/uploads/2022/11/Lacha-Paratha-500x375.jpg"
+    },
+    {
+      "id": "m10",
+      "name": {
+        "en": "Gulab Jamun Duo",
+        "gu": "ગુલાબ જામુન ડ્યુઓ",
+        "hi": "गुलाब जामुन जोड़ी",
+        "pa": "ગુલાਬ ਜਾਮੁਨ ਜੋੜੀ",
+        "fr": "Duo de Gulab Jamun",
+        "es": "Dúo de Gulab Jamun"
+      },
+      "category": "Desserts",
+      "price": 110,
+      "image": "https://images.unhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUR23T2iCmYjywxNoG8FTHiJbTth0S37gHE7sFvwPww&s=10"
+    },
+    {
+      "id": "m11",
+      "name": {
+        "en": "Saffron Rasmalai",
+        "gu": "કેસર રસમલાઈ",
+        "hi": "केसर रसमलाई",
+        "pa": "ਕੇਸਰ ਰਸਮਲਾਈ",
+        "fr": "Rasmalai au Safran",
+        "es": "Rasmalai de Azafrán"
+      },
+      "category": "Desserts",
+      "price": 140,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2eTSWGySKAy4hkrDIuw7dZzZvokhAZH7yr51vxeJ0qA&s=10"
+    },
+    {
+      "id": "m12",
+      "name": {
+        "en": "Mango Lassi Elite",
+        "gu": "મેંગો લસ્સી એલિટ",
+        "hi": "मैंगो लस्सी एलीट",
+        "pa": "ਮੈਂਗੋ ਲੱਸੀ ਐਲੀਟ",
+        "fr": "Lassi à la Mangue Élite",
+        "es": "Lassi de Mango Élite"
+      },
+      "category": "Drinks",
+      "price": 95,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJqxkLIffsO74hWCev_5XPv-_47YH0hvwbns1IEEu5A&s=10"
+    },
+    {
+      "id": "m13",
+      "name": {
+        "en": "Masala Chai Pot",
+        "gu": "મસાલા ચાઇ પોટ",
+        "hi": "મસાલા ચાય પોટ",
+        "pa": "ਮਸਾਲਾ ਚਾਹ ਪੋਟ",
+        "fr": "Thé Masala Chaï",
+        "es": "Tetera de Masala Chai"
+      },
+      "category": "Drinks",
+      "price": 75,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZci3xfFYH1bRZaLBUkJjWu68q8Wg1F7OHY5DZoOJDaQ&s=10"
+    },
+    {
+      "id": "m14",
+      "name": {
+        "en": "Paneer Bhurji Special",
+        "gu": "પનીર ભુર્જી સ્પેશિયલ",
+        "hi": "पनीर भुर्जी स्पेशल",
+        "pa": "ਪਨੀਰ ਭੁਰਜੀ ਸਪੈਸ਼ਲ",
+        "fr": "Bhurji au Paneer Spécial",
+        "es": "Bhurji de Paneer Especial"
+      },
+      "category": "Mains",
+      "price": 310,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0BwNXAmm4UAmgndOGvpxcuGn56HPeM4KTwZRb9igAnQ&s=10"
+    },
+    {
+      "id": "m15",
+      "name": {
+        "en": "Crispy Veg Spring Rolls",
+        "gu": "ક્રિસ્પી વેજ સ્પ્રિંગ રોલ્સ",
+        "hi": "क्रिस्पी वेज स्प्रिंग रोल्स",
+        "pa": "ਕ੍ਰਿਸਪੀ ਵੈਜ ਸਪ੍ਰਿੰਗ ਰੋਲਸ",
+        "fr": "Rouleaux de Printemps aux Légumes",
+        "es": "Rollitos de Primavera de Verduras"
+      },
+      "category": "Starters",
+      "price": 180,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQts4s81bbyWX92oF-hMxBBDKQMmrscHcMcih6zvE2rjA&s=10"
+    },
+    {
+      "id": "m16",
+      "name": {
+        "en": "Jeera Rice",
+        "gu": "જીરા રાઇસ",
+        "hi": "जीरा राइस",
+        "pa": "ਜੀਰਾ ਚੌਲ",
+        "fr": "Riz au Cumin (Jeera)",
+        "es": "Arroz con Comino (Jeera)"
+      },
+      "category": "Bread",
+      "price": 160,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGa48zKqCnlIMzILmzKkCKvZ3uLEXjxUKszJd-mu5KQ&s=10"
+    },
+    {
+      "id": "m17",
+      "name": {
+        "en": "Fresh Mint Limeade",
+        "gu": "ફ્રેશ મિન્ટ લાઈમેડ",
+        "hi": "फ्रेश मिंट लाइमेड",
+        "pa": "ਤਾਜ਼ਾ ਪੁਦੀਨਾ ਲਾਈਮੇਡ",
+        "fr": "Limondade Menthe Fraîche",
+        "es": "Limonada de Menta Fresca"
+      },
+      "category": "Drinks",
+      "price": 85,
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop"
+    }
+  ],
+  "tables": [
+    { "id": "t1", "number": 1, "capacity": 2, "location": "Window Side" },
+    { "id": "t2", "number": 2, "capacity": 2, "location": "Window Side" },
+    { "id": "t3", "number": 2, "capacity": 2, "location": "Window Side" },
+    { "id": "t4", "number": 3, "capacity": 4, "location": "Main Hall" },
+    { "id": "t5", "number": 2, "capacity": 4, "location": "Main Hall" },
+    { "id": "t6", "number": 4, "capacity": 4, "location": "Main Hall" },
+    { "id": "t7", "number": 4, "capacity": 4, "location": "Main Hall" },
+    { "id": "t8", "number": 2, "capacity": 4, "location": "Main Hall" },
+    { "id": "t9", "number": 4, "capacity": 4, "location": "Main Hall" },
+    { "id": "t10", "number": 4, "capacity": 4, "location": "Main Hall" },
+    { "id": "t11", "number": 5, "capacity": 4, "location": "Main Hall" },
+    { "id": "t12", "number": 5, "capacity": 4, "location": "Garden Patio" },
+    { "id": "t13", "number": 5, "capacity": 4, "location": "Garden Patio" },
+    { "id": "t14", "number": 6, "capacity": 6, "location": "Garden Patio" },
+    { "id": "t15", "number": 7, "capacity": 6, "location": "Garden Patio" },
+    { "id": "t16", "number": 8, "capacity": 8, "location": "VIP Cabin" },
+    { "id": "t17", "number": 9, "capacity": 8, "location": "VIP Cabin" },
+    { "id": "t18", "number": 10, "capacity": 12, "location": "Grand Banquet" }
+  ],
+  "bookings": []
+}

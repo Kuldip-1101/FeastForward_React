@@ -1,0 +1,11 @@
+{
+  "translation": {
+    "welcome": "Bienvenue au FeastForward",
+    "subWelcome": "Découvrez une cuisine de luxe absolue, réservée à votre façon.",
+    "bookTable": "Réserver une Table",
+    "viewMenu": "Voir le Menu",
+    "login": "Se Connecter",
+    "toggleTheme": "Changer le Thème",
+    "buffetFrom": "Expérience Buffet Moyenne À Partir De: "
+  }
+}
