@@ -6,6 +6,13 @@
     "viewMenu": "Ver el Menú",
     "login": "Iniciar Sesión",
     "toggleTheme": "Cambiar Tema",
-    "buffetFrom": "Experiencia de Buffet Promedio Desde: "
+    "buffetFrom": "Experiencia de Buffet Promedio Desde: ",
+    "seoTitle": "FeastForward | Reserva de Mesas y Cenas Multilingües Premium",
+    "seoDesc": "Reserve mesas de lujo y explore menús gourmet en FeastForward.",
+    "hoursTitle": "Horario de Atención",
+    "weekday": "Lunes - Viernes",
+    "weekend": "Sábado - Domingo",
+    "lunch": "Sesión de Almuerzo",
+    "dinner": "Sesión de Cena"
   }
 }

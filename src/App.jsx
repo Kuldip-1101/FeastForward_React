@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
+import { Helmet } from 'react-helmet-async';
 import { getCustomTheme } from '../src/config/theme';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import HoursSection from './components/HoursSection';
 
 function App() {
   //------------- Read our theme state -------------
@@ -23,6 +25,7 @@ function App() {
         {/*---------------- Main viewing area ----------------*/}
         <Box component="main" sx={{ flexGrow: 1 }}>
           <HeroSection />
+          <HoursSection />                                                   
         </Box>
       </Box>
     </ThemeProvider>

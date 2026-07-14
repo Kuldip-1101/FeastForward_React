@@ -72,7 +72,7 @@ function Navbar() {
               }}
               //----------- makes sure matches our dark/light theme perfectly-------------
               MenuProps={{
-                PaperProps: {
+                paperprops: {
                   sx: { bgcolor: "background.paper" },
                 },
               }}

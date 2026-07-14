@@ -6,6 +6,13 @@
     "viewMenu": "Voir le Menu",
     "login": "Se Connecter",
     "toggleTheme": "Changer le Thème",
-    "buffetFrom": "Expérience Buffet Moyenne À Partir De: "
+    "buffetFrom": "Expérience Buffet Moyenne À Partir De: ",
+    "seoTitle": "FeastForward | Réservation de Tables et Repas Multilingues Premium",
+    "seoDesc": "Réservez des tables de luxe et explorez des menus gastronomiques chez FeastForward.",
+    "hoursTitle": "Heures d'Ouverture",
+    "weekday": "Lundi - Vendredi",
+    "weekend": "Samedi - Dimanche",
+    "lunch": "Session du Déjeuner",
+    "dinner": "Session du Dîner"
   }
 }

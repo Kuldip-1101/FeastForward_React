@@ -6,6 +6,13 @@
     "viewMenu": "View Our Menu",
     "login": "Login",
     "toggleTheme": "Toggle Theme",
-    "buffetFrom": "Average Buffet Experience From: "
+    "buffetFrom": "Average Buffet Experience From: ",
+    "seoTitle": "FeastForward | Premium Multi-Lingual Dining & Table Reservations",
+    "seoDesc": "Book luxury tables and explore gourmet menus at FeastForward.",
+    "hoursTitle": "Operating Hours",
+    "weekday": "Monday - Friday",
+    "weekend": "Saturday - Sunday",
+    "lunch": "Lunch Session",
+    "dinner": "Dinner Session"
   }
 }

@@ -38,7 +38,7 @@ function HeroSection() {
             : "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(250,249,246,1) 100%)",
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         {/*--------------- Dynamic Translatable Headline --------------*/}
         <Typography
           variant="h2"
@@ -46,7 +46,7 @@ function HeroSection() {
           sx={{
             fontWeight: "800",
             mb: 3,
-            fontSize: { xs: "2.5rem", md: "4rem" },
+            fontSize: { xs: '2.2rem', sm: '3rem', md: '3.8rem' },
             color: "text.primary",
           }}
         >
@@ -85,8 +85,8 @@ function HeroSection() {
           direction={{ xs: "column", sm: "row" }}
           spacing={2}
           sx={{
-            justifyContent: "center", // Centers horizontally
-            alignItems: "center", // Centers vertically on mobile stack
+            justifyContent: "center", 
+            alignItems: "center",
             mt: 4,
           }}
         >
@@ -101,7 +101,7 @@ function HeroSection() {
               color: "#ffffff",
               backgroundColor: "primary.main",
               "&:hover": { backgroundColor: "#B3922E" },
-              width: { xs: "100%", sm: "auto" }, // Full width on mobile, normal on desktop
+              width: { xs: "100%", sm: "auto" }, 
             }}
           >
             {t("bookTable")}
