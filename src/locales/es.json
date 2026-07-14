@@ -1,6 +1,6 @@
 {
   "translation": {
-    "welcome": "Bienvenido a FeastForward",
+    "welcome": "Bienvenido a FeastForward Bistro",
     "subWelcome": "Experimente la cocina de lujo absoluta, reservada a su manera.",
     "bookTable": "Reservar una Mesa",
     "viewMenu": "Ver el Menú",
@@ -13,6 +13,14 @@
     "weekday": "Lunes - Viernes",
     "weekend": "Sábado - Domingo",
     "lunch": "Sesión de Almuerzo",
-    "dinner": "Sesión de Cena"
+    "dinner": "Sesión de Cena",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "emailRequired": "El correo electrónico es obligatorio",
+    "invalidEmail": "Por favor introduzca un correo electrónico válido",
+    "passRequired": "La contraseña es obligatoria",
+    "passMinLength": "La contraseña debe tener al menos 6 caracteres",
+    "submitAuth": "Iniciar Sesión",
+    "close": "Cerrar"
   }
 }

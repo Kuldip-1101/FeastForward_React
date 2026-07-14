@@ -13,6 +13,14 @@
     "weekday": "Monday - Friday",
     "weekend": "Saturday - Sunday",
     "lunch": "Lunch Session",
-    "dinner": "Dinner Session"
+    "dinner": "Dinner Session",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "emailRequired": "Email is required",
+    "invalidEmail": "Please enter a valid email address",
+    "passRequired": "Password is required",
+    "passMinLength": "Password must be at least 6 characters",
+    "submitAuth": "Submit Credentials",
+    "close": "Close"
   }
 }
