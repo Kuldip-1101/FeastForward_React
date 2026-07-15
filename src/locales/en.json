@@ -5,6 +5,8 @@
     "bookTable": "Book a Table",
     "viewMenu": "View Our Menu",
     "login": "Login",
+    "logout": "Logout",
+    "welcomeUser": "Welcome, {{name}}",
     "toggleTheme": "Toggle Theme",
     "buffetFrom": "Average Buffet Experience From: ",
     "seoTitle": "FeastForward | Premium Multi-Lingual Dining & Table Reservations",
@@ -21,6 +23,7 @@
     "passRequired": "Password is required",
     "passMinLength": "Password must be at least 6 characters",
     "submitAuth": "Submit Credentials",
-    "close": "Close"
+    "close": "Close",
+    "invalidCredentials": "Invalid email or password"
   }
 }

@@ -1,10 +1,12 @@
 {
   "translation": {
     "welcome": "Bienvenido a FeastForward Bistro",
-    "subWelcome": "Experimente la cocina de lujo absoluta, reservada a su manera.",
+    "subWelcome": "Experimente la cuisine de lujo absoluta, reservada a su manera.",
     "bookTable": "Reservar una Mesa",
     "viewMenu": "Ver el Menú",
     "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "welcomeUser": "Bienvenido, {{name}}",
     "toggleTheme": "Cambiar Tema",
     "buffetFrom": "Experiencia de Buffet Promedio Desde: ",
     "seoTitle": "FeastForward | Reserva de Mesas y Cenas Multilingües Premium",
@@ -21,6 +23,7 @@
     "passRequired": "La contraseña es obligatoria",
     "passMinLength": "La contraseña debe tener al menos 6 caracteres",
     "submitAuth": "Iniciar Sesión",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "invalidCredentials": "Correo electrónico o contraseña inválidos"
   }
 }

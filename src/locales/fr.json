@@ -5,6 +5,8 @@
     "bookTable": "Réserver une Table",
     "viewMenu": "Voir le Menu",
     "login": "Se Connecter",
+    "logout": "Se Déconnecter",
+    "welcomeUser": "Bienvenue, {{name}}",
     "toggleTheme": "Changer le Thème",
     "buffetFrom": "Expérience Buffet Moyenne À Partir De: ",
     "seoTitle": "FeastForward | Réservation de Tables et Repas Multilingues Premium",
@@ -21,6 +23,7 @@
     "passRequired": "Le mot de passe est requis",
     "passMinLength": "Le mot de passe doit comporter au moins 6 caractères",
     "submitAuth": "Se connecter",
-    "close": "Fermer"
+    "close": "Fermer",
+    "invalidCredentials": "Email ou mot de passe invalide"
   }
 }

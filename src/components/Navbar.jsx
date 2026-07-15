@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { toggleTheme } from "../store/themeSlice";
 import { setLanguage } from "../store/localeSlice";
+import { logout } from '../store/authSlice';
 import i18n from "../config/i18n";
 import AuthModal from "./AuthModal";
 
@@ -22,6 +23,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Navbar() {
   const { t } = useTranslation();
@@ -29,6 +31,8 @@ function Navbar() {
 
   const isDarkMode = useSelector((state) => state.theme.darkMode);
   const currentLang = useSelector((state) => state.locale.currentLang);
+
+  const { user, isAuthenticated } = useSelector((state) => state.auth);
 
   const [authOpen, setAuthOpen] = useState(false);
 
@@ -93,16 +97,28 @@ function Navbar() {
               </Select>
             </Box>
 
-            {/*----------- Login Button with Icon --------------*/}
-            <Button
-              variant="outlined"
-              size="small"
-              startIcon={<LoginIcon />}
-              onClick={() => setAuthOpen(true)} 
-              sx={{ fontWeight: "600", borderRadius: 2 }}
-            >
-              {t("login")}
-            </Button>
+            {/*----------- Conditional Authentication Rendering Stack ------------------*/}
+            {isAuthenticated ? (
+              <Stack direction="row" spacing={2} sx ={{alignItems:"center"}} >
+                <Typography variant="body2" sx={{ fontWeight: '600', color: 'text.primary' }}>
+                  {t('welcomeUser', { name: user.name })}
+                </Typography>
+                <Button 
+                  variant="outlined" 
+                  color="error" 
+                  size="small" 
+                  startIcon={<LogoutIcon />} 
+                  onClick={() => dispatch(logout())}
+                  sx={{ fontWeight: '600' }}
+                >
+                  {t('logout')}
+                </Button>
+              </Stack>
+            ) : (
+              <Button variant="outlined" size="small" startIcon={<LoginIcon />} onClick={() => setAuthOpen(true)} sx={{ fontWeight: '600', borderRadius: 2 }}>
+                {t('login')}
+              </Button>
+            )}
 
             {/*----------- Eye-catching Light/Dark Toggle Icon Button --------------*/}
             <IconButton onClick={() => dispatch(toggleTheme())} color="inherit">

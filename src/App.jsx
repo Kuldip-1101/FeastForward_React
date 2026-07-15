@@ -5,6 +5,7 @@ import { getCustomTheme } from '../src/config/theme';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import HoursSection from './components/HoursSection';
+import Home from './pages/Home';
 
 function App() {
   //------------- Read our theme state -------------
@@ -23,10 +24,7 @@ function App() {
         <Navbar />
         
         {/*---------------- Main viewing area ----------------*/}
-        <Box component="main" sx={{ flexGrow: 1 }}>
-          <HeroSection />
-          <HoursSection />                                                   
-        </Box>
+        <Home />
       </Box>
     </ThemeProvider>
   );
