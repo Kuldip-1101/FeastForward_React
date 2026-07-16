@@ -1,31 +1,52 @@
 import { useSelector } from 'react-redux';
-import { ThemeProvider, CssBaseline, Box } from '@mui/material';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
-import { getCustomTheme } from '../src/config/theme';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import HoursSection from './components/HoursSection';
+import { useTranslation } from 'react-i18next';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { getCustomTheme } from './config/theme';
+import Layout from './components/Layout';
 import Home from './pages/Home';
+import Menu from './pages/Menu';
+import Bookings from './pages/Bookings';
 
 function App() {
-  //------------- Read our theme state -------------
+  const { t } = useTranslation();
   const isDarkMode = useSelector((state) => state.theme.darkMode);
-  
-  // -------------- Generate the active configuration object------------
   const theme = getCustomTheme(isDarkMode);
+
+  //------ Define our route tree -------
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />, //-----Root element ------
+      children: [
+        {
+          index: true, 
+          element: <Home />
+        },
+        {
+          path: 'menu',
+          element: <Menu />
+        },
+        {
+          path: 'bookings',
+          element: <Bookings />
+        }
+      ]
+    }
+  ]);
 
   return (
     <ThemeProvider theme={theme}>
-      {/*----------- resets default browser margins and applies baseline background styling ------------*/}
-      <CssBaseline /> 
+      <CssBaseline />
       
-      <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-        {/*----------- Our modern responsive header navigation ------------*/}
-        <Navbar />
-        
-        {/*---------------- Main viewing area ----------------*/}
-        <Home />
-      </Box>
+      <Helmet>
+        <title>{t('seoTitle')}</title>
+        <meta name="description" content={t('seoDesc')} />
+      </Helmet>
+
+      {/* ----------- router engine --------------*/}
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }
