@@ -8,6 +8,8 @@
     "logout": "Se Déconnecter",
     "welcomeUser": "Bienvenue, {{name}}",
     "toggleTheme": "Changer le Thème",
+    "navHome": "Accueil",
+    "navMenu": "Menu",
     "buffetFrom": "Expérience Buffet Moyenne À Partir De: ",
     "seoTitle": "FeastForward | Réservation de Tables et Repas Multilingues Premium",
     "seoDesc": "Réservez des tables de luxe et explorez des menus gastronomiques chez FeastForward.",

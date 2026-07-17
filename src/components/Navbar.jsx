@@ -12,9 +12,10 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { Link, NavLink} from "react-router-dom";
 import { toggleTheme } from "../store/themeSlice";
 import { setLanguage } from "../store/localeSlice";
-import { logout } from '../store/authSlice';
+import { logout } from "../store/authSlice";
 import i18n from "../config/i18n";
 import AuthModal from "./AuthModal";
 
@@ -22,8 +23,9 @@ import AuthModal from "./AuthModal";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import LanguageIcon from "@mui/icons-material/Language";
-import LoginIcon from '@mui/icons-material/Login';
-import LogoutIcon from '@mui/icons-material/Logout';
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -51,7 +53,7 @@ function Navbar() {
           borderBottom: "1px solid",
           borderColor: "divider",
           backgroundColor: "background.paper",
-          backdropFilter: "blur(8px)", 
+          backdropFilter: "blur(8px)",
           color: "text.primary",
         }}
       >
@@ -64,6 +66,46 @@ function Navbar() {
           >
             FeastForward
           </Typography>
+
+          {/*----------- Central Navigation Links Area --------------*/}
+          <Stack direction="row" spacing={1}>
+            <Button
+              component={NavLink}
+              to="/"
+              color="inherit"
+              sx={{
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                px: 2,
+                borderRadius: 2,
+                "&.active": {
+                  color: "primary.main",
+                  backgroundColor: "action.selected",
+                },
+              }}
+            >
+              {t("navHome")}
+            </Button>
+
+            <Button
+              component={NavLink}
+              to="/menu"
+              color="inherit"
+              startIcon={<RestaurantMenuIcon fontSize="small" />}
+              sx={{
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                px: 2,
+                borderRadius: 2,
+                "&.active": {
+                  color: "primary.main",
+                  backgroundColor: "action.selected",
+                },
+              }}
+            >
+              {t("navMenu")}
+            </Button>
+          </Stack>
 
           {/*----------- Global Controls Stack --------------*/}
           <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
@@ -99,24 +141,33 @@ function Navbar() {
 
             {/*----------- Conditional Authentication Rendering Stack ------------------*/}
             {isAuthenticated ? (
-              <Stack direction="row" spacing={2} sx ={{alignItems:"center"}} >
-                <Typography variant="body2" sx={{ fontWeight: '600', color: 'text.primary' }}>
-                  {t('welcomeUser', { name: user.name })}
-                </Typography>
-                <Button 
-                  variant="outlined" 
-                  color="error" 
-                  size="small" 
-                  startIcon={<LogoutIcon />} 
-                  onClick={() => dispatch(logout())}
-                  sx={{ fontWeight: '600' }}
+              <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
+                <Typography
+                  variant="body2"
+                  sx={{ fontWeight: "600", color: "text.primary" }}
                 >
-                  {t('logout')}
+                  {t("welcomeUser", { name: user.name })}
+                </Typography>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  size="small"
+                  startIcon={<LogoutIcon />}
+                  onClick={() => dispatch(logout())}
+                  sx={{ fontWeight: "600" }}
+                >
+                  {t("logout")}
                 </Button>
               </Stack>
             ) : (
-              <Button variant="outlined" size="small" startIcon={<LoginIcon />} onClick={() => setAuthOpen(true)} sx={{ fontWeight: '600', borderRadius: 2 }}>
-                {t('login')}
+              <Button
+                variant="outlined"
+                size="small"
+                startIcon={<LoginIcon />}
+                onClick={() => setAuthOpen(true)}
+                sx={{ fontWeight: "600", borderRadius: 2 }}
+              >
+                {t("login")}
               </Button>
             )}
 
