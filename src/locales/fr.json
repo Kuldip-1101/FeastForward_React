@@ -28,6 +28,12 @@
     "passMinLength": "Le mot de passe doit comporter au moins 6 caractères",
     "submitAuth": "Se connecter",
     "close": "Fermer",
-    "invalidCredentials": "Email ou mot de passe invalide"
+    "invalidCredentials": "Email ou mot de passe invalide",
+    "cartTitle": "Votre Panier de Précommande",
+    "cartEmpty": "Votre panier de précommande est actuellement vide.",
+    "cartTotal": "Montant Total de Base :",
+    "cartProceed": "Passer à la Réservation",
+    "cartClear": "Vider la Précommande",
+    "addToPreOrder": "Ajouter à la Précommande"
   }
 }

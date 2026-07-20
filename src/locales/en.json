@@ -28,6 +28,12 @@
     "passMinLength": "Password must be at least 6 characters",
     "submitAuth": "Submit Credentials",
     "close": "Close",
-    "invalidCredentials": "Invalid email or password"
+    "invalidCredentials": "Invalid email or password",
+    "cartTitle": "Your Pre-Order Cart",
+    "cartEmpty": "Your pre-order cart is currently empty.",
+    "cartTotal": "Total Base Amount:",
+    "cartProceed": "Proceed to Booking",
+    "cartClear": "Clear Pre-Order",
+    "addToPreOrder": "Add to Pre-Order"
   }
 }

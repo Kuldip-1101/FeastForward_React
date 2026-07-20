@@ -28,6 +28,12 @@
     "passMinLength": "La contraseña debe tener al menos 6 caracteres",
     "submitAuth": "Iniciar Sesión",
     "close": "Cerrar",
-    "invalidCredentials": "Correo electrónico o contraseña inválidos"
+    "invalidCredentials": "Correo electrónico o contraseña inválidos",
+    "cartTitle": "Su Carrito de Prepedido",
+    "cartEmpty": "Su carrito de prepedido está actualmente vacío.",
+    "cartTotal": "Monto Total Base:",
+    "cartProceed": "Proceder a la Reserva",
+    "cartClear": "Vaciar Prepedido",
+    "addToPreOrder": "Añadir al Prepedido"
   }
 }

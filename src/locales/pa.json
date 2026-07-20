@@ -28,6 +28,12 @@
     "passMinLength": "ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
     "submitAuth": "ਦਾਖਲ ਕਰੋ",
     "close": "ਬੰਦ ਕਰੋ",
-    "invalidCredentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ"
+    "invalidCredentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ",
+    "cartTitle": "ਤੁਹਾਡੀ ਪ੍ਰੀ-ਆਰਡਰ ਕਾਰਟ",
+    "cartEmpty": "ਤੁਹਾਡੀ ਪ੍ਰੀ-ਆਰਡਰ ਕਾਰਟ ਫਿਲਹਾਲ ਖਾਲੀ ਹੈ।",
+    "cartTotal": "ਕੁੱਲ ਮੂਲ ਰਕਮ:",
+    "cartProceed": "ਬੁਕਿੰਗ ਲਈ ਅੱਗੇ ਵਧੋ",
+    "cartClear": "ਪ੍ਰੀ-ਆਰਡਰ ਖਾਲੀ ਕਰੋ",
+    "addToPreOrder": "ਪ੍ਰੀ-ਆਰਡਰ ਵਿੱਚ ਜੋੜੋ"
   }
 }
