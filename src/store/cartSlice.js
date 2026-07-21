@@ -28,9 +28,8 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      //--------- action.payload: { userId: string | null, item: object }--------
-      const userId = action.payload.userId || 'guest';
-      const item = action.payload.item;
+      //--------- action.payload: { userId: string, item: object }--------
+      const { userId, item } = action.payload;
 
       if (!state.carts[userId]) {
         state.carts[userId] = [];
@@ -48,8 +47,8 @@ const cartSlice = createSlice({
     },
 
     removeFromCart: (state, action) => {
-      //---------- action.payload: { userId: string | null, itemId: string | number }---
-      const { userId = 'guest', itemId } = action.payload;
+      //---------- action.payload: { userId: string, itemId: string | number }---
+      const { userId, itemId } = action.payload;
 
       if (state.carts[userId]) {
         state.carts[userId] = state.carts[userId].filter((i) => i.id !== itemId);
@@ -58,8 +57,8 @@ const cartSlice = createSlice({
     },
 
     updateQuantity: (state, action) => {
-      //--------- action.payload: { userId: string | null, itemId: string | number, quantity: number }
-      const { userId = 'guest', itemId, quantity } = action.payload;
+      //--------- action.payload: { userId: string, itemId: string | number, quantity: number }-------
+      const { userId, itemId, quantity } = action.payload;
 
       if (state.carts[userId]) {
         const item = state.carts[userId].find((i) => i.id === itemId);
@@ -71,34 +70,9 @@ const cartSlice = createSlice({
     },
 
     clearUserCart: (state, action) => {
-      //--------- action.payload: userId
-      const userId = action.payload || 'guest';
+      //--------- action.payload: userId---------
+      const userId = action.payload;
       state.carts[userId] = [];
-      saveCartsToStorage(state.carts);
-    },
-
-    //--------- Optional: Merge guest cart into user cart upon login
-    mergeGuestCartToUser: (state, action) => {
-      const targetUserId = action.payload;
-      const guestCart = state.carts['guest'] || [];
-
-      if (!targetUserId || guestCart.length === 0) return;
-
-      if (!state.carts[targetUserId]) {
-        state.carts[targetUserId] = [];
-      }
-
-      guestCart.forEach((guestItem) => {
-        const existing = state.carts[targetUserId].find((i) => i.id === guestItem.id);
-        if (existing) {
-          existing.quantity += guestItem.quantity;
-        } else {
-          state.carts[targetUserId].push(guestItem);
-        }
-      });
-
-      //----------- Clear guest cart after merging-----------
-      state.carts['guest'] = [];
       saveCartsToStorage(state.carts);
     },
   },
@@ -109,7 +83,6 @@ export const {
   removeFromCart,
   updateQuantity,
   clearUserCart,
-  mergeGuestCartToUser,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

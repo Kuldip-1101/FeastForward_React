@@ -19,20 +19,43 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutlined";
 import { useTranslation } from "react-i18next";
 import { useCurrentCart } from "../hooks/useCurrentCart";
 
-const formatLocalizedPrice = (baseInrPrice, lang) => {
+const formatLocalizedPrice = (baseInrPrice, quantity, lang) => {
   if (["hi", "gu", "pa"].includes(lang)) {
-    return `₹${baseInrPrice.toLocaleString()}`;
+    return `₹${(baseInrPrice * quantity).toLocaleString()}`;
   }
-  return `$${Math.round(baseInrPrice / 85)}`;
+
+  //----- Calculate unit USD price first, then multiply by quantity--------
+  const unitUsd = Math.round(baseInrPrice / 85);
+  return `$${unitUsd * quantity}`;
 };
 
 function CartDrawer({ open, onClose }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "en";
 
-  // Hook handles active user / guest state & actions automatically
-  const { cartItems, totalCartAmount, addItem, removeItem, resetCart, decrementItem } =
-    useCurrentCart();
+  //--- Hook handles active user / guest state & actions automatically---
+  const {
+    cartItems,
+    totalCartAmount,
+    addItem,
+    removeItem,
+    resetCart,
+    decrementItem,
+  } = useCurrentCart();
+
+  //------- Helper to format total USD based on unit USD sum---------
+  const formatTotalCartPrice = (lang) => {
+    if (["hi", "gu", "pa"].includes(lang)) {
+      return `₹${totalCartAmount.toLocaleString()}`;
+    }
+
+    //---- Sum of unit USD prices * quantity----
+    const totalUsd = cartItems.reduce(
+      (acc, item) => acc + Math.round(item.price / 85) * item.quantity,
+      0
+    );
+    return `$${totalUsd}`;
+  };
 
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -112,13 +135,14 @@ function CartDrawer({ open, onClose }) {
                           sx={{ fontWeight: 600, mt: 0.5 }}
                         >
                           {formatLocalizedPrice(
-                            item.price * item.quantity,
+                            item.price,
+                            item.quantity,
                             currentLang,
                           )}
                         </Typography>
                       }
                     />
-                    <Stack direction="row" alignItems="center" spacing={0.5}>
+                    <Stack direction="row" alignitems="center" spacing={0.5}>
                       <IconButton
                         size="small"
                         onClick={() => decrementItem(item.id)}
@@ -156,7 +180,7 @@ function CartDrawer({ open, onClose }) {
                 color="primary.main"
                 sx={{ fontWeight: 800 }}
               >
-                {formatLocalizedPrice(totalCartAmount, currentLang)}
+                {formatTotalCartPrice(currentLang)}
               </Typography>
             </Box>
             <Stack spacing={1.5}>
