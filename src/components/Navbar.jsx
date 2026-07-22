@@ -16,6 +16,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
+
 import { toggleTheme } from "../store/themeSlice";
 import { setLanguage } from "../store/localeSlice";
 import { logout } from "../store/authSlice";
@@ -23,15 +24,15 @@ import i18n from "../config/i18n";
 import AuthModal from "./AuthModal";
 import CartDrawer from "./CartDrawer";
 import MobileDrawer from "./MobileDrawer";
-import { useCurrentCart } from "../hooks/useCurrentCart"; // Hook imported here
+import { useCurrentCart } from "../hooks/useCurrentCart";
+import { NAV_LINKS } from "../config/navigation"; 
 
-//---------------MUI Premium Icons ----------------
+//-------------MUI Premium Icon imports---------
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -39,21 +40,19 @@ function Navbar() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const isMobile = useMediaQuery(theme.breakpoints.down(1100));
 
   const isDarkMode = useSelector((state) => state.theme.darkMode);
   const currentLang = useSelector((state) => state.locale.currentLang);
   const { user, isAuthenticated } = useSelector((state) => state.auth);
 
-  //----------- Hook handles active user / guest cart automatically---------
   const { totalCartCount } = useCurrentCart();
 
-  //----------------- Local State for Modals -----------------
   const [authOpen, setAuthOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  //-------- Auto-close mobile drawer when screen grows above 900px-------
   useEffect(() => {
     if (!isMobile && mobileMenuOpen) {
       setMobileMenuOpen(false);
@@ -80,7 +79,7 @@ function Navbar() {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 1.5, sm: 3 } }}>
-          {/* -----------Left: Mobile Hamburger OR Desktop Brand -----------*/}
+          {/*------------ Brand / Hamburger------------ */}
           <Stack direction="row" alignitems="center" spacing={1}>
             {isMobile ? (
               <IconButton onClick={() => setMobileMenuOpen(true)} color="inherit" edge="start">
@@ -102,43 +101,37 @@ function Navbar() {
             )}
           </Stack>
 
-          {/*------------- Center: Desktop Navigation Links ------------*/}
+          {/*--------- Desktop Links Loop */}
           {!isMobile && (
             <Stack direction="row" spacing={1}>
-              <Button
-                component={NavLink}
-                to="/"
-                color="inherit"
-                sx={{
-                  fontWeight: 600,
-                  px: 2,
-                  borderRadius: 2,
-                  "&.active": { color: "primary.main", backgroundColor: "action.selected" },
-                }}
-              >
-                {t("navHome")}
-              </Button>
-
-              <Button
-                component={NavLink}
-                to="/menu"
-                color="inherit"
-                startIcon={<RestaurantMenuIcon fontSize="small" />}
-                sx={{
-                  fontWeight: 600,
-                  px: 2,
-                  borderRadius: 2,
-                  "&.active": { color: "primary.main", backgroundColor: "action.selected" },
-                }}
-              >
-                {t("navMenu")}
-              </Button>
+              {NAV_LINKS.map((link) => {
+                const IconComponent = link.icon;
+                return (
+                  <Button
+                    key={link.path}
+                    component={NavLink}
+                    to={link.path}
+                    color="inherit"
+                    startIcon={<IconComponent fontSize="small" />}
+                    sx={{
+                      fontWeight: 600,
+                      px: 2,
+                      borderRadius: 2,
+                      "&.active": {
+                        color: "primary.main",
+                        backgroundColor: "action.selected",
+                      },
+                    }}
+                  >
+                    {t(link.translationKey) || link.fallbackLabel}
+                  </Button>
+                );
+              })}
             </Stack>
           )}
 
-          {/*------------- Right: Actions Cluster --------------*/}
+          {/*----------------- Actions------------------ */}
           <Stack direction="row" spacing={{ xs: 1, sm: 2 }} alignitems="center">
-            {/* Language Selector */}
             <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
               <LanguageIcon color="action" fontSize="small" />
               <Select
@@ -157,17 +150,15 @@ function Navbar() {
               </Select>
             </Box>
 
-            {/*-------------------- Cart Icon -----------------*/}
             <IconButton color="inherit" onClick={() => setCartOpen(true)} size="small">
               <Badge badgeContent={totalCartCount} color="primary">
                 <ShoppingBagIcon fontSize="small" />
               </Badge>
             </IconButton>
 
-            {/*---------------- Desktop Auth Section ---------------*/}
             {!isMobile && (
               isAuthenticated ? (
-                <Stack direction="row" spacing={1.5} sx ={{ alignItems: "center" }}>
+                <Stack direction="row" spacing={1.5} sx={{ alignItems: "center" }}>
                   <Typography variant="body2" sx={{ fontWeight: "600" }}>
                     {t("welcomeUser", { name: user.name })}
                   </Typography>
@@ -195,22 +186,23 @@ function Navbar() {
               )
             )}
 
-            {/*---------------- Mobile-only Quick Login button when logged out ----------------*/}
             {isMobile && !isAuthenticated && (
               <IconButton color="primary" onClick={() => setAuthOpen(true)} size="small">
                 <LoginIcon fontSize="small" />
               </IconButton>
             )}
 
-            {/*-------------------- Theme Toggle -----------------*/}
             <IconButton onClick={() => dispatch(toggleTheme())} color="inherit" size="small">
-              {isDarkMode ? <LightModeIcon sx={{ color: "primary.main" }} fontSize="small" /> : <DarkModeIcon fontSize="small" />}
+              {isDarkMode ? (
+                <LightModeIcon sx={{ color: "primary.main" }} fontSize="small" />
+              ) : (
+                <DarkModeIcon fontSize="small" />
+              )}
             </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>
 
-      {/*------------- Mobile Navigation Drawer ----------------*/}
       <MobileDrawer
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
@@ -220,7 +212,6 @@ function Navbar() {
         onOpenAuth={() => setAuthOpen(true)}
       />
 
-      {/*------------- Global Modals -------------*/}
       <AuthModal open={authOpen} handleClose={() => setAuthOpen(false)} />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>

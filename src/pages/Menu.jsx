@@ -16,16 +16,7 @@ import { useSelector } from "react-redux";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCurrentCart } from "../hooks/useCurrentCart";
 import AuthModal from "../components/AuthModal";
-
-//--------- dynamic currency handler ---------
-const formatLocalizedPrice = (baseInrPrice, lang) => {
-  if (["hi", "gu", "pa"].includes(lang)) {
-    return `₹${baseInrPrice.toLocaleString()}`;
-  }
-  //--------- Convert INR to USD ---------------
-  const usdEquivalent = Math.round(baseInrPrice / 85);
-  return `$${usdEquivalent}`;
-};
+import { formatLocalizedPrice } from "../utils/formatCurrency";
 
 function Menu() {
   const { t, i18n } = useTranslation();
@@ -105,7 +96,10 @@ function Menu() {
         <Grid container spacing={4}>
           {menuItems?.map((item) => {
             //--------- Resolve translation key dynamically---------
-            const itemTitle = item.name[currentLang] || item.name["en"];
+            const itemTitle =
+              typeof item.name === "string"
+                ? item.name
+                : item.name?.[currentLang] || item.name?.en || "Item";
 
             return (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
@@ -183,7 +177,7 @@ function Menu() {
                         color="primary.main"
                         sx={{ fontWeight: 800 }}
                       >
-                        {formatLocalizedPrice(item.price, currentLang)}
+                        {formatLocalizedPrice(item.price, 1, currentLang)}
                       </Typography>
 
                       <Button

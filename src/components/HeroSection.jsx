@@ -1,31 +1,17 @@
 import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 //------------- MUI Icons--------------
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-function HeroSection() {
-  const { t } = useTranslation();
-  const currentLang = useSelector((state) => state.locale.currentLang);
-  const currentCurrency = useSelector((state) => state.locale.currency);
+//------------- Shared Currency Utility --------------
+import { formatLocalizedPrice } from "../utils/formatCurrency";
 
-  //------------- Helper currency engine to show localized layout values --------------
-  const formatSamplePrice = (amount) => {
-    const localeMapping = {
-      en: "en-US",
-      gu: "en-IN",
-      hi: "hi-IN",
-      pa: "pa-IN",
-      fr: "fr-FR",
-      es: "es-ES",
-    };
-    return new Intl.NumberFormat(localeMapping[currentLang] || "en-US", {
-      style: "currency",
-      currency: currentCurrency,
-    }).format(amount);
-  };
+function HeroSection() {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language || "en";
 
   return (
     <Box
@@ -46,7 +32,7 @@ function HeroSection() {
           sx={{
             fontWeight: "800",
             mb: 3,
-            fontSize: { xs: '2.2rem', sm: '3rem', md: '3.8rem' },
+            fontSize: { xs: "2.2rem", sm: "3rem", md: "3.8rem" },
             color: "text.primary",
           }}
         >
@@ -76,8 +62,7 @@ function HeroSection() {
             letterSpacing: 1,
           }}
         >
-          {t("buffetFrom")}
-          {formatSamplePrice(450)}
+          {t("buffetFrom")} {formatLocalizedPrice(450, 1, currentLang)}
         </Typography>
 
         {/*--------------- Action Buttons Stack ----------------*/}
@@ -85,12 +70,15 @@ function HeroSection() {
           direction={{ xs: "column", sm: "row" }}
           spacing={2}
           sx={{
-            justifyContent: "center", 
+            justifyContent: "center",
             alignItems: "center",
             mt: 4,
           }}
         >
+          {/* Book Table Button -> /book-table */}
           <Button
+            component={Link}
+            to="/book-table"
             variant="contained"
             size="large"
             startIcon={<CalendarMonthIcon />}
@@ -101,13 +89,16 @@ function HeroSection() {
               color: "#ffffff",
               backgroundColor: "primary.main",
               "&:hover": { backgroundColor: "#B3922E" },
-              width: { xs: "100%", sm: "auto" }, 
+              width: { xs: "100%", sm: "auto" },
             }}
           >
             {t("bookTable")}
           </Button>
 
+          {/* View Menu Button -> /menu */}
           <Button
+            component={Link}
+            to="/menu"
             variant="outlined"
             size="large"
             color="primary"

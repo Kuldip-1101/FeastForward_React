@@ -256,24 +256,116 @@
     }
   ],
   "tables": [
-    { "id": "t1", "number": 1, "capacity": 2, "location": "Window Side" },
-    { "id": "t2", "number": 2, "capacity": 2, "location": "Window Side" },
-    { "id": "t3", "number": 2, "capacity": 2, "location": "Window Side" },
-    { "id": "t4", "number": 3, "capacity": 4, "location": "Main Hall" },
-    { "id": "t5", "number": 2, "capacity": 4, "location": "Main Hall" },
-    { "id": "t6", "number": 4, "capacity": 4, "location": "Main Hall" },
-    { "id": "t7", "number": 4, "capacity": 4, "location": "Main Hall" },
-    { "id": "t8", "number": 2, "capacity": 4, "location": "Main Hall" },
-    { "id": "t9", "number": 4, "capacity": 4, "location": "Main Hall" },
-    { "id": "t10", "number": 4, "capacity": 4, "location": "Main Hall" },
-    { "id": "t11", "number": 5, "capacity": 4, "location": "Main Hall" },
-    { "id": "t12", "number": 5, "capacity": 4, "location": "Garden Patio" },
-    { "id": "t13", "number": 5, "capacity": 4, "location": "Garden Patio" },
-    { "id": "t14", "number": 6, "capacity": 6, "location": "Garden Patio" },
-    { "id": "t15", "number": 7, "capacity": 6, "location": "Garden Patio" },
-    { "id": "t16", "number": 8, "capacity": 8, "location": "VIP Cabin" },
-    { "id": "t17", "number": 9, "capacity": 8, "location": "VIP Cabin" },
-    { "id": "t18", "number": 10, "capacity": 12, "location": "Grand Banquet" }
+    {
+      "id": "t1",
+      "number": 1,
+      "capacity": 2,
+      "location": "Window Side"
+    },
+    {
+      "id": "t2",
+      "number": 2,
+      "capacity": 2,
+      "location": "Window Side"
+    },
+    {
+      "id": "t3",
+      "number": 2,
+      "capacity": 2,
+      "location": "Window Side"
+    },
+    {
+      "id": "t4",
+      "number": 3,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t5",
+      "number": 2,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t6",
+      "number": 4,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t7",
+      "number": 4,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t8",
+      "number": 2,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t9",
+      "number": 4,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t10",
+      "number": 4,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t11",
+      "number": 5,
+      "capacity": 4,
+      "location": "Main Hall"
+    },
+    {
+      "id": "t12",
+      "number": 5,
+      "capacity": 4,
+      "location": "Garden Patio"
+    },
+    {
+      "id": "t13",
+      "number": 5,
+      "capacity": 4,
+      "location": "Garden Patio"
+    },
+    {
+      "id": "t14",
+      "number": 6,
+      "capacity": 6,
+      "location": "Garden Patio"
+    },
+    {
+      "id": "t15",
+      "number": 7,
+      "capacity": 6,
+      "location": "Garden Patio"
+    },
+    {
+      "id": "t16",
+      "number": 8,
+      "capacity": 8,
+      "location": "VIP Cabin"
+    },
+    {
+      "id": "t17",
+      "number": 9,
+      "capacity": 8,
+      "location": "VIP Cabin"
+    },
+    {
+      "id": "t18",
+      "number": 10,
+      "capacity": 12,
+      "location": "Grand Banquet"
+    }
   ],
-  "bookings": []
+  "bookings": [   
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

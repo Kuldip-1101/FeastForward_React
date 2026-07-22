@@ -14,8 +14,9 @@ import {
 } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import HomeIcon from "@mui/icons-material/Home";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+
+import { NAV_LINKS } from "../config/navigation"; 
+
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
@@ -42,7 +43,7 @@ function MobileDrawer({
         }}
         role="presentation"
       >
-        {/*-------------- Top Section: Brand Title & Nav Links --------------*/}
+        {/*------------ Top Section(Title) ------------ */}
         <Box>
           <Typography
             variant="h6"
@@ -63,56 +64,41 @@ function MobileDrawer({
 
           <Divider sx={{ mb: 2 }} />
 
+          {/*------------ Mobile Links Loop ------------ */}
           <List disablePadding>
-            <ListItem disablePadding sx={{ mb: 1 }}>
-              <ListItemButton
-                component={NavLink}
-                to="/"
-                onClick={onClose}
-                sx={{
-                  borderRadius: 2,
-                  "&.active": {
-                    color: "primary.main",
-                    backgroundColor: "action.selected",
-                  },
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: 36, color: "inherit" }}>
-                  <HomeIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={t("navHome")}
-                  primaryTypographyProps={{ fontWeight: 600 }}
-                />
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton
-                component={NavLink}
-                to="/menu"
-                onClick={onClose}
-                sx={{
-                  borderRadius: 2,
-                  "&.active": {
-                    color: "primary.main",
-                    backgroundColor: "action.selected",
-                  },
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: 36, color: "inherit" }}>
-                  <RestaurantMenuIcon fontSize="small" />
-                </ListItemIcon>
-                <ListItemText
-                  primary={t("navMenu")}
-                  primaryTypographyProps={{ fontWeight: 600 }}
-                />
-              </ListItemButton>
-            </ListItem>
+            {NAV_LINKS.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <ListItem key={link.path} disablePadding sx={{ mb: 1 }}>
+                  <ListItemButton
+                    component={NavLink}
+                    to={link.path}
+                    onClick={onClose}
+                    sx={{
+                      borderRadius: 2,
+                      "&.active": {
+                        color: "primary.main",
+                        backgroundColor: "action.selected",
+                      },
+                    }}
+                  >
+                    <ListItemIcon sx={{ minWidth: 36, color: "inherit" }}>
+                      <IconComponent fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={t(link.translationKey) || link.fallbackLabel}
+                      slotProps={{
+                        primary: { fontWeight: 600 },
+                      }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
           </List>
         </Box>
 
-        {/*-------------- Bottom Section: User Card & Action --------------*/}
+        {/*------------ Bottom Section ------------ */}
         <Box
           sx={{
             mt: "auto",
@@ -156,7 +142,12 @@ function MobileDrawer({
                   >
                     {user?.name}
                   </Typography>
-                  <Typography variant="caption" color="text.secondary" noWrap display="block">
+                  <Typography
+                    variant="caption"
+                    color="text.secondary"
+                    noWrap
+                    display="block"
+                  >
                     {user?.email || "Logged in"}
                   </Typography>
                 </Box>

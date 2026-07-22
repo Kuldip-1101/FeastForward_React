@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Bookings from './pages/Bookings';
+import ReservationPage from './pages/ReservationPage';
 
 function App() {
   const { t } = useTranslation();
@@ -31,6 +32,10 @@ function App() {
         {
           path: 'bookings',
           element: <Bookings />
+        },
+        {
+          path: 'book-table', 
+          element: <ReservationPage />
         }
       ]
     }

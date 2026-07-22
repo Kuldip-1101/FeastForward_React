@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; 
 import {
   Drawer,
   Box,
@@ -18,22 +19,15 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutlined";
 import { useTranslation } from "react-i18next";
 import { useCurrentCart } from "../hooks/useCurrentCart";
-
-const formatLocalizedPrice = (baseInrPrice, quantity, lang) => {
-  if (["hi", "gu", "pa"].includes(lang)) {
-    return `₹${(baseInrPrice * quantity).toLocaleString()}`;
-  }
-
-  //----- Calculate unit USD price first, then multiply by quantity--------
-  const unitUsd = Math.round(baseInrPrice / 85);
-  return `$${unitUsd * quantity}`;
-};
+import {
+  formatLocalizedPrice,
+  formatTotalCartPrice,
+} from "../utils/formatCurrency";
 
 function CartDrawer({ open, onClose }) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "en";
 
-  //--- Hook handles active user / guest state & actions automatically---
   const {
     cartItems,
     totalCartAmount,
@@ -42,20 +36,6 @@ function CartDrawer({ open, onClose }) {
     resetCart,
     decrementItem,
   } = useCurrentCart();
-
-  //------- Helper to format total USD based on unit USD sum---------
-  const formatTotalCartPrice = (lang) => {
-    if (["hi", "gu", "pa"].includes(lang)) {
-      return `₹${totalCartAmount.toLocaleString()}`;
-    }
-
-    //---- Sum of unit USD prices * quantity----
-    const totalUsd = cartItems.reduce(
-      (acc, item) => acc + Math.round(item.price / 85) * item.quantity,
-      0
-    );
-    return `$${totalUsd}`;
-  };
 
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -102,6 +82,7 @@ function CartDrawer({ open, onClose }) {
                       item.name?.en ||
                       item.title ||
                       "Item";
+
                 return (
                   <ListItem
                     key={item.id}
@@ -137,12 +118,14 @@ function CartDrawer({ open, onClose }) {
                           {formatLocalizedPrice(
                             item.price,
                             item.quantity,
-                            currentLang,
+                            currentLang
                           )}
                         </Typography>
                       }
                     />
-                    <Stack direction="row" alignitems="center" spacing={0.5}>
+
+                    {/*------------ Quantity & Delete Controls ------------*/}
+                    <Stack direction="row" alignItems="center" spacing={0.5}>
                       <IconButton
                         size="small"
                         onClick={() => decrementItem(item.id)}
@@ -151,12 +134,21 @@ function CartDrawer({ open, onClose }) {
                       </IconButton>
                       <Typography
                         variant="body2"
-                        sx={{ fontWeight: 700, px: 1 }}
+                        sx={{ display: "flex", alignItems: "center", fontWeight: 700 }}
                       >
                         {item.quantity}
                       </Typography>
                       <IconButton size="small" onClick={() => addItem(item)}>
                         <AddIcon fontSize="small" />
+                      </IconButton>
+
+                      <IconButton
+                        size="small"
+                        color="error"
+                        onClick={() => removeItem(item.id)}
+                        sx={{ ml: 0.5 }}
+                      >
+                        <DeleteOutlineIcon fontSize="small" />
                       </IconButton>
                     </Stack>
                   </ListItem>
@@ -180,11 +172,14 @@ function CartDrawer({ open, onClose }) {
                 color="primary.main"
                 sx={{ fontWeight: 800 }}
               >
-                {formatTotalCartPrice(currentLang)}
+                {formatTotalCartPrice(cartItems, totalCartAmount, currentLang)}
               </Typography>
             </Box>
             <Stack spacing={1.5}>
               <Button
+                component={Link}
+                to="/book-table"
+                onClick={onClose}
                 variant="contained"
                 color="primary"
                 fullWidth
