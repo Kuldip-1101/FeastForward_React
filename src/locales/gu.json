@@ -68,6 +68,33 @@
       "submittingButton": "ખાતરી થઈ રહી છે...",
       "successMessage": "રિઝર્વેશન સફળતાપૂર્વક કન્ફર્મ થયું!",
       "errorMessage": "રિઝર્વેશન સબમિટ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો."
+    },
+  "myBookings": {
+      "title": "મારા રિઝર્વેશન",
+      "subtitle": "તમારા તમામ આગામી અને ભૂતકાળના બુકિંગને ટ્રેક અને રિવ્યૂ કરો.",
+      "loginRequiredTitle": "લોગિન જરૂરી છે",
+      "loginRequiredDesc": "તમારા અંગત ટેબલ રિઝર્વેશન અને પ્રી-ઓર્ડર જોવા માટે કૃપા કરીને સાઇન ઇન કરો.",
+      "emptyTitle": "કોઈ રિઝર્વેશન મળ્યા નથી",
+      "emptySubtitle": "તમે હજુ સુધી કોઈ ટેબલ બુકિંગ અથવા પ્રી-ઓર્ડર કર્યા નથી.",
+      "bookNowBtn": "હમણાં જ ટેબલ બુક કરો",
+      "fetchError": "તમારા રિઝર્વેશન લોડ કરવામાં નિષ્ફળ. કૃપા કરીને પછીથી પ્રયાસ કરો.",
+      "statusUpcoming": "આગામી",
+      "statusCompleted": "પૂર્ણ",
+      "reservedTable": "આરક્ષિત ટેબલ",
+      "bookingRef": "બુકિંગ રેફરન્સ",
+      "guestsCount": "{{count}} મહેમાનો",
+      "specialRequests": "ખાસ વિનંતીઓ",
+      "preOrderTitle": "પ્રી-ઓર્ડર કરેલ વાનગીઓ",
+      "noPreOrdersAttached": "આ બુકિંગ માટે કોઈ વાનગીઓ પ્રી-ઓર્ડર કરવામાં આવી નથી.",
+      "totalPreOrderAmount": "કુલ પ્રી-ઓર્ડર રકમ",
+      "cancelReservationBtn": "રિઝર્વેશન રદ કરો",
+      "cancelDialogTitle": "ટેબલ રિઝર્વેશન રદ કરો",
+      "cancelDialogConfirmText": "શું તમે ખરેખર રિઝર્વેશન #{{id}} રદ કરવા માંગો છો? આ ક્રિયા પાછી ખેંચી શકાતી નથી.",
+      "keepReservationBtn": "રિઝર્વેશન રાખો",
+      "confirmCancelBtn": "હા, રિઝર્વેશન રદ કરો",
+      "cancellingBtn": "રદ થઈ રહ્યું છે...",
+      "cancelSuccess": "રિઝર્વેશન સફળતાપૂર્વક રદ કરવામાં આવ્યું.",
+      "cancelError": "રિઝર્વેશન રદ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો."
     }
   }
 }

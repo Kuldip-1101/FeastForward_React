@@ -36,7 +36,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import MenuIcon from "@mui/icons-material/Menu";
 
-function Navbar() {
+function Navbar({ onOpenAuth }) {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const theme = useTheme();
@@ -49,7 +49,6 @@ function Navbar() {
 
   const { totalCartCount } = useCurrentCart();
 
-  const [authOpen, setAuthOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -101,7 +100,7 @@ function Navbar() {
             )}
           </Stack>
 
-          {/*--------- Desktop Links Loop */}
+          {/*--------- Desktop Links Loop ----------*/}
           {!isMobile && (
             <Stack direction="row" spacing={1}>
               {NAV_LINKS.map((link) => {
@@ -178,7 +177,7 @@ function Navbar() {
                   variant="outlined"
                   size="small"
                   startIcon={<LoginIcon />}
-                  onClick={() => setAuthOpen(true)}
+                  onClick={onOpenAuth}
                   sx={{ fontWeight: "600", borderRadius: 2 }}
                 >
                   {t("login")}
@@ -187,7 +186,7 @@ function Navbar() {
             )}
 
             {isMobile && !isAuthenticated && (
-              <IconButton color="primary" onClick={() => setAuthOpen(true)} size="small">
+              <IconButton color="primary" onClick={onOpenAuth} size="small">
                 <LoginIcon fontSize="small" />
               </IconButton>
             )}
@@ -209,10 +208,9 @@ function Navbar() {
         isAuthenticated={isAuthenticated}
         user={user}
         onLogout={() => dispatch(logout())}
-        onOpenAuth={() => setAuthOpen(true)}
+        onOpenAuth={onOpenAuth}
       />
 
-      <AuthModal open={authOpen} handleClose={() => setAuthOpen(false)} />
       <CartDrawer open={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );

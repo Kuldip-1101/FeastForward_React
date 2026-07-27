@@ -365,7 +365,112 @@
       "location": "Grand Banquet"
     }
   ],
-  "bookings": [   
+  "bookings": [
+    {
+      "fullName": "Aarav Patel",
+      "email": "aarav@example.com",
+      "phone": "2647326487",
+      "date": "2026-07-27",
+      "timeSlot": "01:00 PM",
+      "tableId": "t13",
+      "guestCount": 2,
+      "specialRequests": "",
+      "bookingId": "RES-7632",
+      "userId": "u1",
+      "tableDetails": "Table 5 (Garden Patio)",
+      "createdAt": "2026-07-27T07:04:41.837Z",
+      "preOrders": [
+        {
+          "id": "m1",
+          "name": {
+            "en": "Premium Butter Paneer",
+            "gu": "પ્રીમિયમ બટર પનીર",
+            "hi": "प्रीमियम बटर पनीर",
+            "pa": "ਪ੍ਰੀਮੀਅਮ ਬਟਰ ਪਨੀਰ",
+            "fr": "Paneer au Beurre Premium",
+            "es": "Paneer de Mantequilla Premium"
+          },
+          "price": 320,
+          "quantity": 1
+        },
+        {
+          "id": "m2",
+          "name": {
+            "en": "Garlic Naan Platter",
+            "gu": "ગાર્લિક નાન પ્લેટર",
+            "hi": "गार्लिक नान प्लैटर",
+            "pa": "ਗਾਰਲિક ਨਾਨ ਪਲੇਟਰ",
+            "fr": "Plateau de Naan à l'Ail",
+            "es": "Plato de Naan de Ajo"
+          },
+          "price": 120,
+          "quantity": 1
+        }
+      ],
+      "totalPreOrderAmount": 440,
+      "id": "1"
+    },
+    {
+      "fullName": "Aarav Patel",
+      "email": "aarav@example.com",
+      "phone": "3724892348",
+      "date": "2026-07-01",
+      "timeSlot": "02:00 PM",
+      "tableId": "t14",
+      "guestCount": 2,
+      "specialRequests": "",
+      "bookingId": "RES-7842",
+      "userId": "u1",
+      "tableDetails": "Table 6 (Garden Patio)",
+      "createdAt": "2026-07-27T07:05:17.621Z",
+      "preOrders": [
+        {
+          "id": "m1",
+          "name": {
+            "en": "Premium Butter Paneer",
+            "gu": "પ્રીમિયમ બટર પનીર",
+            "hi": "प्रीमियम बटर पनीर",
+            "pa": "ਪ੍ਰੀਮੀਅਮ ਬਟਰ ਪਨੀਰ",
+            "fr": "Paneer au Beurre Premium",
+            "es": "Paneer de Mantequilla Premium"
+          },
+          "price": 320,
+          "quantity": 1
+        },
+        {
+          "id": "m3",
+          "name": {
+            "en": "Crispy Samosa Trio",
+            "gu": "ક્રિસ્પી સમોસા ટ્રિઓ",
+            "hi": "क्रिस्पी समोसा तिकड़ी",
+            "pa": "ਕ੍ਰਿਸਪੀ ਸਮੋਸਾ ਤਿਕੜੀ",
+            "fr": "Trio de Samoussas Croustillants",
+            "es": "Trío de Samosas Crujientes"
+          },
+          "price": 150,
+          "quantity": 1
+        }
+      ],
+      "totalPreOrderAmount": 470,
+      "id": "2"
+    },
+    {
+      "fullName": "Aarav Patel",
+      "email": "aarav@example.com",
+      "phone": "1234564545",
+      "date": "2026-07-27",
+      "timeSlot": "01:00 PM",
+      "tableId": "t5",
+      "guestCount": 2,
+      "specialRequests": "",
+      "bookingId": "RES-7832",
+      "userId": "u1",
+      "tableDetails": "Table 2 (Main Hall)",
+      "createdAt": "2026-07-27T10:23:27.832Z",
+      "preOrders": [],
+      "totalPreOrderAmount": 0,
+      "id": "qRrxtJgSaQc"
+    }
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

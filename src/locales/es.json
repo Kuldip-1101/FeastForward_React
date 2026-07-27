@@ -68,6 +68,33 @@
       "submittingButton": "Confirmando...",
       "successMessage": "¡Reserva confirmada con éxito!",
       "errorMessage": "Error al enviar la reserva. Por favor intente de nuevo."
+    },
+   "myBookings": {
+      "title": "Mis Reservas",
+      "subtitle": "Rastree y revise todas sus reservas futuras y pasadas.",
+      "loginRequiredTitle": "Inicio de Sesión Requerido",
+      "loginRequiredDesc": "Inicie sesión para ver sus reservas de mesa personales y pre-pedidos.",
+      "emptyTitle": "No se Encontraron Reservas",
+      "emptySubtitle": "Aún no ha realizado ninguna reserva de mesa o pre-pedido.",
+      "bookNowBtn": "Reservar una Mesa Ahora",
+      "fetchError": "No se pudieron cargar sus reservas. Inténtelo más tarde.",
+      "statusUpcoming": "Próxima",
+      "statusCompleted": "Completada",
+      "reservedTable": "Mesa Reservada",
+      "bookingRef": "Ref. de Reserva",
+      "guestsCount": "{{count}} Personas",
+      "specialRequests": "Solicitudes Especiales",
+      "preOrderTitle": "Platos Pre-Ordenados",
+      "noPreOrdersAttached": "No hay platos pre-ordenados para esta reserva.",
+      "totalPreOrderAmount": "Monto Total del Pre-Pedido",
+      "cancelReservationBtn": "Cancelar Reserva",
+      "cancelDialogTitle": "Cancelar Reserva de Mesa",
+      "cancelDialogConfirmText": "¿Está seguro de que desea cancelar la reserva #{{id}}? Esta acción no se puede deshacer.",
+      "keepReservationBtn": "Mantener reserva",
+      "confirmCancelBtn": "Sí, Cancelar Reserva",
+      "cancellingBtn": "Cancelando...",
+      "cancelSuccess": "Reserva cancelada con éxito.",
+      "cancelError": "Error al cancelar la reserva. Inténtelo de nuevo."
     }
   }
 }

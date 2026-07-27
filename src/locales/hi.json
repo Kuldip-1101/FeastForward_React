@@ -68,6 +68,34 @@
       "submittingButton": "पुष्टि हो रही है...",
       "successMessage": "आरक्षण सफलतापूर्वक पुष्टि हो गया!",
       "errorMessage": "आरक्षण सबमिट करने में विफल। कृपया पुन: प्रयास करें।"
+    },
+    "myBookings": {
+      "title": "मेरे आरक्षण",
+      "subtitle": "अपनी सभी आगामी और पिछली बुकिंग को ट्रैक और समीक्षा करें।",
+      "loginRequiredTitle": "लॉगिन आवश्यक है",
+      "loginRequiredDesc": "कृपया अपने व्यक्तिगत टेबल आरक्षण और प्री-ऑर्डर देखने के लिए साइन इन करें।",
+      "emptyTitle": "कोई आरक्षण नहीं मिला",
+      "emptySubtitle": "आपने अभी तक कोई टेबल बुकिंग या प्री-ऑर्डर नहीं किया है।",
+      "bookNowBtn": "अभी एक टेबल बुक करें",
+      "fetchError": "आपके आरक्षण लोड करने में विफल। कृपया बाद में पुनः प्रयास करें।",
+      "statusUpcoming": "आगामी",
+      "statusCompleted": "पूर्ण",
+      "reservedTable": "आरक्षित टेबल",
+      "bookingRef": "बुकिंग संदर्भ",
+      "guestsCount": "{{count}} अतिथि",
+      "specialRequests": "विशेष अनुरोध",
+      "preOrderTitle": "प्री-ऑर्डर किए गए व्यंजन",
+      "noPreOrdersAttached": "इस बुकिंग के लिए कोई व्यंजन प्री-ऑर्डर नहीं किए गए हैं।",
+      "totalPreOrderAmount": "कुल प्री-ऑर्डर राशि",
+      "cancelReservationBtn": "आरक्षण रद्द करें",
+      "cancelDialogTitle": "टेबल आरक्षण रद्द करें",
+      "cancelDialogConfirmText": "क्या आप सुनिश्चित हैं कि आप आरक्षण #{{id}} रद्द करना चाहते हैं? यह क्रिया वापस नहीं ली जा सकती।",
+      "keepReservationBtn": "आरक्षण बनाए रखें",
+      "confirmCancelBtn": "हाँ, आरक्षण रद्द करें",
+      "cancellingBtn": "रद्द किया जा रहा है...",
+      "cancelSuccess": "आरक्षण सफलतापूर्वक रद्द कर दिया गया।",
+      "cancelError": "आरक्षण रद्द करने में विफल। कृपया पुनः प्रयास करें।"
+    
     }
   }
 }

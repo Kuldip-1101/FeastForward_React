@@ -68,6 +68,33 @@
       "submittingButton": "Confirmation...",
       "successMessage": "Réservation confirmée avec succès !",
       "errorMessage": "Échec de la réservation. Veuillez réessayer."
+    },
+    "myBookings": {
+      "title": "Mes Réservations",
+      "subtitle": "Suivez et consultez toutes vos réservations à venir et passées.",
+      "loginRequiredTitle": "Connexion Requise",
+      "loginRequiredDesc": "Veuillez vous connecter pour afficher vos réservations de table et vos précommandes.",
+      "emptyTitle": "Aucune Réservation Trouvée",
+      "emptySubtitle": "Vous n'avez pas encore effectué de réservation de table ni de précommande.",
+      "bookNowBtn": "Réserver une Table Maintenant",
+      "fetchError": "Impossible de charger vos réservations. Veuillez réessayer plus tard.",
+      "statusUpcoming": "À venir",
+      "statusCompleted": "Terminée",
+      "reservedTable": "Table Réservée",
+      "bookingRef": "Réf. de Réservation",
+      "guestsCount": "{{count}} Personnes",
+      "specialRequests": "Demandes Particulières",
+      "preOrderTitle": "Plats Précommandés",
+      "noPreOrdersAttached": "Aucun plat précommandé pour cette réservation.",
+      "totalPreOrderAmount": "Montant Total de la Précommande",
+      "cancelReservationBtn": "Annuler la Réservation",
+      "cancelDialogTitle": "Annuler la Réservation de Table",
+      "cancelDialogConfirmText": "Êtes-vous sûr de vouloir annuler la réservation n°{{id}} ? Cette action est irréversible.",
+      "keepReservationBtn": "Garder la réservation",
+      "confirmCancelBtn": "Oui, Annuler la Réservation",
+      "cancellingBtn": "Annulation en cours...",
+      "cancelSuccess": "Réservation annulée avec succès.",
+      "cancelError": "Échec de l'annulation. Veuillez réessayer."
     }
   }
 }

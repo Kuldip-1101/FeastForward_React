@@ -134,6 +134,7 @@ export function ReservationPage() {
   //---------------- Mutation to Submit Reservation Payload----------------
   const createBookingMutation = useMutation({
     mutationFn: async (newBooking) => {
+
       const response = await fetch("http://localhost:5000/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -165,8 +166,13 @@ export function ReservationPage() {
   const onSubmit = (formData) => {
     const selectedTableObj = allTables.find((t) => t.id === formData.tableId);
 
+    //------------Randomly generate a unique ID for the booking ------------
+    const customId = `RES-${Date.now().toString().slice(-4)}`;
+ 
+
     const payload = {
       ...formData,
+      bookingId: customId,
       userId: user?.id || "guest",
       tableDetails: selectedTableObj
         ? `Table ${selectedTableObj.number} (${selectedTableObj.location})`

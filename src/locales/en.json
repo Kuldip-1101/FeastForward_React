@@ -68,6 +68,33 @@
       "submittingButton": "Confirming...",
       "successMessage": "Reservation successfully confirmed!",
       "errorMessage": "Failed to submit reservation. Please try again."
+    },
+   "myBookings": {
+      "title": "My Reservations",
+      "subtitle": "Track and review all your upcoming and past dining bookings.",
+      "loginRequiredTitle": "Login Required",
+      "loginRequiredDesc": "Please sign in to view your personal table reservations and pre-orders.",
+      "emptyTitle": "No Reservations Found",
+      "emptySubtitle": "You haven't placed any table bookings or pre-orders yet.",
+      "bookNowBtn": "Book a Table Now",
+      "fetchError": "Failed to load your reservations. Please try again later.",
+      "statusUpcoming": "Upcoming",
+      "statusCompleted": "Completed",
+      "reservedTable": "Reserved Table",
+      "bookingRef": "Booking Ref",
+      "guestsCount": "{{count}} Guests",
+      "specialRequests": "Special Requests",
+      "preOrderTitle": "Pre-Ordered Dishes",
+      "noPreOrdersAttached": "No dishes pre-ordered for this reservation.",
+      "totalPreOrderAmount": "Total Pre-Order Amount",
+      "cancelReservationBtn": "Cancel Reservation",
+      "cancelDialogTitle": "Cancel Table Reservation",
+      "cancelDialogConfirmText": "Are you sure you want to cancel reservation #{{id}}? This action cannot be undone.",
+      "keepReservationBtn": "Keep Reservation",
+      "confirmCancelBtn": "Yes, Cancel Reservation",
+      "cancellingBtn": "Cancelling...",
+      "cancelSuccess": "Reservation successfully cancelled.",
+      "cancelError": "Failed to cancel reservation. Please try again."
     }
   }
 }
