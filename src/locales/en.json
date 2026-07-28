@@ -35,6 +35,14 @@
     "cartProceed": "Proceed to Booking",
     "cartClear": "Clear Pre-Order",
     "addToPreOrder": "Add to Pre-Order",
+    "admin": {
+      "portalTitle": "Admin Portal",
+      "defaultAdminUser": "Admin User",
+      "dashboard": "Dashboard",
+      "reservations": "Reservations",
+      "menuManagement": "Menu Management",
+      "analytics": "Analytics"
+    },
     "reservation": {
       "title": "Book a Table",
       "subtitle": "Reserve your table and customize your dining experience.",

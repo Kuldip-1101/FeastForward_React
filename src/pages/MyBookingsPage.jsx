@@ -21,17 +21,20 @@ import UnauthenticatedView from "../components/UnauthenticatedView";
 import BookingCard from "../components/BookingCard";
 import CancelBookingDialog from "../components/CancelBookingDialog";
 
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+
 //--------------- API Calls----------------
 const fetchUserBookings = async (userEmail) => {
   const response = await fetch(
-    `http://localhost:5000/bookings?email=${encodeURIComponent(userEmail)}`
+    `${API_BASE_URL}/bookings?email=${encodeURIComponent(userEmail)}`
   );
   if (!response.ok) throw new Error("Failed to fetch reservations");
   return response.json();
 };
 
 const cancelReservationApi = async (bookingId) => {
-  const response = await fetch(`http://localhost:5000/bookings/${bookingId}`, {
+  const response = await fetch(`${API_BASE_URL}/bookings/${bookingId}`, {
     method: "DELETE",
   });
   if (!response.ok) throw new Error("Failed to cancel reservation");
@@ -138,7 +141,7 @@ export default function MyBookingsPage() {
 
       {/*----------------- Loading & Error -----------------*/}
       {isLoading && (
-        <Box display="flex" justifyContent="center" py={8}>
+        <Box display="flex" justifycontent="center" py={8}>
           <CircularProgress sx={{ color: "#e5a93c" }} />
         </Box>
       )}

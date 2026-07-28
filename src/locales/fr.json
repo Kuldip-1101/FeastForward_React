@@ -35,6 +35,14 @@
     "cartProceed": "Passer à la Réservation",
     "cartClear": "Vider la Précommande",
     "addToPreOrder": "Ajouter à la Précommande",
+    "admin": {
+      "portalTitle": "Portail Admin",
+      "defaultAdminUser": "Utilisateur Admin",
+      "dashboard": "Tableau de bord",
+      "reservations": "Réservations",
+      "menuManagement": "Gestion du Menu",
+      "analytics": "Statistiques"
+    },
     "reservation": {
       "title": "Réserver une Table",
       "subtitle": "Réservez votre table et personnalisez votre expérience culinaire.",

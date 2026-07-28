@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Navbar from './Navbar';
-import AuthModal from './AuthModal';
+import Navbar from '../components/Navbar';
+import AuthModal from '../components/AuthModal';
 
 function Layout() {
 
@@ -15,11 +15,13 @@ function Layout() {
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/*---------- Fixed Navbar on top ----------*/}
-      <Navbar onOpenAuth={handleOpenAuth} />
+      {/*----------- Customer Navbar ------------*/}
+     <Navbar onOpenAuth={handleOpenAuth} />
       
       {/*---------- Main Content Area ----------*/}
-      <Outlet context={{ user, isAuthenticated, onOpenAuthModal: handleOpenAuth }} />
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <Outlet context={{ user, isAuthenticated, onOpenAuthModal: handleOpenAuth }} />
+      </Box>
 
       {/*-------- Global Auth Modal mounted at top level ------------*/}
       <AuthModal open={authOpen} handleClose={handleCloseAuth} />

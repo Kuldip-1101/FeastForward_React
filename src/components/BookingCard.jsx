@@ -123,7 +123,7 @@ export default function BookingCard({
             flexDirection: "row",
             alignItems: "center",
             flexWrap: "wrap",
-            gap: { xs: 3, sm: 6 },
+            gap: { xs: 3, sm: 6, md: 15 },
             mb: 3,
           }}
         >

@@ -35,6 +35,14 @@
     "cartProceed": "Proceder a la Reserva",
     "cartClear": "Vaciar Prepedido",
     "addToPreOrder": "Añadir al Prepedido",
+    "admin": {
+      "portalTitle": "Portal de Admin",
+      "defaultAdminUser": "Usuario Admin",
+      "dashboard": "Panel de Control",
+      "reservations": "Reservas",
+      "menuManagement": "Gestión de Menú",
+      "analytics": "Estadísticas"
+    },
     "reservation": {
       "title": "Reservar una Mesa",
       "subtitle": "Reserve su mesa y personalice su experiencia gastronómica.",

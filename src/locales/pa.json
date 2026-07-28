@@ -35,6 +35,14 @@
     "cartProceed": "ਬੁਕਿੰਗ ਲਈ ਅੱਗੇ ਵਧੋ",
     "cartClear": "ਪ੍ਰੀ-ਆਰਡਰ ਖਾਲੀ ਕਰੋ",
     "addToPreOrder": "ਪ੍ਰੀ-ਆਰਡਰ ਵਿੱਚ ਜੋੜੋ",
+    "admin": {
+      "portalTitle": "ਐਡਮਿਨ ਪੋਰਟਲ",
+      "defaultAdminUser": "ਐਡਮਿਨ ਵਰਤੋਂਕਾਰ",
+      "dashboard": "ਡੈਸ਼ਬੋਰਡ",
+      "reservations": "ਬੁਕਿੰਗਾਂ",
+      "menuManagement": "ਮੇਨੂ ਪ੍ਰਬੰਧਨ",
+      "analytics": "ਐਨਾਲਿਟਿਕਸ"
+    },
     "reservation": {
       "title": "ਟੇਬਲ ਬੁੱਕ ਕਰੋ",
       "subtitle": "ਆਪਣੀ ਟੇਬਲ ਬੁੱਕ ਕਰੋ ਅਤੇ ਆਪਣੇ ਡਾਇਨਿੰਗ ਅਨੁਭਵ ਨੂੰ ਅਨੁਕੂਲਿਤ ਕਰੋ।",

@@ -35,6 +35,14 @@
     "cartProceed": "બુકિંગ તરફ આગળ વધો",
     "cartClear": "પ્રી-ઓર્ડર ખાલી કરો",
     "addToPreOrder": "પ્રી-ઓર્ડરમાં ઉમેરો",
+    "admin": {
+      "portalTitle": "એડમિન પોર્ટલ",
+      "defaultAdminUser": "એડમિન વપરાશકર્તા",
+      "dashboard": "ડૅશબોર્ડ",
+      "reservations": "બુકિંગ્સ",
+      "menuManagement": "મેનૂ સંચાલન",
+      "analytics": "એનાલિટિક્સ"
+    },
     "reservation": {
       "title": "ટેબલ બુક કરો",
       "subtitle": "તમારું ટેબલ બુક કરો અને તમારો અનુભવ કસ્ટમાઇઝ કરો.",

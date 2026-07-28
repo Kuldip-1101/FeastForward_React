@@ -81,12 +81,13 @@ export function ReservationPage() {
   const selectedDate = watch("date");
   const selectedTimeSlot = watch("timeSlot");
   const selectedGuestCount = Number(watch("guestCount") || 2);
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
   //---------------Fetch All Tables from db.json-------------
   const { data: allTables = [], isLoading: isLoadingTables } = useQuery({
     queryKey: ["tables"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/tables");
+      const res = await fetch(`${API_BASE_URL}/tables`);
       if (!res.ok) throw new Error("Failed to fetch tables list");
       return res.json();
     },
@@ -99,7 +100,7 @@ export function ReservationPage() {
       queryFn: async () => {
         if (!selectedDate) return [];
         const res = await fetch(
-          `http://localhost:5000/bookings?date=${selectedDate}`,
+          `${API_BASE_URL}/bookings?date=${selectedDate}`,
         );
         if (!res.ok) throw new Error("Failed to fetch bookings");
         return res.json();
@@ -135,7 +136,7 @@ export function ReservationPage() {
   const createBookingMutation = useMutation({
     mutationFn: async (newBooking) => {
 
-      const response = await fetch("http://localhost:5000/bookings", {
+      const response = await fetch(`${API_BASE_URL}/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newBooking),

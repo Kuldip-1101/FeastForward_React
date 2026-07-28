@@ -14,51 +14,59 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom"; // 1. Added Router Hook
 import { loginSuccess } from "../store/authSlice";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 function AuthModal({ open, handleClose }) {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // 2. Initialize Navigation
   const [errorMessage, setErrorMessage] = useState("");
 
-  //------------- Initialize the React Hook Form core elements -----------------
+  //------------- Initialize React Hook Form -----------------
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({
-    mode: "onTouched", // Validates fields live as soon as the user finishes typing and clicks away
+    mode: "onTouched",
   });
 
   //-------------- TanStack Query Mutation Logic -----------------
   const loginMutation = useMutation({
     mutationFn: async ({ email, password }) => {
       const response = await fetch(
-        `http://localhost:5000/users?email=${email}`,
+        `${API_BASE_URL}/users?email=${encodeURIComponent(email)}`
       );
       if (!response.ok) throw new Error("Server error");
       const users = await response.json();
 
-      //--------------  verification of text password -----------
+      //-------------- Verification of credentials -----------
       if (users.length === 0 || users[0].password !== password) {
         throw new Error("invalidCredentials");
       }
-      return users[0]; //---- Return user object matches
+      return users[0]; // Return user object matches
     },
     onSuccess: (userData) => {
-      dispatch(loginSuccess(userData)); //---- Save profile details inside Redux store
+      dispatch(loginSuccess(userData)); // Save profile details inside Redux store
       setErrorMessage("");
       reset();
       handleClose();
+
+      // 3. Conditional Redirect based on role
+      if (userData.role === "admin") {
+        navigate("/admin/dashboard", { replace: true });
+      }
     },
     onError: (error) => {
-      //---- Show error messages in popup alert box ----
       setErrorMessage(
         error.message === "invalidCredentials"
           ? t("invalidCredentials")
-          : "Connection error",
+          : "Connection error"
       );
     },
   });
@@ -83,7 +91,7 @@ function AuthModal({ open, handleClose }) {
         sx: { borderRadius: 3, p: 2, bgcolor: "background.paper" },
       }}
     >
-      {/*----------- Dynamic Centered Icon Header ---------------*/}
+      {/*----------- Header Icon ---------------*/}
       <Stack sx={{ mt: 2 }}>
         <AccountCircleIcon
           sx={{
@@ -100,13 +108,13 @@ function AuthModal({ open, handleClose }) {
         </DialogTitle>
       </Stack>
 
-      {/*-------------- Form Context wrapper using standard submission mechanics -----------------*/}
+      {/*-------------- Form Context Wrapper -----------------*/}
       <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
         <DialogContent sx={{ pb: 1 }}>
           <Stack spacing={3}>
             {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
 
-            {/*--------- Email Field with validation--------- */}
+            {/*--------- Email Field --------- */}
             <TextField
               label={t("emailLabel")}
               fullWidth
@@ -122,7 +130,7 @@ function AuthModal({ open, handleClose }) {
               })}
             />
 
-            {/*------------- Password input with validation ------------*/}
+            {/*------------- Password Field ------------*/}
             <TextField
               label={t("passwordLabel")}
               type="password"
@@ -141,7 +149,7 @@ function AuthModal({ open, handleClose }) {
           </Stack>
         </DialogContent>
 
-        {/*-------- Modal Interactivity Button Blocks ------------*/}
+        {/*-------- Actions ------------*/}
         <DialogActions sx={{ px: 3, pb: 2, mt: 1 }}>
           <Button
             onClick={handleModalClose}
@@ -153,7 +161,7 @@ function AuthModal({ open, handleClose }) {
           <Button
             type="submit"
             variant="contained"
-            disabled={loginMutation.isPending} // Disables button while network request flies
+            disabled={loginMutation.isPending}
             sx={{
               fontWeight: "bold",
               color: "#ffffff",

@@ -35,6 +35,14 @@
     "cartProceed": "बुकिंग के लिए आगे बढ़ें",
     "cartClear": "प्री-ऑर्डर साफ़ करें",
     "addToPreOrder": "प्री-ऑर्डर में जोड़ें",
+    "admin": {
+      "portalTitle": "एडमिन पोर्टल",
+      "defaultAdminUser": "एडमिन उपयोगकर्ता",
+      "dashboard": "डैशबोर्ड",
+      "reservations": "बुकिंग",
+      "menuManagement": "मेन्यू प्रबंधन",
+      "analytics": "विश्लेषण"
+    },
     "reservation": {
       "title": "टेबल बुक करें",
       "subtitle": "अपनी टेबल आरक्षित करें और अपने डाइनिंग अनुभव को कस्टमाइज़ करें।",

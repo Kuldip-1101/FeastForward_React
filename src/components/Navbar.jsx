@@ -4,8 +4,6 @@ import {
   Toolbar,
   Typography,
   Box,
-  Select,
-  MenuItem,
   IconButton,
   Stack,
   Button,
@@ -17,20 +15,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 
-import { toggleTheme } from "../store/themeSlice";
-import { setLanguage } from "../store/localeSlice";
 import { logout } from "../store/authSlice";
-import i18n from "../config/i18n";
-import AuthModal from "./AuthModal";
 import CartDrawer from "./CartDrawer";
 import MobileDrawer from "./MobileDrawer";
+import HeaderUtilities from "./HeaderUtilities"; // Integrated extracted component
 import { useCurrentCart } from "../hooks/useCurrentCart";
 import { NAV_LINKS } from "../config/navigation"; 
 
 //-------------MUI Premium Icon imports---------
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import LanguageIcon from "@mui/icons-material/Language";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
@@ -42,11 +34,7 @@ function Navbar({ onOpenAuth }) {
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down(1100));
-
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-  const currentLang = useSelector((state) => state.locale.currentLang);
   const { user, isAuthenticated } = useSelector((state) => state.auth);
-
   const { totalCartCount } = useCurrentCart();
 
   const [cartOpen, setCartOpen] = useState(false);
@@ -57,12 +45,6 @@ function Navbar({ onOpenAuth }) {
       setMobileMenuOpen(false);
     }
   }, [isMobile, mobileMenuOpen]);
-
-  const handleLanguageChange = (event) => {
-    const selectedLang = event.target.value;
-    dispatch(setLanguage(selectedLang));
-    i18n.changeLanguage(selectedLang);
-  };
 
   return (
     <>
@@ -129,26 +111,8 @@ function Navbar({ onOpenAuth }) {
             </Stack>
           )}
 
-          {/*----------------- Actions------------------ */}
-          <Stack direction="row" spacing={{ xs: 1, sm: 2 }} alignitems="center">
-            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-              <LanguageIcon color="action" fontSize="small" />
-              <Select
-                value={currentLang}
-                onChange={handleLanguageChange}
-                variant="standard"
-                disableUnderline
-                sx={{ fontWeight: 500, fontSize: "0.85rem", color: "text.primary" }}
-              >
-                <MenuItem value="en">EN</MenuItem>
-                <MenuItem value="gu">GU</MenuItem>
-                <MenuItem value="hi">HI</MenuItem>
-                <MenuItem value="pa">PA</MenuItem>
-                <MenuItem value="fr">FR</MenuItem>
-                <MenuItem value="es">ES</MenuItem>
-              </Select>
-            </Box>
-
+          {/*----------------- Actions ------------------ */}
+          <Stack direction="row" spacing={{ xs: 1, sm: 2 }} alignItems="center">
             <IconButton color="inherit" onClick={() => setCartOpen(true)} size="small">
               <Badge badgeContent={totalCartCount} color="primary">
                 <ShoppingBagIcon fontSize="small" />
@@ -159,7 +123,7 @@ function Navbar({ onOpenAuth }) {
               isAuthenticated ? (
                 <Stack direction="row" spacing={1.5} sx={{ alignItems: "center" }}>
                   <Typography variant="body2" sx={{ fontWeight: "600" }}>
-                    {t("welcomeUser", { name: user.name })}
+                    {t("welcomeUser", { name: user?.name })}
                   </Typography>
                   <Button
                     variant="outlined"
@@ -191,13 +155,8 @@ function Navbar({ onOpenAuth }) {
               </IconButton>
             )}
 
-            <IconButton onClick={() => dispatch(toggleTheme())} color="inherit" size="small">
-              {isDarkMode ? (
-                <LightModeIcon sx={{ color: "primary.main" }} fontSize="small" />
-              ) : (
-                <DarkModeIcon fontSize="small" />
-              )}
-            </IconButton>
+            {/*---------------- Reusable Header Utilities ------------------*/}
+            <HeaderUtilities />
           </Stack>
         </Toolbar>
       </AppBar>

@@ -24,7 +24,7 @@ export const NAV_LINKS = [
   },
   {
     path: "/my-bookings",
-    translationKey: "myBookings.title", // translation key or fallback label
+    translationKey: "myBookings.title", 
     fallbackLabel: "My Bookings",
     icon: BookmarkBorderIcon,
   },
