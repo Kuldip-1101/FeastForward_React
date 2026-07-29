@@ -41,7 +41,49 @@
       "dashboard": "Dashboard",
       "reservations": "Reservations",
       "menuManagement": "Menu Management",
-      "analytics": "Analytics"
+      "analytics": "Analytics",
+      "dashboardTab": {
+        "overview": {
+          "title": "Dashboard Overview",
+          "subtitle": "Live daily operations and reservation highlights.",
+          "error": "Failed to load live dashboard data."
+        },
+        "stats": {
+          "totalBookings": "Total Bookings",
+          "todaysBookings": "Today's Bookings",
+          "todaysGuests": "Today's Guests",
+          "pendingActions": "Pending Actions"
+        },
+        "table": {
+          "title": "Reservation Management",
+          "subtitle": "Manage today's and upcoming table reservations.",
+          "colId": "ID",
+          "colCustomer": "Customer",
+          "colDateTime": "Date / Time",
+          "colTable": "Table Details",
+          "colGuests": "Guests",
+          "colPreOrders": "Pre-Orders",
+          "colStatus": "Status",
+          "colAction": "Action",
+          "empty": "No reservations found.",
+          "itemsCount": "{{count}} Item",
+          "itemsCount_other": "{{count}} Items",
+          "noPreOrders": "None",
+          "notAvailable": "N/A"
+        },
+        "status": {
+          "completed": "Completed",
+          "preparing": "Preparing",
+          "confirmed": "Confirmed",
+          "cancelled": "Cancelled",
+          "pending": "Pending"
+        },
+        "actions": {
+          "markPreparing": "Mark as Preparing / Seated",
+          "markCompleted": "Mark as Completed",
+          "cancelReservation": "Cancel Reservation"
+        }
+      }
     },
     "reservation": {
       "title": "Book a Table",

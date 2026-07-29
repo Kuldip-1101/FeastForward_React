@@ -41,7 +41,49 @@
       "dashboard": "Tableau de bord",
       "reservations": "Réservations",
       "menuManagement": "Gestion du Menu",
-      "analytics": "Statistiques"
+      "analytics": "Statistiques",
+      "dashboardTab": {
+        "overview": {
+          "title": "Aperçu du Tableau de Bord",
+          "subtitle": "Opérations quotidiennes en direct et faits saillants des réservations.",
+          "error": "Échec du chargement des données en direct du tableau de bord."
+        },
+        "stats": {
+          "totalBookings": "Réservations Totales",
+          "todaysBookings": "Réservations du Jour",
+          "todaysGuests": "Couverts du Jour",
+          "pendingActions": "Actions en Attente"
+        },
+        "table": {
+          "title": "Gestion des Réservations",
+          "subtitle": "Gérez les réservations de tables d'aujourd'hui et à venir.",
+          "colId": "ID",
+          "colCustomer": "Client",
+          "colDateTime": "Date / Heure",
+          "colTable": "Détails de la Table",
+          "colGuests": "Invités",
+          "colPreOrders": "Précommandes",
+          "colStatus": "Statut",
+          "colAction": "Action",
+          "empty": "Aucune réservation trouvée.",
+          "itemsCount": "{{count}} article",
+          "itemsCount_other": "{{count}} articles",
+          "noPreOrders": "Aucun",
+          "notAvailable": "N/D"
+        },
+        "status": {
+          "completed": "Terminée",
+          "preparing": "En préparation",
+          "confirmed": "Confirmée",
+          "cancelled": "Annulée",
+          "pending": "En attente"
+        },
+        "actions": {
+          "markPreparing": "Marquer comme En préparation / Installé",
+          "markCompleted": "Marquer comme Terminée",
+          "cancelReservation": "Annuler la réservation"
+        }
+      }
     },
     "reservation": {
       "title": "Réserver une Table",

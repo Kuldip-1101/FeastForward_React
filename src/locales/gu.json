@@ -41,7 +41,49 @@
       "dashboard": "ડૅશબોર્ડ",
       "reservations": "બુકિંગ્સ",
       "menuManagement": "મેનૂ સંચાલન",
-      "analytics": "એનાલિટિક્સ"
+      "analytics": "એનાલિટિક્સ",
+      "dashboardTab": {
+        "overview": {
+          "title": "ડેશબોર્ડ ઝાંખી",
+          "subtitle": "દૈનિક કામગીરી અને બુકિંગની મુખ્ય વિગતો.",
+          "error": "લાઇવ ડેશબોર્ડ ડેટા લોડ કરવામાં નિષ્ફળ."
+        },
+        "stats": {
+          "totalBookings": "કુલ બુકિંગ",
+          "todaysBookings": "આજની બુકિંગ",
+          "todaysGuests": "આજના મહેમાનો",
+          "pendingActions": "બાકી કામગીરી"
+        },
+        "table": {
+          "title": "બુકિંગ સંચાલન",
+          "subtitle": "આજની અને આગામી ટેબલ બુકિંગનું સંચાલન કરો.",
+          "colId": "આઈડી",
+          "colCustomer": "ગ્રાહક",
+          "colDateTime": "તારીખ / સમય",
+          "colTable": "ટેબલ વિગતો",
+          "colGuests": "મહેમાનો",
+          "colPreOrders": "પ્રી-ઓર્ડર",
+          "colStatus": "સ્થિતિ",
+          "colAction": "પ્રક્રિયા",
+          "empty": "કોઈ બુકિંગ મળ્યું નથી.",
+          "itemsCount": "{{count}} વસ્તુ",
+          "itemsCount_other": "{{count}} વસ્તુઓ",
+          "noPreOrders": "કાંઈ નહીં",
+          "notAvailable": "ઉપલબ્ધ નથી"
+        },
+        "status": {
+          "completed": "પૂર્ણ થયું",
+          "preparing": "તૈયારીમાં",
+          "confirmed": "કન્ફર્મ થયેલ",
+          "cancelled": "રદ થયેલ",
+          "pending": "બાકી"
+        },
+        "actions": {
+          "markPreparing": "તૈયારીમાં / બેસાડેલ તરીકે માર્ક કરો",
+          "markCompleted": "પૂર્ણ તરીકે માર્ક કરો",
+          "cancelReservation": "બુકિંગ રદ કરો"
+        }
+      }
     },
     "reservation": {
       "title": "ટેબલ બુક કરો",
@@ -77,7 +119,7 @@
       "successMessage": "રિઝર્વેશન સફળતાપૂર્વક કન્ફર્મ થયું!",
       "errorMessage": "રિઝર્વેશન સબમિટ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો."
     },
-  "myBookings": {
+    "myBookings": {
       "title": "મારા રિઝર્વેશન",
       "subtitle": "તમારા તમામ આગામી અને ભૂતકાળના બુકિંગને ટ્રેક અને રિવ્યૂ કરો.",
       "loginRequiredTitle": "લોગિન જરૂરી છે",

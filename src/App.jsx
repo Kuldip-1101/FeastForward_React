@@ -19,6 +19,7 @@ import Bookings from './pages/Bookings';
 import ReservationPage from './pages/ReservationPage';
 import MyBookingsPage from './pages/MyBookingsPage';
 import AdminDashboard from './pages/AdminDashboard';
+import NotFoundRedirect from './components/NotFoundRedirect';
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
         ],
       },
     ],
+  },
+
+  // ---------------- 404 CATCH-ALL ROUTE ----------------
+  {
+    path: '*',
+    element: <NotFoundRedirect />,
   },
 ]);
 

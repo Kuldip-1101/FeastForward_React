@@ -41,7 +41,49 @@
       "dashboard": "ਡੈਸ਼ਬੋਰਡ",
       "reservations": "ਬੁਕਿੰਗਾਂ",
       "menuManagement": "ਮੇਨੂ ਪ੍ਰਬੰਧਨ",
-      "analytics": "ਐਨਾਲਿਟਿਕਸ"
+      "analytics": "ਐਨਾਲਿਟਿਕਸ",
+      "dashboardTab": {
+        "overview": {
+          "title": "ਡੈਸ਼ਬੋਰਡ ਦਾ ਵੇਰਵਾ",
+          "subtitle": "ਰੋਜ਼ਾਨਾ ਦੇ ਕੰਮਕਾਜ ਅਤੇ ਬੁਕਿੰਗ ਦੀਆਂ ਮੁੱਖ ਗੱਲਾਂ।",
+          "error": "ਲਾਈਵ ਡੈਸ਼ਬੋਰਡ ਡਾਟਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ।"
+        },
+        "stats": {
+          "totalBookings": "ਕੁੱਲ ਬੁਕਿੰਗਾਂ",
+          "todaysBookings": "ਅੱਜ ਦੀਆਂ ਬੁਕਿੰਗਾਂ",
+          "todaysGuests": "ਅੱਜ ਦੇ ਮਹਿਮਾਨ",
+          "pendingActions": "ਬਾਕੀ ਕਾਰਵਾਈਆਂ"
+        },
+        "table": {
+          "title": "ਬੁਕਿੰਗ ਪ੍ਰਬੰਧਨ",
+          "subtitle": "ਅੱਜ ਦੀਆਂ ਅਤੇ ਆਉਣ ਵਾਲੀਆਂ ਟੇਬਲ ਬੁਕਿੰਗਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ।",
+          "colId": "ਆਈਡੀ",
+          "colCustomer": "ਗਾਹਕ",
+          "colDateTime": "ਮਿਤੀ / ਸਮਾਂ",
+          "colTable": "ਟੇਬਲ ਦਾ ਵੇਰਵਾ",
+          "colGuests": "ਮਹਿਮਾਨ",
+          "colPreOrders": "ਪ੍ਰੀ-ਆਰਡਰ",
+          "colStatus": "ਸਥਿਤੀ",
+          "colAction": "ਕਾਰਵਾਈ",
+          "empty": "ਕੋਈ ਬੁਕਿੰਗ ਨਹੀਂ ਮਿਲੀ।",
+          "itemsCount": "{{count}} ਆਈਟਮ",
+          "itemsCount_other": "{{count}} ਆਈਟਮਾਂ",
+          "noPreOrders": "ਕੋਈ ਨਹੀਂ",
+          "notAvailable": "ਉਪਲਬਧ ਨਹੀਂ"
+        },
+        "status": {
+          "completed": "ਪੂਰਾ ਹੋਇਆ",
+          "preparing": "ਤਿਆਰੀ ਵਿੱਚ",
+          "confirmed": "ਪੁਸ਼ਟੀ ਕੀਤੀ",
+          "cancelled": "ਰੱਦ ਕੀਤਾ",
+          "pending": "ਬਾਕੀ"
+        },
+        "actions": {
+          "markPreparing": "ਤਿਆਰੀ ਵਿੱਚ / ਬਿਠਾਇਆ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ",
+          "markCompleted": "ਪੂਰਾ ਹੋਇਆ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ",
+          "cancelReservation": "ਬੁਕਿੰਗ ਰੱਦ ਕਰੋ"
+        }
+      }
     },
     "reservation": {
       "title": "ਟੇਬਲ ਬੁੱਕ ਕਰੋ",
@@ -77,7 +119,7 @@
       "successMessage": "ਰਿਜ਼ਰਵੇਸ਼ਨ ਸਫਲਤਾਪੂਰਵਕ ਕਨਫਰਮ ਹੋ ਗਈ!",
       "errorMessage": "ਰਿਜ਼ਰਵੇਸ਼ਨ ਦਰਜ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
     },
-   "myBookings": {
+    "myBookings": {
       "title": "ਮੇਰੀਆਂ ਰਿਜ਼ਰਵੇਸ਼ਨਾਂ",
       "subtitle": "ਆਪਣੀਆਂ ਸਾਰੀਆਂ ਆਉਣ ਵਾਲੀਆਂ ਅਤੇ ਪੁਰਾਣੀਆਂ ਬੁਕਿੰਗਾਂ ਨੂੰ ਟ੍ਰੈਕ ਅਤੇ ਰਿਵਿਊ ਕਰੋ।",
       "loginRequiredTitle": "ਲੌਗਇਨ ਲਾਜ਼ਮੀ ਹੈ",

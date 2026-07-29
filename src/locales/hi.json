@@ -41,7 +41,49 @@
       "dashboard": "डैशबोर्ड",
       "reservations": "बुकिंग",
       "menuManagement": "मेन्यू प्रबंधन",
-      "analytics": "विश्लेषण"
+      "analytics": "विश्लेषण",
+      "dashboardTab": {
+        "overview": {
+          "title": "डैशबोर्ड अवलोकन",
+          "subtitle": "लाइव दैनिक संचालन और आरक्षण की मुख्य विशेषताएं।",
+          "error": "लाइव डैशबोर्ड डेटा लोड करने में विफल।"
+        },
+        "stats": {
+          "totalBookings": "कुल बुकिंग",
+          "todaysBookings": "आज की बुकिंग",
+          "todaysGuests": "आज के मेहमान",
+          "pendingActions": "लंबित कार्रवाई"
+        },
+        "table": {
+          "title": "आरक्षण प्रबंधन",
+          "subtitle": "आज की और आगामी टेबल बुकिंग का प्रबंधन करें।",
+          "colId": "आईडी",
+          "colCustomer": "ग्राहक",
+          "colDateTime": "दिनांक / समय",
+          "colTable": "टेबल विवरण",
+          "colGuests": "मेहमान",
+          "colPreOrders": "प्री-ऑर्डर",
+          "colStatus": "स्थिति",
+          "colAction": "कार्रवाई",
+          "empty": "कोई आरक्षण नहीं मिला।",
+          "itemsCount": "{{count}} आइटम",
+          "itemsCount_other": "{{count}} आइटम",
+          "noPreOrders": "कोई नहीं",
+          "notAvailable": "उपलब्ध नहीं"
+        },
+        "status": {
+          "completed": "पूरा हुआ",
+          "preparing": "तैयारी में",
+          "confirmed": "पुष्टि की गई",
+          "cancelled": "रद्द किया गया",
+          "pending": "लंबित"
+        },
+        "actions": {
+          "markPreparing": "तैयारी / आसीन के रूप में चिह्नित करें",
+          "markCompleted": "पूर्ण के रूप में चिह्नित करें",
+          "cancelReservation": "आरक्षण रद्द करें"
+        }
+      }
     },
     "reservation": {
       "title": "टेबल बुक करें",
@@ -103,7 +145,6 @@
       "cancellingBtn": "रद्द किया जा रहा है...",
       "cancelSuccess": "आरक्षण सफलतापूर्वक रद्द कर दिया गया।",
       "cancelError": "आरक्षण रद्द करने में विफल। कृपया पुनः प्रयास करें।"
-    
     }
   }
 }

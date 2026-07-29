@@ -408,7 +408,8 @@
         }
       ],
       "totalPreOrderAmount": 440,
-      "id": "1"
+      "id": "1",
+      "status": "Completed"
     },
     {
       "fullName": "Aarav Patel",
@@ -452,7 +453,8 @@
         }
       ],
       "totalPreOrderAmount": 470,
-      "id": "2"
+      "id": "2",
+      "status": "Completed"
     },
     {
       "fullName": "Aarav Patel",
@@ -469,7 +471,8 @@
       "createdAt": "2026-07-27T10:23:27.832Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "id": "qRrxtJgSaQc"
+      "id": "qRrxtJgSaQc",
+      "status": "Completed"
     },
     {
       "fullName": "Aarav Patel",
@@ -486,7 +489,44 @@
       "createdAt": "2026-07-28T04:30:10.484Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "id": "4kU_rQaqRlI"
+      "id": "4kU_rQaqRlI",
+      "status": "Confirmed"
+    },
+    {
+      "fullName": "Aarav Patel",
+      "email": "aarav@example.com",
+      "phone": "8522221211",
+      "date": "2026-07-29",
+      "timeSlot": "01:00 PM",
+      "tableId": "t7",
+      "guestCount": 2,
+      "specialRequests": "Make it good",
+      "bookingId": "RES-2339",
+      "userId": "u1",
+      "tableDetails": "Table 4 (Main Hall)",
+      "createdAt": "2026-07-29T10:25:12.339Z",
+      "preOrders": [],
+      "totalPreOrderAmount": 0,
+      "id": "VHajpu6M1CM",
+      "status": "Preparing"
+    },
+    {
+      "fullName": "Kuldip",
+      "email": "aarav@example.com",
+      "phone": "8522221211",
+      "date": "2026-07-29",
+      "timeSlot": "02:00 PM",
+      "tableId": "t8",
+      "guestCount": 2,
+      "specialRequests": "",
+      "bookingId": "RES-3771",
+      "userId": "guest",
+      "tableDetails": "Table 2 (Main Hall)",
+      "createdAt": "2026-07-29T10:25:53.771Z",
+      "preOrders": [],
+      "totalPreOrderAmount": 0,
+      "id": "WJlz9Wl62FY",
+      "status": "Preparing"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

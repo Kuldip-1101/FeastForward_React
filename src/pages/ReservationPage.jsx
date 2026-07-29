@@ -187,6 +187,7 @@ export function ReservationPage() {
         quantity: item.quantity,
       })),
       totalPreOrderAmount: totalCartAmount,
+      status: "Confirmed"
     };
 
     createBookingMutation.mutate(payload);

@@ -41,7 +41,49 @@
       "dashboard": "Panel de Control",
       "reservations": "Reservas",
       "menuManagement": "Gestión de Menú",
-      "analytics": "Estadísticas"
+      "analytics": "Estadísticas",
+      "dashboardTab": {
+        "overview": {
+          "title": "Resumen del Panel",
+          "subtitle": "Operaciones diarias en vivo y aspectos destacados de reservas.",
+          "error": "Error al cargar los datos del panel en vivo."
+        },
+        "stats": {
+          "totalBookings": "Total de Reservas",
+          "todaysBookings": "Reservas de Hoy",
+          "todaysGuests": "Comensales de Hoy",
+          "pendingActions": "Acciones Pendientes"
+        },
+        "table": {
+          "title": "Gestión de Reservas",
+          "subtitle": "Gestione las reservas de mesas para hoy y próximas fechas.",
+          "colId": "ID",
+          "colCustomer": "Cliente",
+          "colDateTime": "Fecha / Hora",
+          "colTable": "Detalles de Mesa",
+          "colGuests": "Comensales",
+          "colPreOrders": "Pedidos Previos",
+          "colStatus": "Estado",
+          "colAction": "Acción",
+          "empty": "No se encontraron reservas.",
+          "itemsCount": "{{count}} artículo",
+          "itemsCount_other": "{{count}} artículos",
+          "noPreOrders": "Ninguno",
+          "notAvailable": "N/D"
+        },
+        "status": {
+          "completed": "Completada",
+          "preparing": "En preparación",
+          "confirmed": "Confirmada",
+          "cancelled": "Cancelada",
+          "pending": "Pendiente"
+        },
+        "actions": {
+          "markPreparing": "Marcar como En preparación / Sentado",
+          "markCompleted": "Marcar como Completada",
+          "cancelReservation": "Cancelar Reserva"
+        }
+      }
     },
     "reservation": {
       "title": "Reservar una Mesa",
@@ -77,7 +119,7 @@
       "successMessage": "¡Reserva confirmada con éxito!",
       "errorMessage": "Error al enviar la reserva. Por favor intente de nuevo."
     },
-   "myBookings": {
+    "myBookings": {
       "title": "Mis Reservas",
       "subtitle": "Rastree y revise todas sus reservas futuras y pasadas.",
       "loginRequiredTitle": "Inicio de Sesión Requerido",
