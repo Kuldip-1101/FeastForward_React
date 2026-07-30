@@ -101,6 +101,7 @@
       "guestCountMax": "Le nombre maximum de personnes est 20",
       "dateLabel": "Date de réservation",
       "dateRequired": "La date est requise",
+      "loginRequired": "Veuillez vous connecter pour finaliser votre réservation de table.",
       "timeSlotLabel": "Créneau horaire",
       "timeSlotRequired": "Veuillez choisir un créneau horaire",
       "fullyBooked": "Complet",

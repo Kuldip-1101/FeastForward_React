@@ -101,6 +101,7 @@
       "guestCountMax": "El máximo de personas es 20",
       "dateLabel": "Fecha de reserva",
       "dateRequired": "La fecha es obligatoria",
+      "loginRequired": "Por favor, inicie sesión para completar su reserva de mesa.",
       "timeSlotLabel": "Horario",
       "timeSlotRequired": "Por favor seleccione un horario",
       "fullyBooked": "Completo",

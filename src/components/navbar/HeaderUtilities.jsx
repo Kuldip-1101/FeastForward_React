@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Select, MenuItem, IconButton, Stack } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme } from '../store/themeSlice';
-import { setLanguage } from '../store/localeSlice';
-import i18n from '../config/i18n';
+import { toggleTheme } from '../../store/themeSlice';
+import { setLanguage } from '../../store/localeSlice';
+import i18n from '../../config/i18n';
 
 //------------- MUI Premium Icons ----------
 import DarkModeIcon from '@mui/icons-material/DarkMode';

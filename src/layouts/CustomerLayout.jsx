@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Navbar from '../components/Navbar';
-import AuthModal from '../components/AuthModal';
+import Navbar from '../components/navbar/Navbar';
+import AuthModal from '../components/navbar/AuthModal';
 
 function Layout() {
 

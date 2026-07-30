@@ -15,12 +15,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 
-import { logout } from "../store/authSlice";
-import CartDrawer from "./CartDrawer";
-import MobileDrawer from "./MobileDrawer";
+import { logout } from "../../store/authSlice";
+import CartDrawer from "../CartDrawer";
+import MobileDrawer from "../navbar/MobileDrawer";
 import HeaderUtilities from "./HeaderUtilities"; // Integrated extracted component
-import { useCurrentCart } from "../hooks/useCurrentCart";
-import { NAV_LINKS } from "../constants/navigation"; 
+import { useCurrentCart } from "../../hooks/useCurrentCart";
+import { NAV_LINKS } from "../../constants/navigation"; 
 
 //-------------MUI Premium Icon imports---------
 import LoginIcon from "@mui/icons-material/Login";

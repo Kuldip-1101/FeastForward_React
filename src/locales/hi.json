@@ -101,6 +101,7 @@
       "guestCountMax": "अधिकतम अतिथि संख्या 20 है",
       "dateLabel": "आरक्षण तिथि",
       "dateRequired": "तिथि आवश्यक है",
+      "loginRequired": "अपनी टेबल बुकिंग पूरी करने के लिए कृपया लॉगिन करें।",
       "timeSlotLabel": "समय स्लॉट",
       "timeSlotRequired": "कृपया समय स्लॉट चुनें",
       "fullyBooked": "पूर्ण बुक किया गया",

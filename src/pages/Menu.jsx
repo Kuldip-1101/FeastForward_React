@@ -15,7 +15,7 @@ import {
 import { useSelector } from "react-redux";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCurrentCart } from "../hooks/useCurrentCart";
-import AuthModal from "../components/AuthModal";
+import AuthModal from "../components/navbar/AuthModal";
 import { formatLocalizedPrice } from "../utils/formatCurrency";
 
 function Menu() {

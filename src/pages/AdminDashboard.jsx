@@ -123,7 +123,7 @@ export default function AdminDashboard() {
 
   if (isLoading) {
     return (
-      <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
+      <Box display="flex" justifycontent="center" alignitems="center" minheight="60vh">
         <CircularProgress color="warning" />
       </Box>
     );

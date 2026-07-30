@@ -508,7 +508,7 @@
       "preOrders": [],
       "totalPreOrderAmount": 0,
       "id": "VHajpu6M1CM",
-      "status": "Preparing"
+      "status": "Completed"
     },
     {
       "fullName": "Kuldip",
@@ -526,7 +526,7 @@
       "preOrders": [],
       "totalPreOrderAmount": 0,
       "id": "WJlz9Wl62FY",
-      "status": "Preparing"
+      "status": "Completed"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

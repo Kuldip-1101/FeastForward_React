@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom"; // 1. Added Router Hook
-import { loginSuccess } from "../store/authSlice";
+import { loginSuccess } from "../../store/authSlice";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";

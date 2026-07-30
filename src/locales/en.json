@@ -101,6 +101,7 @@
       "guestCountMax": "Maximum guest count is 20",
       "dateLabel": "Reservation Date",
       "dateRequired": "Date is required",
+      "loginRequired": "Please log in to complete your table reservation.",
       "timeSlotLabel": "Time Slot",
       "timeSlotRequired": "Please select a time slot",
       "fullyBooked": "Fully Booked",

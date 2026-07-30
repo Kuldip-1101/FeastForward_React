@@ -3,7 +3,7 @@ import { Box, AppBar, Toolbar, Typography, IconButton, useTheme, useMediaQuery }
 import { Outlet } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdminSidebar, { DRAWER_WIDTH } from '../components/AdminSidebar';
-import HeaderUtilities from '../components/HeaderUtilities';
+import HeaderUtilities from '../components/navbar/HeaderUtilities';
 
 function AdminLayout() {
   const [mobileOpen, setMobileOpen] = useState(false);

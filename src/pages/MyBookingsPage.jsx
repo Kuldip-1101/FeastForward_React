@@ -18,16 +18,16 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 
 //----------- Separate imported components---------
 import UnauthenticatedView from "../components/UnauthenticatedView";
-import BookingCard from "../components/BookingCard";
-import CancelBookingDialog from "../components/CancelBookingDialog";
+import BookingCard from "../components/bookings/BookingCard";
+import CancelBookingDialog from "../components/bookings/CancelBookingDialog";
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 //--------------- API Calls----------------
-const fetchUserBookings = async (userEmail) => {
+const fetchUserBookings = async (id) => {
   const response = await fetch(
-    `${API_BASE_URL}/bookings?email=${encodeURIComponent(userEmail)}`
+    `${API_BASE_URL}/bookings?userId=${encodeURIComponent(id)}`
   );
   if (!response.ok) throw new Error("Failed to fetch reservations");
   return response.json();
@@ -67,9 +67,9 @@ export default function MyBookingsPage() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["userBookings", user?.email],
-    queryFn: () => fetchUserBookings(user.email),
-    enabled: !!user?.email,
+    queryKey: ["userBookings", user?.id],
+    queryFn: () => fetchUserBookings(user.id),
+    enabled: !!user?.id,
   });
 
   //--------------- Cancel Booking Mutation ----------------

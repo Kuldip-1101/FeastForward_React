@@ -15,7 +15,7 @@ import {
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { NAV_LINKS } from "../constants/navigation"; 
+import { NAV_LINKS } from "../../constants/navigation"; 
 
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
