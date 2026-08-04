@@ -18,6 +18,7 @@ import {
   ListItemIcon,
   ListItemText,
   Divider,
+  TablePagination,
 } from '@mui/material';
 
 import SummaryCard from '../components/admindashboard/SummaryCard';
@@ -52,6 +53,9 @@ export default function AdminDashboard() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedBooking, setSelectedBooking] = useState(null);
 
+  //-----------------Pagination States ----------------
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
 
   //--------------------Tan Stack query to handle the data-----------
   const { data: rawBookings = [], isLoading, isError } = useQuery({
@@ -81,7 +85,9 @@ export default function AdminDashboard() {
       return { ...booking, computedStatus };
     });
 
+    //---------------- Exclude 'Completed' from Total Bookings------------
     const totalBookings = processed.length;
+    
     const todaysBookings = processed.filter((b) => b.date === todayStr).length;
     const todaysGuests = processed
       .filter((b) => b.date === todayStr)
@@ -94,15 +100,39 @@ export default function AdminDashboard() {
         (b.computedStatus === 'Preparing' || (b.specialRequests && b.specialRequests.trim() !== ''))
     ).length;
 
-    const sorted = [...processed].sort(
-      (a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date)
-    );
+    // ----------------Sort strictly by Date (Newest dates first)--------------
+    const sorted = [...processed].sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+
+      if (dateB !== dateA) return dateB - dateA; // Descending Date
+      
+      // Fallback: If dates are identical, sort by creation time
+      return new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime();
+    });
 
     return {
       bookings: sorted,
       stats: { totalBookings, todaysBookings, todaysGuests, pendingActionCount },
     };
   }, [rawBookings]);
+
+  //----------------- Pagination Handlers --------------
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0); //---- Reset to first page whenever rows per page changes
+  };
+
+  //------------Slice bookings array to only show the current page's records----------
+  const paginatedBookings = useMemo(() => {
+    const startIndex = page * rowsPerPage;
+    return bookings.slice(startIndex, startIndex + rowsPerPage);
+  }, [bookings, page, rowsPerPage]);
+
 
   //----------------- Open the anchor menu --------------
   const handleOpenMenu = (event, booking) => {
@@ -123,7 +153,7 @@ export default function AdminDashboard() {
 
   if (isLoading) {
     return (
-      <Box display="flex" justifycontent="center" alignitems="center" minheight="60vh">
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
         <CircularProgress color="warning" />
       </Box>
     );
@@ -131,7 +161,7 @@ export default function AdminDashboard() {
 
   if (isError) {
     return (
-      <Box p={4}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
         <Typography color="error">{t('admin.dashboardTab.overview.error')}</Typography>
       </Box>
     );
@@ -140,8 +170,8 @@ export default function AdminDashboard() {
   return (
     <Box p={{ xs: 2.5, md: 4 }} sx={{ width: '100%' }}>
       {/*--------------------- Header --------------------*/}
-      <Box sx={{mb:3}}>
-        <Typography variant="h3" sx={{fontWeight: 600}} gutterBottom>
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h3" sx={{ fontWeight: 600 }} gutterBottom>
           {t('admin.dashboardTab.overview.title')}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -164,7 +194,7 @@ export default function AdminDashboard() {
 
       {/*----------------------- Reservation Table --------------------*/}
       <Paper variant="outlined" sx={{ borderRadius: 3, overflow: 'hidden', mt: 4, p: 3 }}>
-        <Box sx={{mb:2}}>
+        <Box sx={{ mb: 2 }}>
           <Typography variant="h6" fontWeight="bold">
             {t('admin.dashboardTab.table.title')}
           </Typography>
@@ -190,7 +220,7 @@ export default function AdminDashboard() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {bookings.length === 0 ? (
+              {paginatedBookings.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={8} align="center" sx={{ py: 4 }}>
                     <Typography variant="body2" color="text.secondary">
@@ -199,7 +229,8 @@ export default function AdminDashboard() {
                   </TableCell>
                 </TableRow>
               ) : (
-                bookings.map((booking) => (
+                //-----------Render paginatedBookings instead of full bookings array--------
+                paginatedBookings.map((booking) => (
                   <BookingTableRow
                     key={booking.id}
                     booking={booking}
@@ -210,6 +241,17 @@ export default function AdminDashboard() {
             </TableBody>
           </Table>
         </TableContainer>
+
+        {/*------------------------ Pagination Component ---------------------*/}
+        <TablePagination
+          component="div"
+          count={bookings.length} //---------- Total rows in the database
+          page={page}
+          onPageChange={handleChangePage}
+          rowsPerPage={rowsPerPage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          rowsPerPageOptions={[5, 10, 15]} //-------- Dropdown options for rows per page
+        />
 
         {/*------------------------ Menu ---------------------*/}
         <Menu

@@ -83,6 +83,88 @@
           "markCompleted": "पूर्ण के रूप में चिह्नित करें",
           "cancelReservation": "आरक्षण रद्द करें"
         }
+      },
+      "reservationsTab": {
+        "title": "आरक्षण संचालन",
+        "subtitle": "लाइव सेवा प्रवाह, टेबल आवंटन और ऑक्यूपेंसी प्रबंधित करें।",
+        "manualReservationBtn": "मैनुअल बुकिंग",
+        "stats": {
+          "seatedVsExpected": "बैठे हुए बनाम अपेक्षित",
+          "tableOccupancy": "टेबल ऑक्यूपेंसी",
+          "next2HoursRush": "अगले 2 घंटे की भीड़",
+          "specialNotesPreOrders": "विशेष नोट और प्री-ऑर्डर",
+          "parties": "{{count}} पार्टियां",
+          "notes": "{{count}} नोट्स"
+        },
+        "filters": {
+          "searchPlaceholder": "अतिथि का नाम, फोन या ID खोजें...",
+          "dateLabel": "तिथि",
+          "statusLabel": "स्थिति",
+          "shiftLabel": "शिफ्ट",
+          "allStatuses": "सभी स्थितियां",
+          "statusConfirmed": "पुष्टि की गई",
+          "statusSeated": "बैठे हुए / जारी",
+          "statusCompleted": "पूरा हुआ",
+          "statusCancelled": "रद्द किया गया",
+          "allService": "सभी सेवाएं",
+          "lunchShift": "दोपहर की शिफ्ट",
+          "dinnerShift": "रात की शिफ्ट"
+        },
+        "table": {
+          "idTime": "ID और समय",
+          "customer": "ग्राहक",
+          "tableZone": "टेबल और जोन",
+          "guests": "मेहमान",
+          "notesPreOrders": "नोट्स / प्री-ऑर्डर",
+          "status": "स्थिति",
+          "action": "कार्रवाई",
+          "noMatch": "आपके फ़िल्टर के अनुसार कोई बुकिंग नहीं मिली।",
+          "guest": "अतिथि",
+          "unassigned": "अनिर्धारित",
+          "none": "कोई नहीं",
+          "preOrderedItems": "{{count}} प्री-ऑर्डर आइटम",
+          "statusActive": "बैठे हुए / सक्रिय"
+        },
+        "actions": {
+          "markSeated": "बैठे हुए के रूप में चिह्नित करें",
+          "markCompleted": "पूरा के रूप में चिह्नित करें",
+          "cancelBooking": "बुकिंग रद्द करें"
+        },
+        "dialog": {
+          "title": "मैनुअल / वॉक-इन बुकिंग जोड़ें",
+          "fullName": "पूरा नाम",
+          "fullNameReq": "पूरा नाम आवश्यक है",
+          "email": "ईमेल पता",
+          "emailInvalid": "अमान्य ईमेल पता",
+          "phone": "फोन नंबर",
+          "phoneReq": "फोन नंबर आवश्यक है",
+          "phoneInvalid": "मान्य 10-अंकीय फोन नंबर दर्ज करें",
+          "guestCount": "मेहमानों की संख्या",
+          "guestReq": "मेहमानों की संख्या आवश्यक है",
+          "guestMin": "कम से कम 1 अतिथि आवश्यक है",
+          "guestMax": "अधिकतम क्षमता पार हो गई है",
+          "resDate": "बुकिंग तिथि",
+          "dateReq": "तिथि आवश्यक है",
+          "timeSlot": "समय स्लॉट",
+          "timeSlotReq": "समय स्लॉट आवश्यक है",
+          "fullyBooked": "(पूरी तरह से बुक)",
+          "selectTable": "टेबल चुनें",
+          "tableReq": "टेबल का चयन आवश्यक है",
+          "pickTimeFirst": "पहले समय स्लॉट चुनें",
+          "seats": "सीटें",
+          "reserved": "[आरक्षित]",
+          "notes": "विशेष अनुरोध / नोट्स",
+          "notesPlaceholder": "जैसे जन्मदिन, स्पेशल सीट, बच्चों की कुर्सी",
+          "cancel": "रद्द करें",
+          "confirm": "बुकिंग की पुष्टि करें"
+        },
+        "notifications": {
+          "createSuccess": "मैनुअल बुकिंग सफलतापूर्वक बनाई गई!",
+          "createError": "बुकिंग बनाने में विफल",
+          "fetchError": "आरक्षण डेटा लोड करने में त्रुटि।",
+          "updateSuccess": "आरक्षण की स्थिति अपडेट हो गई!",
+          "updateFailed": "स्थिति अपडेट करने में विफल"
+        }
       }
     },
     "reservation": {

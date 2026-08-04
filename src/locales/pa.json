@@ -83,6 +83,88 @@
           "markCompleted": "ਪੂਰਾ ਹੋਇਆ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ",
           "cancelReservation": "ਬੁਕਿੰਗ ਰੱਦ ਕਰੋ"
         }
+      },
+      "reservationsTab": {
+        "title": "ਬੁਕਿੰਗ ਸੰਚਾਲਨ",
+        "subtitle": "ਲਾਈਵ ਸੇਵਾ, ਟੇਬਲ ਬੈਠਕ ਅਤੇ ਆਕੂਪੈਂਸੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ।",
+        "manualReservationBtn": "ਮੈਨੂਅਲ ਬੁਕਿੰਗ",
+        "stats": {
+          "seatedVsExpected": "ਬੈਠੇ ਹੋਏ vs ਸੰਭਾਵਿਤ",
+          "tableOccupancy": "ਟੇਬਲ ਆਕੂਪੈਂਸੀ",
+          "next2HoursRush": "ਅਗਲੇ 2 ਘੰਟਿਆਂ ਦੀ ਭੀੜ",
+          "specialNotesPreOrders": "ਖਾਸ ਨੋਟਸ ਅਤੇ ਪ੍ਰੀ-ਆਰਡਰ",
+          "parties": "{{count}} ਪਾਰਟੀਆਂ",
+          "notes": "{{count}} ਨੋਟਸ"
+        },
+        "filters": {
+          "searchPlaceholder": "ਮਹਿਮਾਨ ਦਾ ਨਾਮ, ਫੋਨ ਜਾਂ ID ਖੋਜੋ...",
+          "dateLabel": "ਮਿਤੀ",
+          "statusLabel": "ਸਥਿਤੀ",
+          "shiftLabel": "ਸ਼ਿਫਟ",
+          "allStatuses": "ਸਾਰੀਆਂ ਸਥਿਤੀਆਂ",
+          "statusConfirmed": "ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ",
+          "statusSeated": "ਬੈਠੇ ਹੋਏ / ਚੱਲ ਰਿਹਾ",
+          "statusCompleted": "ਪੂਰਾ ਹੋਇਆ",
+          "statusCancelled": "ਰੱਦ ਕੀਤਾ ਗਿਆ",
+          "allService": "ਸਾਰੀਆਂ ਸੇਵਾਵਾਂ",
+          "lunchShift": "ਦੁਪਹਿਰ ਦੀ ਸ਼ਿਫਟ",
+          "dinnerShift": "ਰਾਤ ਦੀ ਸ਼ਿਫਟ"
+        },
+        "table": {
+          "idTime": "ID ਅਤੇ ਸਮਾਂ",
+          "customer": "ਗ੍ਰਾਹਕ",
+          "tableZone": "ਟੇਬਲ ਅਤੇ ਜ਼ੋਨ",
+          "guests": "ਮਹਿਮਾਨ",
+          "notesPreOrders": "ਨੋਟਸ / ਪ੍ਰੀ-ਆਰਡਰ",
+          "status": "ਸਥਿਤੀ",
+          "action": "ਕਾਰਵਾਈ",
+          "noMatch": "ਤੁਹਾਡੇ ਫਿਲਟਰ ਅਨੁਸਾਰ ਕੋਈ ਬੁਕਿੰਗ ਨਹੀਂ ਮਿਲੀ।",
+          "guest": "ਮਹਿਮਾਨ",
+          "unassigned": "ਅਣ-ਨਿਰਧਾਰਿਤ",
+          "none": "ਕੋਈ ਨਹੀਂ",
+          "preOrderedItems": "{{count}} ਪ੍ਰੀ-ਆਰਡਰ ਕੀਤੀਆਂ ਚੀਜ਼ਾਂ",
+          "statusActive": "ਬੈਠੇ ਹੋਏ / ਐਕਟਿਵ"
+        },
+        "actions": {
+          "markSeated": "ਬੈਠੇ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ",
+          "markCompleted": "ਪੂਰਾ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ",
+          "cancelBooking": "ਬੁਕਿੰਗ ਰੱਦ ਕਰੋ"
+        },
+        "dialog": {
+          "title": "ਮੈਨੂਅਲ / ਵਾਕ-ਇਨ ਬੁਕਿੰਗ ਜੋੜੋ",
+          "fullName": "ਪੂਰਾ ਨਾਮ",
+          "fullNameReq": "ਪੂਰਾ ਨਾਮ ਲਾਜ਼ਮੀ ਹੈ",
+          "email": "ਈਮੇਲ ਪਤਾ",
+          "emailInvalid": "ਗਲਤ ਈਮੇਲ ਪਤਾ",
+          "phone": "ਫੋਨ ਨੰਬਰ",
+          "phoneReq": "ਫੋਨ ਨੰਬਰ ਲਾਜ਼ਮੀ ਹੈ",
+          "phoneInvalid": "ਸਹੀ 10-ਅੰਕਾਂ ਦਾ ਫੋਨ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+          "guestCount": "ਮਹਿਮਾਨਾਂ ਦੀ ਗਿਣਤੀ",
+          "guestReq": "ਮਹਿਮਾਨਾਂ ਦੀ ਗਿਣਤੀ ਲਾਜ਼ਮੀ ਹੈ",
+          "guestMin": "ਘੱਟੋ-ਘੱਟ 1 ਮਹਿਮਾਨ ਲਾਜ਼ਮੀ ਹੈ",
+          "guestMax": "ਵੱਧ ਤੋਂ ਵੱਧ ਸਮਰੱਥਾ ਪਾਰ ਹੋ ਗਈ ਹੈ",
+          "resDate": "ਬੁਕਿੰਗ ਮਿਤੀ",
+          "dateReq": "ਮਿਤੀ ਲਾਜ਼ਮੀ ਹੈ",
+          "timeSlot": "ਸਮਾਂ ਸਲੌਟ",
+          "timeSlotReq": "ਸਮਾਂ ਸਲੌਟ ਲਾਜ਼ਮੀ ਹੈ",
+          "fullyBooked": "(ਪੂਰੀ ਤਰ੍ਹਾਂ ਬੁੱਕ)",
+          "selectTable": "ਟੇਬਲ ਚੁਣੋ",
+          "tableReq": "ਟੇਬਲ ਚੁਣਨਾ ਲਾਜ਼ਮੀ ਹੈ",
+          "pickTimeFirst": "ਪਹਿਲਾਂ ਸਮਾਂ ਸਲੌਟ ਚੁਣੋ",
+          "seats": "ਸੀਟਾਂ",
+          "reserved": "[ਬੁੱਕ ਕੀਤਾ]",
+          "notes": "ਖਾਸ ਬੇਨਤੀਆਂ / ਨੋਟਸ",
+          "notesPlaceholder": "ਜਿਵੇਂ ਜਨਮਦਿਨ, ਖਾਸ ਸੀਟ ਆਦਿ",
+          "cancel": "ਰੱਦ ਕਰੋ",
+          "confirm": "ਬੁਕਿੰਗ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"
+        },
+        "notifications": {
+          "createSuccess": "ਮੈਨੂਅਲ ਬੁਕਿੰਗ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਈ ਗਈ!",
+          "createError": "ਬੁਕਿੰਗ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ",
+          "fetchError": "ਬੁਕਿੰਗ ਡਾਟਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ।",
+          "updateSuccess": "ਰਿਜ਼ਰਵੇਸ਼ਨ ਦੀ ਸਥਿਤੀ ਅੱਪਡੇਟ ਹੋ ਗਈ!",
+        "updateFailed": "ਸਥਿਤੀ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+        }
       }
     },
     "reservation": {

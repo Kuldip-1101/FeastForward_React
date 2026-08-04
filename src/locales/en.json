@@ -83,6 +83,88 @@
           "markCompleted": "Mark as Completed",
           "cancelReservation": "Cancel Reservation"
         }
+      },
+      "reservationsTab": {
+        "title": "Reservation Operations",
+        "subtitle": "Manage live service flow, host seating, and table occupancy.",
+        "manualReservationBtn": "Manual Reservation",
+        "stats": {
+          "seatedVsExpected": "Seated vs Expected",
+          "tableOccupancy": "Table Occupancy",
+          "next2HoursRush": "Next 2 Hours Rush",
+          "specialNotesPreOrders": "Special Notes & Pre-Orders",
+          "parties": "{{count}} Parties",
+          "notes": "{{count}} Notes"
+        },
+        "filters": {
+          "searchPlaceholder": "Search Guest Name, Phone, or ID...",
+          "dateLabel": "Date",
+          "statusLabel": "Status",
+          "shiftLabel": "Shift",
+          "allStatuses": "All Statuses",
+          "statusConfirmed": "Confirmed",
+          "statusSeated": "Seated / In-Progress",
+          "statusCompleted": "Completed",
+          "statusCancelled": "Cancelled",
+          "allService": "All Service",
+          "lunchShift": "Lunch Shift",
+          "dinnerShift": "Dinner Shift"
+        },
+        "table": {
+          "idTime": "ID & Time",
+          "customer": "Customer",
+          "tableZone": "Table & Zone",
+          "guests": "Guests",
+          "notesPreOrders": "Notes / Pre-Orders",
+          "status": "Status",
+          "action": "Action",
+          "noMatch": "No reservations found matching your filter criteria.",
+          "guest": "Guest",
+          "unassigned": "Unassigned",
+          "none": "None",
+          "preOrderedItems": "{{count}} pre-ordered items",
+          "statusActive": "Seated / Active"
+        },
+        "actions": {
+          "markSeated": "Mark as Seated",
+          "markCompleted": "Mark as Completed",
+          "cancelBooking": "Cancel Booking"
+        },
+        "dialog": {
+          "title": "Add Manual / Walk-in Reservation",
+          "fullName": "Full Name",
+          "fullNameReq": "Full Name is required",
+          "email": "Email Address",
+          "emailInvalid": "Invalid email address",
+          "phone": "Phone Number",
+          "phoneReq": "Phone number is required",
+          "phoneInvalid": "Enter valid 10-digit phone number",
+          "guestCount": "Guest Count",
+          "guestReq": "Guest count is required",
+          "guestMin": "Minimum 1 guest required",
+          "guestMax": "Maximum capacity exceeded",
+          "resDate": "Reservation Date",
+          "dateReq": "Date is required",
+          "timeSlot": "Time Slot",
+          "timeSlotReq": "Time slot is required",
+          "fullyBooked": "(Fully Booked)",
+          "selectTable": "Select Table",
+          "tableReq": "Table selection is required",
+          "pickTimeFirst": "Select a time slot first",
+          "seats": "Seats",
+          "reserved": "[Reserved]",
+          "notes": "Special Requests / Notes",
+          "notesPlaceholder": "e.g. Birthday setup, booth seat, highchair",
+          "cancel": "Cancel",
+          "confirm": "Confirm Booking"
+        },
+        "notifications": {
+          "createSuccess": "Reservation created successfully!",
+          "createError": "Failed to create reservation",
+          "fetchError": "Error loading reservations data.",
+          "updateSuccess": "Reservation status updated!",
+          "updateFailed": "Failed to update status"
+        }
       }
     },
     "reservation": {
@@ -120,7 +202,7 @@
       "successMessage": "Reservation successfully confirmed!",
       "errorMessage": "Failed to submit reservation. Please try again."
     },
-   "myBookings": {
+    "myBookings": {
       "title": "My Reservations",
       "subtitle": "Track and review all your upcoming and past dining bookings.",
       "loginRequiredTitle": "Login Required",

@@ -83,6 +83,88 @@
           "markCompleted": "પૂર્ણ તરીકે માર્ક કરો",
           "cancelReservation": "બુકિંગ રદ કરો"
         }
+      },
+      "reservationsTab": {
+        "title": "રિઝર્વેશન કામગીરી",
+        "subtitle": "લાઇવ સર્વિસ, હોસ્ટ સીટીંગ અને ટેબલ ઓક્યુપન્સી સંચાલિત કરો.",
+        "manualReservationBtn": "મેન્યુઅલ બુકિંગ",
+        "stats": {
+          "seatedVsExpected": "બેઠેલા vs અપેક્ષિત",
+          "tableOccupancy": "ટેબલ ઓક્યુપન્સી",
+          "next2HoursRush": "આગામી 2 કલાકનો રશ",
+          "specialNotesPreOrders": "વિશેષ નોંધો અને પ્રી-ઓર્ડર",
+          "parties": "{{count}} પાર્ટીઓ",
+          "notes": "{{count}} નોંધો"
+        },
+        "filters": {
+          "searchPlaceholder": "ગ્રાહકનું નામ, ફોન અથવા ID શોધો...",
+          "dateLabel": "તારીખ",
+          "statusLabel": "સ્થિતિ",
+          "shiftLabel": "શિફ્ટ",
+          "allStatuses": "તમામ સ્થિતિ",
+          "statusConfirmed": "કન્ફર્મ થયેલ",
+          "statusSeated": "બેઠેલા / પ્રગતિમાં",
+          "statusCompleted": "પૂર્ણ થયેલ",
+          "statusCancelled": "રદ થયેલ",
+          "allService": "તમામ સર્વિસ",
+          "lunchShift": "બપોરની શિફ્ટ",
+          "dinnerShift": "રાત્રિની શિફ્ટ"
+        },
+        "table": {
+          "idTime": "ID અને સમય",
+          "customer": "ગ્રાહક",
+          "tableZone": "ટેબલ અને ઝોન",
+          "guests": "મહેમાનો",
+          "notesPreOrders": "નોંધો / પ્રી-ઓર્ડર",
+          "status": "સ્થિતિ",
+          "action": "ક્રિયા",
+          "noMatch": "તમારા ફિલ્ટર મુજબ કોઈ બુકિંગ મળ્યું નથી.",
+          "guest": "મહેમાન",
+          "unassigned": "અન-એસાંઇન",
+          "none": "કોઈ નહિ",
+          "preOrderedItems": "{{count}} ઓર્ડર કરેલ વાનગીઓ",
+          "statusActive": "બેઠેલા / સક્રિય"
+        },
+        "actions": {
+          "markSeated": "બેઠેલા તરીકે માર્ક કરો",
+          "markCompleted": "પૂર્ણ તરીકે માર્ક કરો",
+          "cancelBooking": "બુકિંગ રદ કરો"
+        },
+        "dialog": {
+          "title": "મેન્યુઅલ / વોક-ઈન રિઝર્વેશન ઉમેરો",
+          "fullName": "પૂરું નામ",
+          "fullNameReq": "પૂરું નામ જરૂરી છે",
+          "email": "ઈમેઈલ સરનામું",
+          "emailInvalid": "અમાન્ય ઈમેઈલ સરનામું",
+          "phone": "ફોન નંબર",
+          "phoneReq": "ફોન નંબર જરૂરી છે",
+          "phoneInvalid": "સાચો 10-અંકનો ફોન નંબર દાખલ કરો",
+          "guestCount": "મહેમાનોની સંખ્યા",
+          "guestReq": "મહેમાનોની સંખ્યા જરૂરી છે",
+          "guestMin": "ઓછામાં ઓછો 1 મહેમાન જરૂરી છે",
+          "guestMax": "મહત્તમ ક્ષમતા ઓળંગી ગઈ છે",
+          "resDate": "બુકિંગ તારીખ",
+          "dateReq": "તારીખ જરૂરી છે",
+          "timeSlot": "સમયનો સ્લોટ",
+          "timeSlotReq": "સમય સ્લોટ પસંદ કરવો જરૂરી છે",
+          "fullyBooked": "(સંપૂર્ણ બુક)",
+          "selectTable": "ટેબલ પસંદ કરો",
+          "tableReq": "ટેબલ પસંદ કરવું જરૂરી છે",
+          "pickTimeFirst": "પહેલા સમય સ્લોટ પસંદ કરો",
+          "seats": "સીટો",
+          "reserved": "[બુક થયેલ]",
+          "notes": "વિશેષ વિનંતીઓ / નોંધો",
+          "notesPlaceholder": "દા.ત. જન્મદિવસ, ખાસ સીટ, બાળકની ખુરશી",
+          "cancel": "રદ કરો",
+          "confirm": "બુકિંગ કન્ફર્મ કરો"
+        },
+        "notifications": {
+          "createSuccess": "મેન્યુઅલ બુકિંગ સફળતાપૂર્વક ઉમેરાયું!",
+          "createError": "બુકિંગ ઉમેરવામાં નિષ્ફળ",
+          "fetchError": "રિઝર્વેશન ડેટા લોડ કરવામાં મુશ્કેલી.",
+          "updateSuccess": "રિઝર્વેશન સ્થિતિ અપડેટ થઈ ગઈ!",
+          "updateFailed": "સ્થિતિ અપડેટ કરવામાં નિષ્ફળ"
+        }
       }
     },
     "reservation": {

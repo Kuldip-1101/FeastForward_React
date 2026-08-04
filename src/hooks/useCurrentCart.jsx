@@ -8,6 +8,7 @@ import {
 
 export function useCurrentCart() {
   const dispatch = useDispatch();
+  const EMPTY_ARRAY = [];
 
   //---------- Get active user ID --------
   const user = useSelector((state) => state.auth?.user);
@@ -15,7 +16,7 @@ export function useCurrentCart() {
 
   //----------- Select the Active User's Cart -------
   const cartItems = useSelector(
-    (state) => (userId ? state.cart?.carts?.[userId] : []) || [],
+    (state) => (userId ? state.cart?.carts?.[userId] : EMPTY_ARRAY) || EMPTY_ARRAY,
   );
 
   const totalCartCount = cartItems.reduce((acc, i) => acc + i.quantity, 0);

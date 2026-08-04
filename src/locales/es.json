@@ -83,6 +83,88 @@
           "markCompleted": "Marcar como Completada",
           "cancelReservation": "Cancelar Reserva"
         }
+      },
+      "reservationsTab": {
+        "title": "Operaciones de Reservas",
+        "subtitle": "Gestione el flujo del servicio, la asignación de mesas y la ocupación.",
+        "manualReservationBtn": "Reserva Manual",
+        "stats": {
+          "seatedVsExpected": "Sentados vs Esperados",
+          "tableOccupancy": "Ocupación de Mesas",
+          "next2HoursRush": "Próximas 2 Horas",
+          "specialNotesPreOrders": "Notas Especiales y Pedidos",
+          "parties": "{{count}} Grupos",
+          "notes": "{{count}} Notas"
+        },
+        "filters": {
+          "searchPlaceholder": "Buscar Nombre, Teléfono o ID...",
+          "dateLabel": "Fecha",
+          "statusLabel": "Estado",
+          "shiftLabel": "Turno",
+          "allStatuses": "Todos los Estados",
+          "statusConfirmed": "Confirmado",
+          "statusSeated": "Sentado / En Proceso",
+          "statusCompleted": "Completado",
+          "statusCancelled": "Cancelado",
+          "allService": "Todo el Servicio",
+          "lunchShift": "Turno de Almuerzo",
+          "dinnerShift": "Turno de Cena"
+        },
+        "table": {
+          "idTime": "ID y Hora",
+          "customer": "Cliente",
+          "tableZone": "Mesa y Zona",
+          "guests": "Invitados",
+          "notesPreOrders": "Notas / Pedidos",
+          "status": "Estado",
+          "action": "Acción",
+          "noMatch": "No se encontraron reservas que coincidan con los filtros.",
+          "guest": "Invitado",
+          "unassigned": "Sin asignar",
+          "none": "Ninguno",
+          "preOrderedItems": "{{count}} artículos pedidos",
+          "statusActive": "Sentado / Activo"
+        },
+        "actions": {
+          "markSeated": "Marcar como Sentado",
+          "markCompleted": "Marcar como Completado",
+          "cancelBooking": "Cancelar Reserva"
+        },
+        "dialog": {
+          "title": "Añadir Reserva Manual / Sin Cita",
+          "fullName": "Nombre Completo",
+          "fullNameReq": "El nombre completo es obligatorio",
+          "email": "Correo Electrónico",
+          "emailInvalid": "Correo electrónico no válido",
+          "phone": "Número de Teléfono",
+          "phoneReq": "El teléfono es obligatorio",
+          "phoneInvalid": "Ingrese un número de 10 dígitos válido",
+          "guestCount": "Número de Invitados",
+          "guestReq": "El número de invitados es obligatorio",
+          "guestMin": "Mínimo 1 invitado requerido",
+          "guestMax": "Capacidad máxima superada",
+          "resDate": "Fecha de Reserva",
+          "dateReq": "La fecha es obligatoria",
+          "timeSlot": "Horario",
+          "timeSlotReq": "El horario es obligatorio",
+          "fullyBooked": "(Totalmente Reservado)",
+          "selectTable": "Seleccionar Mesa",
+          "tableReq": "Debe seleccionar una mesa",
+          "pickTimeFirst": "Seleccione un horario primero",
+          "seats": "Asientos",
+          "reserved": "[Reservado]",
+          "notes": "Notas Especiales / Solicitudes",
+          "notesPlaceholder": "ej. Cumpleaños, silla alta, preferencia de mesa",
+          "cancel": "Cancelar",
+          "confirm": "Confirmar Reserva"
+        },
+        "notifications": {
+          "createSuccess": "¡Reserva manual creada con éxito!",
+          "createError": "Error al crear la reserva",
+          "fetchError": "Error al cargar las reservas.",
+          "updateSuccess": "¡Estado de la reserva actualizado!",
+          "updateFailed": "Error al actualizar el estado"
+        }
       }
     },
     "reservation": {

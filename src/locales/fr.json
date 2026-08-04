@@ -83,6 +83,88 @@
           "markCompleted": "Marquer comme Terminée",
           "cancelReservation": "Annuler la réservation"
         }
+      },
+      "reservationsTab": {
+        "title": "Opérations de Réservation",
+        "subtitle": "Gérez le flux de service, l'attribution des tables et l'occupation.",
+        "manualReservationBtn": "Réservation Manuel",
+        "stats": {
+          "seatedVsExpected": "Installés vs Attendus",
+          "tableOccupancy": "Taux d'occupation",
+          "next2HoursRush": "Coup de feu (2h)",
+          "specialNotesPreOrders": "Notes & Précommandes",
+          "parties": "{{count}} Groupes",
+          "notes": "{{count}} Notes"
+        },
+        "filters": {
+          "searchPlaceholder": "Rechercher par nom, téléphone ou ID...",
+          "dateLabel": "Date",
+          "statusLabel": "Statut",
+          "shiftLabel": "Service",
+          "allStatuses": "Tous les statuts",
+          "statusConfirmed": "Confirmé",
+          "statusSeated": "Installé / En cours",
+          "statusCompleted": "Terminé",
+          "statusCancelled": "Annulé",
+          "allService": "Tous les services",
+          "lunchShift": "Service du midi",
+          "dinnerShift": "Service du soir"
+        },
+        "table": {
+          "idTime": "ID & Heure",
+          "customer": "Client",
+          "tableZone": "Table & Zone",
+          "guests": "Invités",
+          "notesPreOrders": "Notes / Précommandes",
+          "status": "Statut",
+          "action": "Action",
+          "noMatch": "Aucune réservation ne correspond à vos critères.",
+          "guest": "Invité",
+          "unassigned": "Non assigné",
+          "none": "Aucun",
+          "preOrderedItems": "{{count}} articles précommandés",
+          "statusActive": "Installé / Actif"
+        },
+        "actions": {
+          "markSeated": "Marquer comme Installé",
+          "markCompleted": "Marquer comme Terminé",
+          "cancelBooking": "Annuler la réservation"
+        },
+        "dialog": {
+          "title": "Ajouter une réservation manuelle / Sans rendez-vous",
+          "fullName": "Nom complet",
+          "fullNameReq": "Le nom complet est obligatoire",
+          "email": "Adresse e-mail",
+          "emailInvalid": "Adresse e-mail invalide",
+          "phone": "Numéro de téléphone",
+          "phoneReq": "Le téléphone est obligatoire",
+          "phoneInvalid": "Entrez un numéro valide à 10 chiffres",
+          "guestCount": "Nombre d'invités",
+          "guestReq": "Le nombre d'invités est obligatoire",
+          "guestMin": "Minimum 1 invité requis",
+          "guestMax": "Capacité maximale dépassée",
+          "resDate": "Date de réservation",
+          "dateReq": "La date est obligatoire",
+          "timeSlot": "Creneau horaire",
+          "timeSlotReq": "Le creneau est obligatoire",
+          "fullyBooked": "(Complet)",
+          "selectTable": "Sélectionner une table",
+          "tableReq": "La sélection de la table est obligatoire",
+          "pickTimeFirst": "Choisissez un créneau horaire d'abord",
+          "seats": "Places",
+          "reserved": "[Réservé]",
+          "notes": "Demandes spéciales / Notes",
+          "notesPlaceholder": "ex: Anniversaire, chaise haute, préférence de table",
+          "cancel": "Annuler",
+          "confirm": "Confirmer la réservation"
+        },
+        "notifications": {
+          "createSuccess": "Réservation manuelle créée avec succès !",
+          "createError": "Échec de la création de la réservation",
+          "fetchError": "Erreur lors du chargement des réservations.",
+          "updateSuccess": "Statut de la réservation mis à jour !",
+          "updateFailed": "Échec de la mise à jour du statut"
+        }
       }
     },
     "reservation": {
