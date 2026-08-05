@@ -34,7 +34,26 @@
     "cartTotal": "કુલ મૂળ રકમ:",
     "cartProceed": "બુકિંગ તરફ આગળ વધો",
     "cartClear": "પ્રી-ઓર્ડર ખાલી કરો",
-    "addToPreOrder": "પ્રી-ઓર્ડરમાં ઉમેરો",
+    "customerMenu": {
+      "heading": "વાનગી સંગ્રહ",
+      "subheading": "તાજી અને ઉત્કૃષ્ટ સામગ્રીમાંથી હસ્તકલાથી તૈયાર કરાયેલી વાનગીઓ.",
+      "allCategories": "બધી કેટેગરીઓ",
+      "categories": {
+        "Starters": "સ્ટાર્ટર્સ",
+        "Mains": "મુખ્ય ભોજન",
+        "Bread": "રોટલી / બ્રેડ",
+        "Desserts": "મીઠાઈ",
+        "Drinks": "પીણાં"
+      },
+      "addToPreOrder": "પ્રી-ઓર્ડરમાં ઉમેરો",
+      "unavailable": "હાઉસફુલ / પૂરું",
+      "outOfStock": "સ્ટોકમાં નથી",
+      "defaultItemName": "વાનગી",
+      "syncError": "મેનૂ સિંક કરવામાં નિષ્ફળ. ખાતરી કરો કે JSON-Server ચાલુ છે.",
+      "toast": {
+        "itemAdded": "{{item}} પ્રી-ઓર્ડર કાર્ટમાં ઉમેરાઈ ગયું!"
+      }
+    },
     "admin": {
       "portalTitle": "એડમિન પોર્ટલ",
       "defaultAdminUser": "એડમિન વપરાશકર્તા",

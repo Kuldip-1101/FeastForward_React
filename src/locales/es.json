@@ -34,7 +34,26 @@
     "cartTotal": "Monto Total Base:",
     "cartProceed": "Proceder a la Reserva",
     "cartClear": "Vaciar Prepedido",
-    "addToPreOrder": "Añadir al Prepedido",
+    "customerMenu": {
+      "heading": "La Colección Culinaria",
+      "subheading": "Obras maestras elaboradas a mano con ingredientes frescos y de primera calidad.",
+      "allCategories": "Todas las Categorías",
+      "categories": {
+        "Starters": "Entradas",
+        "Mains": "Platos Principales",
+        "Bread": "Panes",
+        "Desserts": "Postres",
+        "Drinks": "Bebidas"
+      },
+      "addToPreOrder": "Agregar al Pedido",
+      "unavailable": "Agotado",
+      "outOfStock": "Agotado",
+      "defaultItemName": "Artículo",
+      "syncError": "No se pudo sincronizar el menú. Asegúrese de que el servidor JSON esté funcionando.",
+      "toast": {
+        "itemAdded": "¡{{item}} agregado al carrito de pre-pedido!"
+      }
+    },
     "admin": {
       "portalTitle": "Portal de Admin",
       "defaultAdminUser": "Usuario Admin",

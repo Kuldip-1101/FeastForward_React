@@ -34,7 +34,26 @@
     "cartTotal": "कुल मूल राशि:",
     "cartProceed": "बुकिंग के लिए आगे बढ़ें",
     "cartClear": "प्री-ऑर्डर साफ़ करें",
-    "addToPreOrder": "प्री-ऑर्डर में जोड़ें",
+    "customerMenu": {
+      "heading": "पाक-कला संग्रह",
+      "subheading": "ताजा और प्रीमियम सामग्री से तैयार उत्कृष्ट व्यंजन।",
+      "allCategories": "सभी श्रेणियां",
+      "categories": {
+        "Starters": "स्टार्टर्स",
+        "Mains": "मुख्य व्यंजन",
+        "Bread": "रोटियाँ / ब्रेड",
+        "Desserts": "मिठाइयाँ",
+        "Drinks": "पेय पदार्थ"
+      },
+      "addToPreOrder": "प्री-ऑर्डर में जोड़ें",
+      "unavailable": "स्टॉक खत्म",
+      "outOfStock": "स्टॉक में नहीं",
+      "defaultItemName": "व्यंजन",
+      "syncError": "मेनू सिंक करने में असमर्थ। सुनिश्चित करें कि JSON-Server चल रहा है।",
+      "toast": {
+        "itemAdded": "{{item}} प्री-ऑर्डर कार्ट में जोड़ा गया!"
+      }
+    },
     "admin": {
       "portalTitle": "एडमिन पोर्टल",
       "defaultAdminUser": "एडमिन उपयोगकर्ता",

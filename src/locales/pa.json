@@ -34,7 +34,26 @@
     "cartTotal": "ਕੁੱਲ ਮੂਲ ਰਕਮ:",
     "cartProceed": "ਬੁਕਿੰਗ ਲਈ ਅੱਗੇ ਵਧੋ",
     "cartClear": "ਪ੍ਰੀ-ਆਰਡਰ ਖਾਲੀ ਕਰੋ",
-    "addToPreOrder": "ਪ੍ਰੀ-ਆਰਡਰ ਵਿੱਚ ਜੋੜੋ",
+    "customerMenu": {
+      "heading": "ਪਕਵਾਨ ਸੰਗ੍ਰਹਿ",
+      "subheading": "ਤਾਜ਼ਾ ਅਤੇ ਵਧੀਆ ਸਮੱਗਰੀ ਨਾਲ ਤਿਆਰ ਕੀਤੇ ਗਏ ਸ਼ਾਨਦਾਰ ਪਕਵਾਨ।",
+      "allCategories": "ਸਾਰੀਆਂ ਸ਼੍ਰੇਣੀਆਂ",
+      "categories": {
+        "Starters": "ਸਟਾਰਟਰਸ",
+        "Mains": "ਮੁੱਖ ਖਾਣਾ",
+        "Bread": "ਰੋਟੀਆਂ / ਬ੍ਰੈੱਡ",
+        "Desserts": "ਮਿਠਾਈਆਂ",
+        "Drinks": "ਪੀਣ ਵਾਲੇ ਪਦਾਰਥ"
+      },
+      "addToPreOrder": "ਪ੍ਰੀ-ਆਰਡਰ ਵਿੱਚ ਜੋੜੋ",
+      "unavailable": "ਖਤਮ ਹੋ ਗਿਆ",
+      "outOfStock": "ਸਟਾਕ ਵਿੱਚ ਨਹੀਂ",
+      "defaultItemName": "ਪਕਵਾਨ",
+      "syncError": "ਮੇਨੂ ਸਿੰਕ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਯਕੀਨੀ ਬਣਾਓ ਕਿ JSON-Server ਚੱਲ ਰਿਹਾ ਹੈ।",
+      "toast": {
+        "itemAdded": "{{item}} ਪ੍ਰੀ-ਆਰਡਰ ਕਾਰਟ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ!"
+      }
+    },
     "admin": {
       "portalTitle": "ਐਡਮਿਨ ਪੋਰਟਲ",
       "defaultAdminUser": "ਐਡਮਿਨ ਵਰਤੋਂਕਾਰ",
@@ -163,7 +182,7 @@
           "createError": "ਬੁਕਿੰਗ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ",
           "fetchError": "ਬੁਕਿੰਗ ਡਾਟਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ।",
           "updateSuccess": "ਰਿਜ਼ਰਵੇਸ਼ਨ ਦੀ ਸਥਿਤੀ ਅੱਪਡੇਟ ਹੋ ਗਈ!",
-        "updateFailed": "ਸਥਿਤੀ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+          "updateFailed": "ਸਥਿਤੀ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
         }
       }
     },

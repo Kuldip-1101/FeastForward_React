@@ -28,6 +28,7 @@
       },
       "category": "Mains",
       "price": 320,
+      "isAvailable": true,
       "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600&auto=format&fit=crop"
     },
     {
@@ -42,6 +43,7 @@
       },
       "category": "Bread",
       "price": 120,
+      "isAvailable": false,
       "image": "https://t4.ftcdn.net/jpg/07/18/16/87/360_F_718168709_mc2zfZw46fQxI81ifoYBEWhJwpsL5iPY.jpg"
     },
     {
@@ -56,6 +58,7 @@
       },
       "category": "Starters",
       "price": 150,
+      "isAvailable": true,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVv3VpfKirsjhvdcEDmdTNzyhrN8ctYc2NMy_7Qz0GoG8r1ABMxqcSnc&s=10"
     },
     {
@@ -70,6 +73,7 @@
       },
       "category": "Starters",
       "price": 280,
+      "isAvailable": true,
       "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=600&auto=format&fit=crop"
     },
     {
@@ -84,6 +88,7 @@
       },
       "category": "Mains",
       "price": 350,
+      "isAvailable": true,
       "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600&auto=format&fit=crop"
     },
     {
@@ -98,6 +103,7 @@
       },
       "category": "Mains",
       "price": 290,
+      "isAvailable": true,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpw7uSocm8OMJjZKEcwdGubqejrQDDEujfRv_VdutwLA&s=10"
     },
     {
@@ -112,6 +118,7 @@
       },
       "category": "Mains",
       "price": 240,
+      "isAvailable": true,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSANmhatsf45uftbimfxRjVmWUht44sbmT00OKOmqcGA&s=10"
     },
     {
@@ -126,6 +133,7 @@
       },
       "category": "Bread",
       "price": 80,
+      "isAvailable": true,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtApGsd9gP-eZXo2UX55yV_ISUL5xIUJKG2z8XdEjig&s=10"
     },
     {
@@ -236,7 +244,7 @@
         "fr": "Riz au Cumin (Jeera)",
         "es": "Arroz con Comino (Jeera)"
       },
-      "category": "Bread",
+      "category": "Mains",
       "price": 160,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTGa48zKqCnlIMzILmzKkCKvZ3uLEXjxUKszJd-mu5KQ&s=10"
     },

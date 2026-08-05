@@ -13,8 +13,6 @@
     "navMenu": "Menu",
     "seoTitle": "FeastForward | Premium Multi-Lingual Dining & Table Reservations",
     "seoDesc": "Book luxury tables and explore gourmet menus at FeastForward.",
-    "menuHeading": "The Culinary Collection",
-    "menuSubheading": "Handcrafted masterpieces prepared from fresh, premium ingredients.",
     "hoursTitle": "Operating Hours",
     "weekday": "Monday - Friday",
     "weekend": "Saturday - Sunday",
@@ -34,7 +32,26 @@
     "cartTotal": "Total Base Amount:",
     "cartProceed": "Proceed to Booking",
     "cartClear": "Clear Pre-Order",
-    "addToPreOrder": "Add to Pre-Order",
+    "customerMenu": {
+      "heading": "The Culinary Collection",
+      "subheading": "Handcrafted masterpieces prepared from fresh, premium ingredients.",
+      "allCategories": "All Categories",
+      "categories": {
+        "Starters": "Starters",
+        "Mains": "Main Course",
+        "Bread": "Breads",
+        "Desserts": "Desserts",
+        "Drinks": "Beverages"
+      },
+      "addToPreOrder": "Add to Pre-Order",
+      "unavailable": "Sold Out",
+      "outOfStock": "Out of Stock",
+      "defaultItemName": "Item",
+      "syncError": "Unable to synchronize menu registry. Ensure JSON-Server endpoint is running.",
+      "toast": {
+        "itemAdded": "{{item}} added to pre-order cart!"
+      }
+    },
     "admin": {
       "portalTitle": "Admin Portal",
       "defaultAdminUser": "Admin User",

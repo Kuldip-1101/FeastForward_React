@@ -34,7 +34,26 @@
     "cartTotal": "Montant Total de Base :",
     "cartProceed": "Passer à la Réservation",
     "cartClear": "Vider la Précommande",
-    "addToPreOrder": "Ajouter à la Précommande",
+    "customerMenu": {
+      "heading": "La Collection Culinaire",
+      "subheading": "Chef-d'œuvres préparés à la main à partir d'ingrédients frais et haut de gamme.",
+      "allCategories": "Toutes les Catégories",
+      "categories": {
+        "Starters": "Entrées",
+        "Mains": "Plats Principaux",
+        "Bread": "Pains",
+        "Desserts": "Desserts",
+        "Drinks": "Boissons"
+      },
+      "addToPreOrder": "Ajouter à la Précommande",
+      "unavailable": "Épuisé",
+      "outOfStock": "Rupture de Stock",
+      "defaultItemName": "Article",
+      "syncError": "Impossible de synchroniser le menu. Assurez-vous que le serveur JSON est en cours d'exécution.",
+      "toast": {
+        "itemAdded": "{{item}} ajouté au panier de précommande !"
+      }
+    },
     "admin": {
       "portalTitle": "Portail Admin",
       "defaultAdminUser": "Utilisateur Admin",
