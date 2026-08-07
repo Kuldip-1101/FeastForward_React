@@ -17,19 +17,19 @@
   ],
   "menu": [
     {
-      "id": "m1",
       "name": {
         "en": "Premium Butter Paneer",
-        "gu": "પ્રીમિયમ બટર પનીર",
         "hi": "प्रीमियम बटर पनीर",
+        "gu": "પ્રીમિયમ બટર પનીર",
         "pa": "ਪ੍ਰੀਮੀਅਮ ਬਟਰ ਪਨੀਰ",
         "fr": "Paneer au Beurre Premium",
         "es": "Paneer de Mantequilla Premium"
       },
       "category": "Mains",
-      "price": 320,
+      "price": 450,
+      "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600&auto=format&fit=crop",
       "isAvailable": true,
-      "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600&auto=format&fit=crop"
+      "id": "m1"
     },
     {
       "id": "m2",
@@ -43,7 +43,7 @@
       },
       "category": "Bread",
       "price": 120,
-      "isAvailable": false,
+      "isAvailable": true,
       "image": "https://t4.ftcdn.net/jpg/07/18/16/87/360_F_718168709_mc2zfZw46fQxI81ifoYBEWhJwpsL5iPY.jpg"
     },
     {
@@ -107,19 +107,19 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpw7uSocm8OMJjZKEcwdGubqejrQDDEujfRv_VdutwLA&s=10"
     },
     {
-      "id": "m7",
       "name": {
         "en": "Chana Masala Twist",
-        "gu": "ચના મસાલા ટ્વિસ્ટ",
         "hi": "चना मसाला ट्विस्ट",
+        "gu": "ચના મસાલા ટ્વિસ્ટ",
         "pa": "ਚਨਾ ਮਸਾਲਾ ਟਵਿਸਟ",
         "fr": "Chana Masala Twist",
         "es": "Chana Masala Twist"
       },
       "category": "Mains",
-      "price": 240,
+      "price": 410,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSANmhatsf45uftbimfxRjVmWUht44sbmT00OKOmqcGA&s=10",
       "isAvailable": true,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSANmhatsf45uftbimfxRjVmWUht44sbmT00OKOmqcGA&s=10"
+      "id": "m7"
     },
     {
       "id": "m8",
@@ -137,18 +137,19 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGtApGsd9gP-eZXo2UX55yV_ISUL5xIUJKG2z8XdEjig&s=10"
     },
     {
-      "id": "m9",
       "name": {
         "en": "Laccha Paratha",
-        "gu": "લચ્છા પરાઠા",
         "hi": "लच्छा पराठा",
+        "gu": "લચ્છા પરાઠા",
         "pa": "ਲੱਛਾ ਪਰਾਠਾ",
         "fr": "Laccha Paratha",
         "es": "Laccha Paratha"
       },
       "category": "Bread",
-      "price": 60,
-      "image": "https://simpleindianmeals.com/wp-content/uploads/2022/11/Lacha-Paratha-500x375.jpg"
+      "price": 90,
+      "image": "https://simpleindianmeals.com/wp-content/uploads/2022/11/Lacha-Paratha-500x375.jpg",
+      "isAvailable": true,
+      "id": "m9"
     },
     {
       "id": "m10",
@@ -204,7 +205,8 @@
       },
       "category": "Drinks",
       "price": 75,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZci3xfFYH1bRZaLBUkJjWu68q8Wg1F7OHY5DZoOJDaQ&s=10"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZci3xfFYH1bRZaLBUkJjWu68q8Wg1F7OHY5DZoOJDaQ&s=10",
+      "isAvailable": true
     },
     {
       "id": "m14",
@@ -261,6 +263,21 @@
       "category": "Drinks",
       "price": 85,
       "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "name": {
+        "en": "Egg Benedict",
+        "hi": "एग बेनेडिक्ट",
+        "gu": "એગ બેનેડિક્ટ",
+        "pa": "ਐਗ ਬੈਨੇਡਿਕਟ",
+        "fr": "Œufs Bénédicte",
+        "es": "Huevos Benedictine"
+      },
+      "category": "Mains",
+      "price": 210,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuBMMjp6uGdqbKXRc0EkDk556P4LpGEumnMJ0ETucUA&s=10",
+      "isAvailable": true,
+      "id": "mqVCRQRl7FE"
     }
   ],
   "tables": [
@@ -641,7 +658,7 @@
       "createdAt": "2026-08-04T06:51:31.742Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "status": "Seated",
+      "status": "Completed",
       "id": "e7sf1wwSmH4"
     },
     {

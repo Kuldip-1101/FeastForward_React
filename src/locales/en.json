@@ -26,6 +26,9 @@
     "passMinLength": "Password must be at least 6 characters",
     "submitAuth": "Submit Credentials",
     "close": "Close",
+    "delete": "Delete",
+    "saving": "Saving...",
+    "deleting": "Deleting...",
     "invalidCredentials": "Invalid email or password",
     "cartTitle": "Your Pre-Order Cart",
     "cartEmpty": "Your pre-order cart is currently empty.",
@@ -181,6 +184,51 @@
           "fetchError": "Error loading reservations data.",
           "updateSuccess": "Reservation status updated!",
           "updateFailed": "Failed to update status"
+        }
+      },
+      "menuTab": {
+        "title": "Menu Management",
+        "subtitle": "Create, edit, and control inventory and dish availability in real time.",
+        "addItemBtn": "Add New Item",
+        "searchPlaceholder": "Search by item title...",
+        "filterCategory": "Category",
+        "table": {
+          "colItem": "Item",
+          "colCategory": "Category",
+          "colPrice": "Price",
+          "colStatus": "In Stock",
+          "colActions": "Actions",
+          "noItemsFound": "No menu items match your search criteria.",
+          "markAvailable": "Click to mark Available",
+          "markOutOfStock": "Click to mark Out of Stock",
+          "edit": "Edit Item",
+          "delete": "Delete Item"
+        },
+        "modal": {
+          "createTitle": "Add New Menu Item",
+          "editTitle": "Edit Menu Item",
+          "multilingualHeading": "Item Titles (Multilingual)",
+          "category": "Category",
+          "price": "Price (₹)",
+          "imageUrl": "Image URL",
+          "inStockLabel": "Item is Available in Stock",
+          "createBtn": "Create Item",
+          "updateBtn": "Update Item"
+        },
+        "deleteDialog": {
+          "title": "Delete Menu Item",
+          "confirmText": "Are you sure you want to delete \"{{title}}\"? This action will remove it permanently from server."
+        },
+        "notifications": {
+          "createSuccess": "Menu item created successfully!",
+          "createError": "Failed to create menu item. Please try again.",
+          "fetchError": "Failed to fetch menu items from server.",
+          "updateSuccess": "Menu item updated successfully!",
+          "updateError": "Failed to update menu item.",
+          "statusSuccess": "Stock status updated!",
+          "statusError": "Failed to update stock status.",
+          "deleteSuccess": "Menu item deleted!",
+          "deleteError": "Failed to delete menu item."
         }
       }
     },
