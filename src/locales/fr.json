@@ -230,6 +230,46 @@
           "deleteSuccess": "Élément du menu supprimé !",
           "deleteError": "Échec de la suppression de l'élément du menu."
         }
+      },
+      "analyticsTab": {
+        "title": "Aperçu des Analytiques",
+        "subtitle": "Suivez les revenus, le volume de réservations et les statistiques par article.",
+        "error": "Échec du chargement des données analytiques.",
+        "filters": {
+          "all": "Tout le temps",
+          "day": "Aujourd'hui",
+          "week": "Cette semaine",
+          "month": "Ce mois-ci",
+          "year": "Cette année"
+        },
+        "kpis": {
+          "revenue": "REVENU DES PRÉCOMMANDES",
+          "guests": "CLIENTS SERVIS",
+          "avgSpend": "DÉPENSE MOYENNE / COUVERT",
+          "conversion": "CONVERSION DES PRÉCOMMANDES"
+        },
+        "charts": {
+          "trendTitle": "Tendance des Réservations & Revenus",
+          "trendSubtitle": "Comparaison du volume de réservation et du total des précommandes.",
+          "categoryTitle": "Revenus par Catégorie",
+          "categorySubtitle": "Répartition des ventes de précommandes par catégorie de plats.",
+          "bookingsSeries": "Réservations",
+          "revenueSeries": "Revenus",
+          "noTrendData": "Aucune donnée disponible pour la période sélectionnée.",
+          "noCategoryData": "Aucune vente de précommande disponible."
+        },
+        "tables": {
+          "topDishesTitle": "Plats les plus Performants",
+          "topDishesSubtitle": "Plats les plus commandés issus des précommandes.",
+          "colItemName": "Nom de l'article",
+          "colCategory": "Catégorie",
+          "colOrdersSold": "Commandes Vendues",
+          "colTotalRevenue": "Revenu Total",
+          "colStockStatus": "État du Stock",
+          "inStock": "En Stock",
+          "outOfStock": "Rupture de Stock",
+          "noDishes": "Aucune précommande enregistrée pour cette période."
+        }
       }
     },
     "reservation": {

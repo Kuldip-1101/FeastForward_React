@@ -58,7 +58,7 @@
       },
       "category": "Starters",
       "price": 150,
-      "isAvailable": true,
+      "isAvailable": false,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVv3VpfKirsjhvdcEDmdTNzyhrN8ctYc2NMy_7Qz0GoG8r1ABMxqcSnc&s=10"
     },
     {
@@ -73,7 +73,7 @@
       },
       "category": "Starters",
       "price": 280,
-      "isAvailable": true,
+      "isAvailable": false,
       "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=600&auto=format&fit=crop"
     },
     {
@@ -88,7 +88,7 @@
       },
       "category": "Mains",
       "price": 350,
-      "isAvailable": true,
+      "isAvailable": false,
       "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600&auto=format&fit=crop"
     },
     {
@@ -276,7 +276,7 @@
       "category": "Mains",
       "price": 210,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuBMMjp6uGdqbKXRc0EkDk556P4LpGEumnMJ0ETucUA&s=10",
-      "isAvailable": true,
+      "isAvailable": false,
       "id": "mqVCRQRl7FE"
     }
   ],
@@ -503,24 +503,6 @@
       "fullName": "Aarav Patel",
       "email": "aarav@example.com",
       "phone": "8522221211",
-      "date": "2026-08-02",
-      "timeSlot": "02:00 PM",
-      "tableId": "t10",
-      "guestCount": 2,
-      "specialRequests": "Make it good",
-      "bookingId": "RES-0484",
-      "userId": "u1",
-      "tableDetails": "Table 4 (Main Hall)",
-      "createdAt": "2026-07-28T04:30:10.484Z",
-      "preOrders": [],
-      "totalPreOrderAmount": 0,
-      "id": "4kU_rQaqRlI",
-      "status": "Confirmed"
-    },
-    {
-      "fullName": "Aarav Patel",
-      "email": "aarav@example.com",
-      "phone": "8522221211",
       "date": "2026-07-29",
       "timeSlot": "01:00 PM",
       "tableId": "t7",
@@ -533,7 +515,7 @@
       "preOrders": [],
       "totalPreOrderAmount": 0,
       "id": "VHajpu6M1CM",
-      "status": "Preparing"
+      "status": "Completed"
     },
     {
       "fullName": "Kuldip",
@@ -551,7 +533,7 @@
       "preOrders": [],
       "totalPreOrderAmount": 0,
       "id": "WJlz9Wl62FY",
-      "status": "Preparing"
+      "status": "Completed"
     },
     {
       "fullName": "Aarav Patel",
@@ -568,7 +550,7 @@
       "createdAt": "2026-08-03T05:40:49.439Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "status": "Confirmed",
+      "status": "Completed",
       "id": "va4mG3bZzMQ"
     },
     {
@@ -586,7 +568,7 @@
       "createdAt": "2026-08-03T06:35:18.306Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "status": "Seated",
+      "status": "Completed",
       "id": "kRmqkCQSXTI"
     },
     {
@@ -604,7 +586,7 @@
       "createdAt": "2026-08-03T06:39:22.161Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "status": "Confirmed",
+      "status": "Completed",
       "id": "E1iF7y0lOu8"
     },
     {
@@ -676,7 +658,7 @@
       "createdAt": "2026-08-04T06:51:48.260Z",
       "preOrders": [],
       "totalPreOrderAmount": 0,
-      "status": "Confirmed",
+      "status": "Completed",
       "id": "Qm5eusGdpTU"
     },
     {
@@ -696,6 +678,24 @@
       "totalPreOrderAmount": 0,
       "status": "Completed",
       "id": "gHohXUWTpwE"
+    },
+    {
+      "fullName": "Nitesh Sharma",
+      "email": "nitesh.starlinetechno@gmail.com",
+      "phone": "2647326487",
+      "date": "2026-08-10",
+      "timeSlot": "09:00 PM",
+      "tableId": "t9",
+      "guestCount": 2,
+      "specialRequests": "Make it good",
+      "bookingId": "RES-1930",
+      "userId": "admin_manual",
+      "tableDetails": "Table 4 (Main Hall)",
+      "createdAt": "2026-08-10T12:38:44.027Z",
+      "preOrders": [],
+      "totalPreOrderAmount": 0,
+      "status": "Completed",
+      "id": "uQQ50VvF4Nw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

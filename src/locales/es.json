@@ -230,6 +230,46 @@
           "deleteSuccess": "¡Elemento del menú eliminado!",
           "deleteError": "Error al eliminar el elemento del menú."
         }
+      },
+      "analyticsTab": {
+        "title": "Resumen de Analíticas",
+        "subtitle": "Rastree ingresos, volumen de reservas y estadísticas por artículo.",
+        "error": "Error al cargar los datos analíticos.",
+        "filters": {
+          "all": "Todo el tiempo",
+          "day": "Hoy",
+          "week": "Esta semana",
+          "month": "Este mes",
+          "year": "Este año"
+        },
+        "kpis": {
+          "revenue": "INGRESOS POR PREPEDIDOS",
+          "guests": "CLIENTES ATENDIDOS",
+          "avgSpend": "GASTO MEDIO / COMENSAL",
+          "conversion": "CONVERSIÓN DE PREPEDIDOS"
+        },
+        "charts": {
+          "trendTitle": "Tendencia de Reservas e Ingresos",
+          "trendSubtitle": "Comparación del volumen de reservas y el total de prepedidos.",
+          "categoryTitle": "Ingresos por Categoría",
+          "categorySubtitle": "Desglose de ventas de prepedidos por categoría de platos.",
+          "bookingsSeries": "Reservas",
+          "revenueSeries": "Ingresos",
+          "noTrendData": "No hay datos de cronología disponibles para el rango seleccionado.",
+          "noCategoryData": "No hay ventas de prepedidos disponibles."
+        },
+        "tables": {
+          "topDishesTitle": "Platos Más Vendidos",
+          "topDishesSubtitle": "Platos más pedidos derivados de los prepedidos.",
+          "colItemName": "Nombre del Artículo",
+          "colCategory": "Categoría",
+          "colOrdersSold": "Pedidos Vendidos",
+          "colTotalRevenue": "Ingresos Totales",
+          "colStockStatus": "Estado de Stock",
+          "inStock": "En Stock",
+          "outOfStock": "Agotado",
+          "noDishes": "No se registraron prepedidos para este período."
+        }
       }
     },
     "reservation": {

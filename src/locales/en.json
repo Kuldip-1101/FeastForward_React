@@ -230,6 +230,46 @@
           "deleteSuccess": "Menu item deleted!",
           "deleteError": "Failed to delete menu item."
         }
+      },
+      "analyticsTab": {
+        "title": "Analytics Overview",
+        "subtitle": "Track revenue, booking volume, and item level stats.",
+        "error": "Failed to load analytics data.",
+        "filters": {
+          "all": "All Time",
+          "day": "Today",
+          "week": "This Week",
+          "month": "This Month",
+          "year": "This Year"
+        },
+        "kpis": {
+          "revenue": "PRE-ORDER REVENUE",
+          "guests": "GUESTS SERVED",
+          "avgSpend": "AVG SPEND / COVER",
+          "conversion": "PRE-ORDER CONVERSION"
+        },
+        "charts": {
+          "trendTitle": "Bookings & Revenue Trend",
+          "trendSubtitle": "Comparison of reservation volume and pre-order total.",
+          "categoryTitle": "Revenue by Category",
+          "categorySubtitle": "Breakdown of pre-order sales across dish categories.",
+          "bookingsSeries": "Bookings",
+          "revenueSeries": "Revenue",
+          "noTrendData": "No timeline data available for the selected range.",
+          "noCategoryData": "No pre-order sales available."
+        },
+        "tables": {
+          "topDishesTitle": "Top Performing Menu Items",
+          "topDishesSubtitle": "Highest ordered menu dishes derived from pre-orders.",
+          "colItemName": "Item Name",
+          "colCategory": "Category",
+          "colOrdersSold": "Orders Sold",
+          "colTotalRevenue": "Total Revenue",
+          "colStockStatus": "Stock Status",
+          "inStock": "In Stock",
+          "outOfStock": "Out of Stock",
+          "noDishes": "No pre-ordered dishes recorded for this period."
+        }
       }
     },
     "reservation": {

@@ -21,6 +21,7 @@ import MyBookingsPage from './pages/MyBookingsPage';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminReservationTab from './pages/AdminReservationTab';
 import AdminMenuTab from './pages/AdminMenuTab';
+import AdminAnalyticsTab from './pages/AdminAnalyticsTab';
 import NotFoundRedirect from './components/navbar/NotFoundRedirect';
 
 
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
           { path: 'dashboard', element: <AdminDashboard /> },
           { path: 'reservations', element: <AdminReservationTab /> },
           { path: 'menu', element: <AdminMenuTab /> },
+          { path: 'analytics', element: <AdminAnalyticsTab /> },
         ],
       },
     ],
