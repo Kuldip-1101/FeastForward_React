@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Box, Typography, Grid, Paper } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
-// Reusable Service Hour Card Component to eliminate repetition
+//---------------- Reusable Service Hour Card Component ----------------
 function HoursCard({ title, hours, isDark, borderColor, primaryText }) {
   return (
     <Box

@@ -16,6 +16,7 @@ import MenuItemModal from "../components/adminMenu/MenuItemModal";
 import DeleteConfirmDialog from "../components/adminMenu/DeleteConfirmDialog";
 import MenuLoading from "../components/customerMenu/MenuLoading";
 import MenuError from "../components/customerMenu/MenuError";
+import PageSEO from "../components/common/PageSEO";
 
 export default function AdminMenuTab() {
   const { t, i18n } = useTranslation();
@@ -60,7 +61,7 @@ export default function AdminMenuTab() {
         open: true,
         message: t(
           "admin.menuTab.notifications.fetchError",
-          "Failed to fetch menu items from server."
+          "Failed to fetch menu items from server.",
         ),
         severity: "error",
       });
@@ -83,7 +84,10 @@ export default function AdminMenuTab() {
       setModalOpen(false);
       setToast({
         open: true,
-        message: t("admin.menuTab.notifications.createSuccess", "Menu item created successfully!"),
+        message: t(
+          "admin.menuTab.notifications.createSuccess",
+          "Menu item created successfully!",
+        ),
         severity: "success",
       });
     },
@@ -94,7 +98,7 @@ export default function AdminMenuTab() {
           error.message ||
           t(
             "admin.menuTab.notifications.createError",
-            "Failed to create menu item."
+            "Failed to create menu item.",
           ),
         severity: "error",
       });
@@ -118,7 +122,10 @@ export default function AdminMenuTab() {
       setEditingItem(null);
       setToast({
         open: true,
-        message: t("admin.menuTab.notifications.updateSuccess", "Menu item updated successfully!"),
+        message: t(
+          "admin.menuTab.notifications.updateSuccess",
+          "Menu item updated successfully!",
+        ),
         severity: "success",
       });
     },
@@ -129,11 +136,11 @@ export default function AdminMenuTab() {
           error.message ||
           t(
             "admin.menuTab.notifications.updateError",
-            "Failed to update menu item."
+            "Failed to update menu item.",
           ),
         severity: "error",
       });
-    }
+    },
   });
 
   //------------------ Quick Availability Toggle Mutation (PATCH)-------------------
@@ -151,7 +158,10 @@ export default function AdminMenuTab() {
       queryClient.invalidateQueries(["menuCatalog"]);
       setToast({
         open: true,
-        message: t("admin.menuTab.notifications.statusSuccess", "Stock status updated!"),
+        message: t(
+          "admin.menuTab.notifications.statusSuccess",
+          "Stock status updated!",
+        ),
         severity: "info",
       });
     },
@@ -162,7 +172,7 @@ export default function AdminMenuTab() {
           error.message ||
           t(
             "admin.menuTab.notifications.statusError",
-            "Failed to update stock status."
+            "Failed to update stock status.",
           ),
         severity: "error",
       });
@@ -184,7 +194,10 @@ export default function AdminMenuTab() {
       setItemToDelete(null);
       setToast({
         open: true,
-        message: t("admin.menuTab.notifications.deleteSuccess", "Menu item deleted!"),
+        message: t(
+          "admin.menuTab.notifications.deleteSuccess",
+          "Menu item deleted!",
+        ),
         severity: "warning",
       });
     },
@@ -195,7 +208,7 @@ export default function AdminMenuTab() {
           error.message ||
           t(
             "admin.menuTab.notifications.deleteError",
-            "Failed to delete menu item."
+            "Failed to delete menu item.",
           ),
         severity: "error",
       });
@@ -240,6 +253,15 @@ export default function AdminMenuTab() {
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
+
+      <PageSEO
+        title={t("seo.adminMenuTitle", "Menu Management | FeastForward Admin")}
+        description={t(
+          "seo.adminMenuDesc",
+          "Add, update, or remove dishes and set availability for the menu.",
+        )}
+      />
+
       {/*-------------------------- Header ------------------------*/}
       <Box
         sx={{
@@ -258,7 +280,7 @@ export default function AdminMenuTab() {
           <Typography variant="body2" color="text.secondary">
             {t(
               "admin.menuTab.subtitle",
-              "Create, update, and manage catalog stock levels in real time."
+              "Create, update, and manage catalog stock levels in real time.",
             )}
           </Typography>
         </Box>

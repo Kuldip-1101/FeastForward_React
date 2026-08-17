@@ -20,14 +20,15 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import UnauthenticatedView from "../components/UnauthenticatedView";
 import BookingCard from "../components/bookings/BookingCard";
 import CancelBookingDialog from "../components/bookings/CancelBookingDialog";
+import PageSEO from "../components/common/PageSEO";
 
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 //--------------- API Calls----------------
 const fetchUserBookings = async (id) => {
   const response = await fetch(
-    `${API_BASE_URL}/bookings?userId=${encodeURIComponent(id)}`
+    `${API_BASE_URL}/bookings?userId=${encodeURIComponent(id)}`,
   );
   if (!response.ok) throw new Error("Failed to fetch reservations");
   return response.json();
@@ -49,6 +50,12 @@ export default function MyBookingsPage() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+
+  const seoTitle = t("seo.myBookingsTitle", "My Bookings | FeastForward");
+  const seoDesc = t(
+    "seo.myBookingsDesc",
+    "View, modify, or manage your upcoming table reservations and pre-orders."
+  );
 
   const [selectedBookingToCancel, setSelectedBookingToCancel] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
@@ -79,12 +86,12 @@ export default function MyBookingsPage() {
       queryClient.invalidateQueries(["userBookings", user?.email]);
       setSelectedBookingToCancel(null);
       setToastMessage(
-        t("myBookings.cancelSuccess") || "Reservation cancelled successfully"
+        t("myBookings.cancelSuccess") || "Reservation cancelled successfully",
       );
     },
     onError: () => {
       setToastMessage(
-        t("myBookings.cancelError") || "Failed to cancel reservation"
+        t("myBookings.cancelError") || "Failed to cancel reservation",
       );
     },
   });
@@ -92,23 +99,29 @@ export default function MyBookingsPage() {
   //----------------Check if user is authenticated, if not show UnauthenticatedView----------------
   if (!user) {
     return (
-      <UnauthenticatedView
-        isDark={isDark}
-        t={t}
-        onOpenAuthModal={onOpenAuthModal}
-      />
+      <>
+        <PageSEO title={seoTitle} description={seoDesc} />
+
+        <UnauthenticatedView
+          isDark={isDark}
+          t={t}
+          onOpenAuthModal={onOpenAuthModal}
+        />
+      </>
     );
   }
 
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
+      <PageSEO title={seoTitle} description={seoDesc} />
+
       {/*------------------- Header -------------------*/}
       <Box sx={{ mb: 4 }}>
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifycontent: "center",
             gap: 1.5,
             mb: 0.5,
           }}

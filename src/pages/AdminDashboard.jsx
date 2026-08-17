@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   Box,
   Grid,
@@ -19,14 +19,16 @@ import {
   ListItemText,
   Divider,
   TablePagination,
-} from '@mui/material';
+} from "@mui/material";
 
-import SummaryCard from '../components/admindashboard/SummaryCard';
-import BookingTableRow from '../components/admindashboard/BookingTableRow';
-import { SUMMARY_CARDS_CONFIG } from '../constants/SummaryCardConst';
-import { MENU_ACTIONS_CONFIG } from '../constants/MenuActionsConst';
+import SummaryCard from "../components/admindashboard/SummaryCard";
+import BookingTableRow from "../components/admindashboard/BookingTableRow";
+import { SUMMARY_CARDS_CONFIG } from "../constants/SummaryCardConst";
+import { MENU_ACTIONS_CONFIG } from "../constants/MenuActionsConst";
+import PageSEO from "../components/common/PageSEO";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 //--------------Fetch Data from API ------------------
 const fetchBookings = async () => {
@@ -37,11 +39,11 @@ const fetchBookings = async () => {
 
 const updateBookingStatus = async ({ id, status }) => {
   const res = await fetch(`${API_BASE_URL}/bookings/${id}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ status }),
   });
-  if (!res.ok) throw new Error('Failed to update status');
+  if (!res.ok) throw new Error("Failed to update status");
   return res.json();
 };
 
@@ -58,8 +60,12 @@ export default function AdminDashboard() {
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   //--------------------Tan Stack query to handle the data-----------
-  const { data: rawBookings = [], isLoading, isError } = useQuery({
-    queryKey: ['bookings'],
+  const {
+    data: rawBookings = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["bookings"],
     queryFn: fetchBookings,
     refetchInterval: 15000,
   });
@@ -67,27 +73,27 @@ export default function AdminDashboard() {
   const statusMutation = useMutation({
     mutationFn: updateBookingStatus,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['bookings'] });
+      queryClient.invalidateQueries({ queryKey: ["bookings"] });
     },
   });
 
   //---------------- Compute summary States and update booking for status -------------
   const { bookings, stats } = useMemo(() => {
-    const todayStr = new Date().toISOString().split('T')[0];
+    const todayStr = new Date().toISOString().split("T")[0];
 
     const processed = rawBookings.map((booking) => {
       let computedStatus = booking.status;
       if (!computedStatus) {
-        if (booking.date < todayStr) computedStatus = 'Completed';
-        else if (booking.date === todayStr) computedStatus = 'Preparing';
-        else computedStatus = 'Confirmed';
+        if (booking.date < todayStr) computedStatus = "Completed";
+        else if (booking.date === todayStr) computedStatus = "Preparing";
+        else computedStatus = "Confirmed";
       }
       return { ...booking, computedStatus };
     });
 
     //---------------- Exclude 'Completed' from Total Bookings------------
     const totalBookings = processed.length;
-    
+
     const todaysBookings = processed.filter((b) => b.date === todayStr).length;
     const todaysGuests = processed
       .filter((b) => b.date === todayStr)
@@ -95,9 +101,10 @@ export default function AdminDashboard() {
 
     const pendingActionCount = processed.filter(
       (b) =>
-        b.computedStatus !== 'Completed' &&
-        b.computedStatus !== 'Cancelled' &&
-        (b.computedStatus === 'Preparing' || (b.specialRequests && b.specialRequests.trim() !== ''))
+        b.computedStatus !== "Completed" &&
+        b.computedStatus !== "Cancelled" &&
+        (b.computedStatus === "Preparing" ||
+          (b.specialRequests && b.specialRequests.trim() !== "")),
     ).length;
 
     // ----------------Sort strictly by Date (Newest dates first)--------------
@@ -106,14 +113,22 @@ export default function AdminDashboard() {
       const dateB = new Date(b.date).getTime();
 
       if (dateB !== dateA) return dateB - dateA; // Descending Date
-      
+
       // Fallback: If dates are identical, sort by creation time
-      return new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime();
+      return (
+        new Date(b.createdAt || 0).getTime() -
+        new Date(a.createdAt || 0).getTime()
+      );
     });
 
     return {
       bookings: sorted,
-      stats: { totalBookings, todaysBookings, todaysGuests, pendingActionCount },
+      stats: {
+        totalBookings,
+        todaysBookings,
+        todaysGuests,
+        pendingActionCount,
+      },
     };
   }, [rawBookings]);
 
@@ -132,7 +147,6 @@ export default function AdminDashboard() {
     const startIndex = page * rowsPerPage;
     return bookings.slice(startIndex, startIndex + rowsPerPage);
   }, [bookings, page, rowsPerPage]);
-
 
   //----------------- Open the anchor menu --------------
   const handleOpenMenu = (event, booking) => {
@@ -153,7 +167,14 @@ export default function AdminDashboard() {
 
   if (isLoading) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "70%",
+        }}
+      >
         <CircularProgress color="warning" />
       </Box>
     );
@@ -161,26 +182,44 @@ export default function AdminDashboard() {
 
   if (isError) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
-        <Typography color="error">{t('admin.dashboardTab.overview.error')}</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "70%",
+        }}
+      >
+        <Typography color="error">
+          {t("admin.dashboardTab.overview.error")}
+        </Typography>
       </Box>
     );
   }
 
   return (
-    <Box p={{ xs: 2.5, md: 4 }} sx={{ width: '100%' }}>
+    <Box p={{ xs: 2.5, md: 4 }} sx={{ width: "100%" }}>
+
+      <PageSEO
+        title={t("seo.adminDashboardTitle", "Admin Dashboard | FeastForward")}
+        description={t(
+          "seo.adminDashboardDesc",
+          "Overview of key metrics, live operations, and activity summaries.",
+        )}
+      />
+
       {/*--------------------- Header --------------------*/}
       <Box sx={{ mb: 3 }}>
         <Typography variant="h3" sx={{ fontWeight: 600 }} gutterBottom>
-          {t('admin.dashboardTab.overview.title')}
+          {t("admin.dashboardTab.overview.title")}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {t('admin.dashboardTab.overview.subtitle')}
+          {t("admin.dashboardTab.overview.subtitle")}
         </Typography>
       </Box>
 
       {/*---------------------- Summary Cards Grid --------------------*/}
-      <Grid container spacing={3} mb={5} sx={{ width: '100%' }}>
+      <Grid container spacing={3} mb={5} sx={{ width: "100%" }}>
         {SUMMARY_CARDS_CONFIG.map((cardConfig) => (
           <Grid key={cardConfig.key} size={{ xs: 12, sm: 6, md: 3 }}>
             <SummaryCard
@@ -193,30 +232,49 @@ export default function AdminDashboard() {
       </Grid>
 
       {/*----------------------- Reservation Table --------------------*/}
-      <Paper variant="outlined" sx={{ borderRadius: 3, overflow: 'hidden', mt: 4, p: 3 }}>
+      <Paper
+        variant="outlined"
+        sx={{ borderRadius: 3, overflow: "hidden", mt: 4, p: 3 }}
+      >
         <Box sx={{ mb: 2 }}>
           <Typography variant="h6" fontWeight="bold">
-            {t('admin.dashboardTab.table.title')}
+            {t("admin.dashboardTab.table.title")}
           </Typography>
           <Typography variant="body2" color="text.secondary" mt={0.5}>
-            {t('admin.dashboardTab.table.subtitle')}
+            {t("admin.dashboardTab.table.subtitle")}
           </Typography>
         </Box>
 
         <Divider sx={{ mb: 1 }} />
 
-        <TableContainer sx={{ width: '100%', overflowX: 'auto' }}>
+        <TableContainer sx={{ width: "100%", overflowX: "auto" }}>
           <Table sx={{ minWidth: 750 }}>
             <TableHead>
               <TableRow>
-                <TableCell><b>{t('admin.dashboardTab.table.colId')}</b></TableCell>
-                <TableCell><b>{t('admin.dashboardTab.table.colCustomer')}</b></TableCell>
-                <TableCell><b>{t('admin.dashboardTab.table.colDateTime')}</b></TableCell>
-                <TableCell><b>{t('admin.dashboardTab.table.colTable')}</b></TableCell>
-                <TableCell align="center"><b>{t('admin.dashboardTab.table.colGuests')}</b></TableCell>
-                <TableCell><b>{t('admin.dashboardTab.table.colPreOrders')}</b></TableCell>
-                <TableCell align="center"><b>{t('admin.dashboardTab.table.colStatus')}</b></TableCell>
-                <TableCell align="center"><b>{t('admin.dashboardTab.table.colAction')}</b></TableCell>
+                <TableCell>
+                  <b>{t("admin.dashboardTab.table.colId")}</b>
+                </TableCell>
+                <TableCell>
+                  <b>{t("admin.dashboardTab.table.colCustomer")}</b>
+                </TableCell>
+                <TableCell>
+                  <b>{t("admin.dashboardTab.table.colDateTime")}</b>
+                </TableCell>
+                <TableCell>
+                  <b>{t("admin.dashboardTab.table.colTable")}</b>
+                </TableCell>
+                <TableCell align="center">
+                  <b>{t("admin.dashboardTab.table.colGuests")}</b>
+                </TableCell>
+                <TableCell>
+                  <b>{t("admin.dashboardTab.table.colPreOrders")}</b>
+                </TableCell>
+                <TableCell align="center">
+                  <b>{t("admin.dashboardTab.table.colStatus")}</b>
+                </TableCell>
+                <TableCell align="center">
+                  <b>{t("admin.dashboardTab.table.colAction")}</b>
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -224,7 +282,7 @@ export default function AdminDashboard() {
                 <TableRow>
                   <TableCell colSpan={8} align="center" sx={{ py: 4 }}>
                     <Typography variant="body2" color="text.secondary">
-                      {t('admin.dashboardTab.table.empty')}
+                      {t("admin.dashboardTab.table.empty")}
                     </Typography>
                   </TableCell>
                 </TableRow>
@@ -258,15 +316,15 @@ export default function AdminDashboard() {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleCloseMenu}
-          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+          transformOrigin={{ horizontal: "right", vertical: "top" }}
+          anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
           {MENU_ACTIONS_CONFIG.map((action) => (
             <React.Fragment key={action.status}>
               {action.isDividerBefore && <Divider />}
               <MenuItem onClick={() => handleStatusUpdate(action.status)}>
                 <ListItemIcon>{action.icon}</ListItemIcon>
-                <ListItemText sx={{ color: action.textColor || 'inherit' }}>
+                <ListItemText sx={{ color: action.textColor || "inherit" }}>
                   {t(action.labelKey)}
                 </ListItemText>
               </MenuItem>

@@ -13,13 +13,15 @@ import {
   formatLocalizedPrice,
   formatTotalCartPrice,
 } from "../utils/formatCurrency";
+import PageSEO from "../components/common/PageSEO";
 
 export default function AdminAnalyticsTab() {
   const theme = useTheme();
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language || "en";
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+  const API_BASE_URL =
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
   const [periodFilter, setPeriodFilter] = useState("all");
 
   //--------------------- Fetch Bookings Data----------------------
@@ -98,7 +100,8 @@ export default function AdminAnalyticsTab() {
 
       preOrders.forEach((po) => {
         const qty = Number(po.quantity || po.qty || 1);
-        const matchedItem = menuLookup.get(String(po.id)) || menuLookup.get(po.name) || po;
+        const matchedItem =
+          menuLookup.get(String(po.id)) || menuLookup.get(po.name) || po;
         const priceInr = Number(matchedItem.price || po.price || 0);
 
         allCartItems.push({ price: priceInr, quantity: qty });
@@ -112,7 +115,10 @@ export default function AdminAnalyticsTab() {
             ordersCount: 0,
             revenueINR: 0,
             itemsList: [],
-            isAvailable: matchedItem.isAvailable !== undefined ? matchedItem.isAvailable : true,
+            isAvailable:
+              matchedItem.isAvailable !== undefined
+                ? matchedItem.isAvailable
+                : true,
           });
         }
 
@@ -123,9 +129,17 @@ export default function AdminAnalyticsTab() {
       });
     });
 
-    const totalInr = allCartItems.reduce((sum, i) => sum + i.price * i.quantity, 0);
-    const totalRevenueFormatted = formatTotalCartPrice(allCartItems, totalInr, currentLang);
-    const avgSpendInr = totalGuests > 0 ? Math.round(totalInr / totalGuests) : 0;
+    const totalInr = allCartItems.reduce(
+      (sum, i) => sum + i.price * i.quantity,
+      0,
+    );
+    const totalRevenueFormatted = formatTotalCartPrice(
+      allCartItems,
+      totalInr,
+      currentLang,
+    );
+    const avgSpendInr =
+      totalGuests > 0 ? Math.round(totalInr / totalGuests) : 0;
     const avgSpendFormatted = formatLocalizedPrice(avgSpendInr, 1, currentLang);
 
     const conversionRate =
@@ -138,7 +152,11 @@ export default function AdminAnalyticsTab() {
       .slice(0, 5)
       .map((item) => ({
         ...item,
-        formattedRevenue: formatTotalCartPrice(item.itemsList, item.revenueINR, currentLang),
+        formattedRevenue: formatTotalCartPrice(
+          item.itemsList,
+          item.revenueINR,
+          currentLang,
+        ),
       }));
 
     const categoryMap = {};
@@ -149,31 +167,46 @@ export default function AdminAnalyticsTab() {
       categoryMap[cat].totalInr += stat.revenueINR;
     });
 
-    const categoryPieData = Object.entries(categoryMap).map(([cat, data], idx) => {
-      const numericVal = ["hi", "gu", "pa"].includes(currentLang)
-        ? data.totalInr
-        : data.items.reduce((acc, i) => acc + Math.round(i.price / 85) * i.quantity, 0);
+    const categoryPieData = Object.entries(categoryMap).map(
+      ([cat, data], idx) => {
+        const numericVal = ["hi", "gu", "pa"].includes(currentLang)
+          ? data.totalInr
+          : data.items.reduce(
+              (acc, i) => acc + Math.round(i.price / 85) * i.quantity,
+              0,
+            );
 
-      return {
-        id: idx,
-        value: numericVal,
-        label: `${t(`customerMenu.categories.${cat}`, cat)} (${formatTotalCartPrice(data.items, data.totalInr, currentLang)})`,
-      };
-    });
+        return {
+          id: idx,
+          value: numericVal,
+          label: `${t(`customerMenu.categories.${cat}`, cat)} (${formatTotalCartPrice(data.items, data.totalInr, currentLang)})`,
+        };
+      },
+    );
 
     const dateMap = {};
     filteredBookings.forEach((b) => {
       const dateStr = b.date
-        ? new Date(b.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })
+        ? new Date(b.date).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+          })
         : "Unknown";
 
-      if (!dateMap[dateStr]) dateMap[dateStr] = { date: dateStr, bookings: 0, revenueINR: 0, items: [] };
+      if (!dateMap[dateStr])
+        dateMap[dateStr] = {
+          date: dateStr,
+          bookings: 0,
+          revenueINR: 0,
+          items: [],
+        };
       dateMap[dateStr].bookings += 1;
 
       const preOrders = b.preOrders || b.cartItems || [];
       preOrders.forEach((po) => {
         const qty = Number(po.quantity || po.qty || 1);
-        const matchedItem = menuLookup.get(String(po.id)) || menuLookup.get(po.name) || po;
+        const matchedItem =
+          menuLookup.get(String(po.id)) || menuLookup.get(po.name) || po;
         const priceInr = Number(matchedItem.price || po.price || 0);
 
         dateMap[dateStr].revenueINR += priceInr * qty;
@@ -186,7 +219,10 @@ export default function AdminAnalyticsTab() {
       bookings: d.bookings,
       revenueNumeric: ["hi", "gu", "pa"].includes(currentLang)
         ? d.revenueINR
-        : d.items.reduce((acc, i) => acc + Math.round(i.price / 85) * i.quantity, 0),
+        : d.items.reduce(
+            (acc, i) => acc + Math.round(i.price / 85) * i.quantity,
+            0,
+          ),
     }));
 
     return {
@@ -202,7 +238,14 @@ export default function AdminAnalyticsTab() {
 
   if (isBookingsLoading || isMenuLoading) {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "400px",
+        }}
+      >
         <CircularProgress color="warning" />
       </Box>
     );
@@ -224,6 +267,18 @@ export default function AdminAnalyticsTab() {
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
+
+      <PageSEO
+        title={t(
+          "seo.adminAnalyticsTitle",
+          "Analytics & Reports | FeastForward Admin",
+        )}
+        description={t(
+          "seo.adminAnalyticsDesc",
+          "Analyze revenue trends, booking metrics, and dish performance.",
+        )}
+      />
+
       <AnalyticsHeader
         periodFilter={periodFilter}
         onPeriodChange={setPeriodFilter}

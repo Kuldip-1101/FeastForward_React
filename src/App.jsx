@@ -8,6 +8,7 @@ import { getCustomTheme } from './config/theme';
 //-------------- Layouts -----------------
 import CustomerLayout from './layouts/CustomerLayout';
 import AdminLayout from './layouts/AdminLayout';
+import PageSEO from './components/common/PageSEO';
 
 //-------------- Protection Wrappers -----------------
 import { CustomerRoute, AdminRoute } from './components/ProtectedRoutes';
@@ -15,7 +16,6 @@ import { CustomerRoute, AdminRoute } from './components/ProtectedRoutes';
 //------------------ Pages -----------------
 import Home from './pages/Home';
 import Menu from './pages/Menu';
-import Bookings from './pages/Bookings';
 import ReservationPage from './pages/ReservationPage';
 import MyBookingsPage from './pages/MyBookingsPage';
 import AdminDashboard from './pages/AdminDashboard';
@@ -75,10 +75,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Helmet>
-        <title>{t('seoTitle')}</title>
-        <meta name="description" content={t('seoDesc')} />
-      </Helmet>
+      {/*--------------- SEO Meta Tags ---------------*/}
+      <PageSEO
+        title={t('seo.title', 'FeastForward - Luxury Dining & Instant Pre-Order')}
+        description={t('seo.description', 'Experience absolute luxury culinary dining.')}
+      />
 
       {/* ----------- Router Engine --------------*/}
       <RouterProvider router={router} />

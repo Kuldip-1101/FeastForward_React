@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, Button, Chip, Typography, Stack, Snackbar, Alert, CircularProgress } from "@mui/material";
+import {
+  Box,
+  Button,
+  Chip,
+  Typography,
+  Stack,
+  Snackbar,
+  Alert,
+  CircularProgress,
+} from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import { useTranslation } from "react-i18next";
 
@@ -11,6 +20,7 @@ import ReservationStats from "../components/adminreservationtab/ReservationStats
 import ReservationFilters from "../components/adminreservationtab/ReservationFilters";
 import ReservationTable from "../components/adminreservationtab/ReservationTable";
 import ReservationDetailModal from "../components/adminreservationtab/ReservationDetailModal";
+import PageSEO from "../components/common/PageSEO";
 
 export default function AdminReservationTab() {
   const { t } = useTranslation();
@@ -21,21 +31,59 @@ export default function AdminReservationTab() {
     switch (status) {
       case "Confirmed":
       case "Preparing":
-        return <Chip label={t("admin.reservationsTab.filters.statusConfirmed")} color="primary" variant="outlined" size="small" />;
+        return (
+          <Chip
+            label={t("admin.reservationsTab.filters.statusConfirmed")}
+            color="primary"
+            variant="outlined"
+            size="small"
+          />
+        );
       case "Seated":
-        return <Chip label={t("admin.reservationsTab.filters.statusSeated")} color="warning" size="small" />;
+        return (
+          <Chip
+            label={t("admin.reservationsTab.filters.statusSeated")}
+            color="warning"
+            size="small"
+          />
+        );
       case "Completed":
-        return <Chip label={t("admin.reservationsTab.filters.statusCompleted")} color="success" size="small" />;
+        return (
+          <Chip
+            label={t("admin.reservationsTab.filters.statusCompleted")}
+            color="success"
+            size="small"
+          />
+        );
       case "Cancelled":
-        return <Chip label={t("admin.reservationsTab.filters.statusCancelled")} color="error" variant="outlined" size="small" />;
+        return (
+          <Chip
+            label={t("admin.reservationsTab.filters.statusCancelled")}
+            color="error"
+            variant="outlined"
+            size="small"
+          />
+        );
       default:
-        return <Chip label={t("admin.reservationsTab.filters.statusUnknown")} size="small" />;
+        return (
+          <Chip
+            label={t("admin.reservationsTab.filters.statusUnknown")}
+            size="small"
+          />
+        );
     }
   };
 
   if (adminState.isLoadingBookings || adminState.isLoadingTables) {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", py: 10 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          py: 10,
+        }}
+      >
         <CircularProgress />
       </Box>
     );
@@ -43,10 +91,21 @@ export default function AdminReservationTab() {
 
   return (
     <Box sx={{ p: 3 }}>
+
+      <PageSEO
+        title={t(
+          "seo.adminReservationTitle",
+          "Reservation Management | FeastForward Admin",
+        )}
+        description={t(
+          "seo.adminReservationDesc",
+          "Manage incoming bookings, pre-orders, and table assignments.",
+        )}
+      />
+
       {/*---------------------- Header Banner -----------------------*/}
       <Stack
         direction={{ xs: "column", sm: "row" }}
-        
         alignitems={{ xs: "flex-start", sm: "center" }}
         spacing={2}
         sx={{ mb: 3, justifyContent: "space-between" }}
@@ -56,7 +115,10 @@ export default function AdminReservationTab() {
             {t("admin.reservationsTab.title", "Reservation Management")}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {t("admin.reservationsTab.subtitle", "Track bookings, assign tables, and manage floor walk-ins.")}
+            {t(
+              "admin.reservationsTab.subtitle",
+              "Track bookings, assign tables, and manage floor walk-ins.",
+            )}
           </Typography>
         </Box>
         <Button
@@ -127,11 +189,15 @@ export default function AdminReservationTab() {
         open={adminState.toast.open}
         autoHideDuration={3000}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        onClose={() => adminState.setToast((prev) => ({ ...prev, open: false }))}
+        onClose={() =>
+          adminState.setToast((prev) => ({ ...prev, open: false }))
+        }
       >
         <Alert
           severity={adminState.toast.severity}
-          onClose={() => adminState.setToast((prev) => ({ ...prev, open: false }))}
+          onClose={() =>
+            adminState.setToast((prev) => ({ ...prev, open: false }))
+          }
           sx={{ width: "100%" }}
         >
           {adminState.toast.message}

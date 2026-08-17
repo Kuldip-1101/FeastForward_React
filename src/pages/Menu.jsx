@@ -13,6 +13,7 @@ import MenuItemCard from "../components/customerMenu/MenuItemCard";
 import MenuLoading from "../components/customerMenu/MenuLoading";
 import MenuError from "../components/customerMenu/MenuError";
 import MenuToast from "../components/customerMenu/MenuToast";
+import PageSEO from "../components/common/PageSEO";
 
 function Menu() {
   const { t, i18n } = useTranslation();
@@ -22,7 +23,8 @@ function Menu() {
   const [authOpen, setAuthOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+  const API_BASE_URL =
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
   const [toast, setToast] = useState({
     open: false,
@@ -75,6 +77,14 @@ function Menu() {
   return (
     <>
       <Container maxWidth="lg" sx={{ my: 6 }}>
+        <PageSEO
+          title={t("seo.menuTitle", " Menu | FeastForward")}
+          description={t(
+            "seo.menuDesc",
+            "Explore our chef-crafted signature dishes and pre-order ahead of time.",
+          )}
+        />
+
         <MenuHeader />
 
         <CategoryTabs

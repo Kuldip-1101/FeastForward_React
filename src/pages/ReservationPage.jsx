@@ -20,6 +20,7 @@ import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
 import { useCurrentCart } from "../hooks/useCurrentCart";
 import { ReservationContactFields } from "../components/reservation/ReservationContactFields";
 import { PreOrderSummarySection } from "../components/reservation/PreOrderSummarySection";
+import PageSEO from "../components/common/PageSEO";
 
 export function ReservationPage() {
   const { t, i18n } = useTranslation();
@@ -187,6 +188,15 @@ export function ReservationPage() {
 
   return (
     <Container maxWidth="md" sx={{ py: 6 }}>
+    
+      <PageSEO
+        title={t("seo.reservationTitle", "Book a Table | FeastForward")}
+        description={t(
+          "seo.reservationDesc",
+          "Reserve your spot and pre-order your favorite dishes for an instant dining experience.",
+        )}
+      />
+
       <Paper elevation={3} sx={{ p: { xs: 3, md: 5 }, borderRadius: 3 }}>
         <Box
           sx={{

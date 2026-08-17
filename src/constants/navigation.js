@@ -18,7 +18,7 @@ export const NAV_LINKS = [
   },
   {
     path: "/book-table",
-    translationKey: "bookTable",
+    translationKey: "navBookTable",
     fallbackLabel: "Book Table",
     icon: TableRestaurantIcon,
   },

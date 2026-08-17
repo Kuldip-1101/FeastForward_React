@@ -11,6 +11,7 @@ import FeaturedDishesSection from "../components/home/FeaturedDishesSection";
 import WorkflowSection from "../components/home/WorkflowSection";
 import OperatingHoursSection from "../components/home/OperatingHoursSection";
 import CtaBannerSection from "../components/home/CtaBannerSection";
+import PageSEO from "../components/common/PageSEO";
 
 export default function Home() {
   const theme = useTheme();
@@ -51,6 +52,12 @@ export default function Home() {
 
   return (
     <Box sx={{ backgroundColor: pageBg, color: primaryText, minHeight: "100vh", pb: 8 }}>
+
+      <PageSEO 
+        title={t('seo.homeTitle', 'Home  |  FeastForward')} 
+        description={t('seo.homeDesc', 'Book your table and pre-order gourmet meals effortlessly.')} 
+      />
+
       <HeroSection
         t={t}
         navigate={navigate}
