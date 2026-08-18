@@ -21,11 +21,11 @@ import {
   TablePagination,
 } from "@mui/material";
 
-import SummaryCard from "../components/admindashboard/SummaryCard";
-import BookingTableRow from "../components/admindashboard/BookingTableRow";
-import { SUMMARY_CARDS_CONFIG } from "../constants/SummaryCardConst";
-import { MENU_ACTIONS_CONFIG } from "../constants/MenuActionsConst";
-import PageSEO from "../components/common/PageSEO";
+import SummaryCard from "../../components/admin/admindashboard/SummaryCard";
+import BookingTableRow from "../../components/admin/admindashboard/BookingTableRow";
+import { SUMMARY_CARDS_CONFIG } from "../../constants/SummaryCardConst";
+import { MENU_ACTIONS_CONFIG } from "../../constants/MenuActionsConst";
+import PageSEO from "../../components/common/PageSEO";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";

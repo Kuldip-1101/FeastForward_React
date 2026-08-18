@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { TableRow, TableCell, Typography, Box, IconButton } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { renderStatusChip } from '../../constants/StatusChipConst';
+import { renderStatusChip } from '../../../constants/StatusChipConst';
 
 export default function BookingTableRow({ booking, onOpenMenu }) {
   const { t } = useTranslation();

@@ -15,8 +15,8 @@ import {
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { logout } from '../store/authSlice';
-import { ADMIN_SIDEBAR_ITEMS } from '../constants/sidebar';
+import { logout } from '../../store/authSlice';
+import { ADMIN_SIDEBAR_ITEMS } from '../../constants/sidebar';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 

@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom"; // 1. Added Router Hook
+import { useNavigate } from "react-router-dom"; 
 import { loginSuccess } from "../../store/authSlice";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
@@ -49,15 +49,15 @@ function AuthModal({ open, handleClose }) {
       if (users.length === 0 || users[0].password !== password) {
         throw new Error("invalidCredentials");
       }
-      return users[0]; // Return user object matches
+      return users[0]; //--------------- Return user object matches
     },
     onSuccess: (userData) => {
-      dispatch(loginSuccess(userData)); // Save profile details inside Redux store
+      dispatch(loginSuccess(userData)); //---------- Save profile details inside Redux store
       setErrorMessage("");
       reset();
       handleClose();
 
-      // 3. Conditional Redirect based on role
+      //----------Conditional Redirect based on role------------
       if (userData.role === "admin") {
         navigate("/admin/dashboard", { replace: true });
       }

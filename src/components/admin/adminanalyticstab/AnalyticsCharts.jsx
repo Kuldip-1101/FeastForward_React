@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Grid, Card, Typography, Box } from "@mui/material";
 import { ChartsContainer, BarPlot, LinePlot, MarkPlot, ChartsXAxis, ChartsYAxis, ChartsTooltip } from "@mui/x-charts";
 import { PieChart } from "@mui/x-charts/PieChart";
-import { CATEGORY_CHART_COLORS } from "../../constants/adminAnalyticsConstant";
+import { CATEGORY_CHART_COLORS } from "../../../constants/adminAnalyticsConstant";
 
 export default function AnalyticsCharts({
   timeSeriesData,
@@ -18,7 +18,7 @@ export default function AnalyticsCharts({
   return (
     <Grid container spacing={3} sx={{ mb: 4 }}>
       {/*------------------ Trend Bar + Line Chart ------------------------*/}
-      <Grid item size={{ xs: 12, sm: 12, md: 6 }}>
+      <Grid size={{ xs: 12, sm: 12, md: 6 }}>
         <Card
           sx={{
             backgroundColor: cardBg,
@@ -86,7 +86,7 @@ export default function AnalyticsCharts({
       </Grid>
 
       {/*------------------ Category Pie Chart ------------------------*/}
-      <Grid item size={{ xs: 12, sm: 12, md: 6 }}>
+      <Grid size={{ xs: 12, sm: 12, md: 6 }}>
         <Card
           sx={{
             backgroundColor: cardBg,

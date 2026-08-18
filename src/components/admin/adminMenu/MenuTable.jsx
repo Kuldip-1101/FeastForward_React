@@ -17,15 +17,16 @@ import {
   MenuItem,
   InputAdornment,
   Tooltip,
+  TablePagination,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTranslation } from "react-i18next";
-import { formatLocalizedPrice } from "../../utils/formatCurrency";
+import { formatLocalizedPrice } from "../../../utils/formatCurrency";
 
 export default function MenuTable({
-  menuItems,
+  menuItems = [],
   currentLang,
   onEdit,
   onDelete,
@@ -35,7 +36,11 @@ export default function MenuTable({
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
-  //------------------- Extract unique categories dynamically for filter dropdown------------------
+  //------------------- Pagination States ------------------
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  //------------------- Extract unique categories dynamically ------------------
   const categories = useMemo(() => {
     const list = menuItems.map((item) => item.category).filter(Boolean);
     return ["ALL", ...Array.from(new Set(list))];
@@ -59,6 +64,34 @@ export default function MenuTable({
       return matchesSearch && matchesCategory;
     });
   }, [menuItems, searchQuery, selectedCategory, currentLang]);
+
+  //------------------- Paginated Subset ------------------
+  const paginatedItems = useMemo(() => {
+    return filteredItems.slice(
+      page * rowsPerPage,
+      page * rowsPerPage + rowsPerPage
+    );
+  }, [filteredItems, page, rowsPerPage]);
+
+  //------------ Reset to page 0 whenever filter or search inputs change-------------
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setPage(0);
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+    setPage(0);
+  };
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
 
   const getItemTitle = (item) => {
     if (typeof item.name === "string") return item.name;
@@ -84,7 +117,7 @@ export default function MenuTable({
           placeholder={t("admin.menuTab.searchPlaceholder", "Search menu item...")}
           size="small"
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={handleSearchChange}
           sx={{ flexGrow: 1 }}
           slotProps={{
             input: {
@@ -101,7 +134,7 @@ export default function MenuTable({
           select
           size="small"
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          onChange={handleCategoryChange}
           sx={{ minWidth: 180 }}
           label={t("admin.menuTab.filterCategory", "Category")}
         >
@@ -155,7 +188,7 @@ export default function MenuTable({
                 </TableCell>
               </TableRow>
             ) : (
-              filteredItems.map((item) => {
+              paginatedItems.map((item) => {
                 const isAvailable = item.isAvailable ?? true;
                 const title = getItemTitle(item);
 
@@ -247,6 +280,18 @@ export default function MenuTable({
             )}
           </TableBody>
         </Table>
+
+        {/*------------------- Pagination Controller ----------------------*/}
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 15]}
+          component="div"
+          count={filteredItems.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          labelRowsPerPage={t("admin.menuTab.table.rowsPerPage", "Rows per page:")}
+        />
       </TableContainer>
     </Box>
   );

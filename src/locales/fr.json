@@ -303,6 +303,7 @@
           "colStatus": "En stock",
           "colActions": "Actions",
           "noItemsFound": "Aucun plat ne correspond à votre recherche.",
+          "rowsPerPage": "Lignes par page :",
           "markAvailable": "Cliquer pour marquer Disponible",
           "markOutOfStock": "Cliquer pour marquer Épuisé",
           "edit": "Modifier l'article",

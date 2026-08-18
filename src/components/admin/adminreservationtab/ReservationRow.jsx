@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CancelIcon from "@mui/icons-material/Cancel";
-import { getMenuActions } from "../../constants/adminReservationTabConstant";
+import { getMenuActions } from "../../../constants/adminReservationTabConstant";
 
 export default function ReservationRow({
   booking,

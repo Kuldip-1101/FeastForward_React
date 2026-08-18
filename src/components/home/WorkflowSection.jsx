@@ -27,7 +27,7 @@ export default function WorkflowSection({ t, isDark, cardBg, borderColor, primar
           {WORKFLOW_STEPS.map((item, idx) => {
             const StepIcon = item.icon;
             return (
-              <Grid key={idx} item size={{ xs: 12, md: 4 }}>
+              <Grid key={idx} size={{ xs: 12, md: 4 }}>
                 <Paper
                   elevation={0}
                   sx={{

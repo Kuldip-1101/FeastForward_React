@@ -303,6 +303,7 @@
           "colStatus": "In Stock",
           "colActions": "Actions",
           "noItemsFound": "No menu items match your search criteria.",
+          "rowsPerPage": "Rows per page:",
           "markAvailable": "Click to mark Available",
           "markOutOfStock": "Click to mark Out of Stock",
           "edit": "Edit Item",

@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Grid, Card, CardContent, Typography, Box } from "@mui/material";
-import { GET_KPI_CARDS_CONFIG } from "../../constants/adminAnalyticsConstant";
+import { GET_KPI_CARDS_CONFIG } from "../../../constants/adminAnalyticsConstant";
 
 export default function KpiCards({
   analyticsData,
@@ -18,7 +18,7 @@ export default function KpiCards({
       {kpis.map((card, idx) => {
         const { IconComponent } = card;
         return (
-          <Grid key={idx} item size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid key={idx} size={{ xs: 12, sm: 6, md: 3 }}>
             <Card
               sx={{
                 backgroundColor: cardBg,

@@ -41,7 +41,7 @@ export default function FeaturedDishesSection({
       <Grid container spacing={3}>
         {isLoading
           ? Array.from(new Array(3)).map((_, idx) => (
-              <Grid key={idx} item size={{ xs: 12, sm: 6, md: 4 }}>
+              <Grid key={idx} size={{ xs: 12, sm: 6, md: 4 }}>
                 <Skeleton variant="rectangular" height={220} sx={{ borderRadius: 3, mb: 1 }} />
                 <Skeleton variant="text" width="60%" height={30} />
                 <Skeleton variant="text" width="40%" height={20} />
@@ -60,7 +60,7 @@ export default function FeaturedDishesSection({
                   : dish.description?.[currentLang] || dish.description?.en || "";
 
               return (
-                <Grid key={dish.id} item size={{ xs: 12, sm: 6, md: 4 }}>
+                <Grid key={dish.id} size={{ xs: 12, sm: 6, md: 4 }}>
                   <Card
                     sx={{
                       backgroundColor: cardBg,

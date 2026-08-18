@@ -11,12 +11,12 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
-import MenuTable from "../components/adminMenu/MenuTable";
-import MenuItemModal from "../components/adminMenu/MenuItemModal";
-import DeleteConfirmDialog from "../components/adminMenu/DeleteConfirmDialog";
-import MenuLoading from "../components/customerMenu/MenuLoading";
-import MenuError from "../components/customerMenu/MenuError";
-import PageSEO from "../components/common/PageSEO";
+import MenuTable from "../../components/admin/adminMenu/MenuTable";
+import MenuItemModal from "../../components/admin/adminMenu/MenuItemModal";
+import DeleteConfirmDialog from "../../components/admin/adminMenu/DeleteConfirmDialog";
+import MenuLoading from "../../components/customerMenu/MenuLoading";
+import MenuError from "../../components/customerMenu/MenuError";
+import PageSEO from "../../components/common/PageSEO";
 
 export default function AdminMenuTab() {
   const { t, i18n } = useTranslation();

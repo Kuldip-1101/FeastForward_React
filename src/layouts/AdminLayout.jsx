@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, AppBar, Toolbar, Typography, IconButton, useTheme, useMediaQuery } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdminSidebar, { DRAWER_WIDTH } from '../components/AdminSidebar';
+import AdminSidebar, { DRAWER_WIDTH } from '../components/admin/AdminSidebar';
 import HeaderUtilities from '../components/navbar/HeaderUtilities';
 
 function AdminLayout() {

@@ -10,7 +10,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { getStatusOptions, getShiftOptions } from "../../constants/adminReservationTabConstant";
+import { getStatusOptions, getShiftOptions } from "../../../constants/adminReservationTabConstant";
 
 export default function ReservationFilters({
   searchQuery,

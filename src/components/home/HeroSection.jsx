@@ -68,8 +68,8 @@ export default function HeroSection({ t, navigate, isDark, primaryText, secondar
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={2}
-          justifyContent="center"
-          alignItems="center"
+          justifycontent="center"
+          alignitems="center"
           sx={{ mb: 6 }}
         >
           <Button
@@ -116,8 +116,8 @@ export default function HeroSection({ t, navigate, isDark, primaryText, secondar
           </Button>
         </Stack>
 
-        <Grid container spacing={2} justifyContent="center" sx={{ opacity: 0.9 }}>
-          <Grid item size={{ xs: 6, sm: 4 }}>
+        <Grid container spacing={2} justifycontent="center" sx={{ opacity: 0.9 }}>
+          <Grid size={{ xs: 6, sm: 4 }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1 }}>
               <StarIcon sx={{ color: "#E5A93C", fontSize: 20 }} />
               <Typography variant="body2" sx={{ fontWeight: 700, color: primaryText }}>
@@ -125,7 +125,7 @@ export default function HeroSection({ t, navigate, isDark, primaryText, secondar
               </Typography>
             </Box>
           </Grid>
-          <Grid item size={{ xs: 6, sm: 4 }}>
+          <Grid size={{ xs: 6, sm: 4 }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1 }}>
               <FlashOnIcon sx={{ color: "#E5A93C", fontSize: 20 }} />
               <Typography variant="body2" sx={{ fontWeight: 700, color: primaryText }}>

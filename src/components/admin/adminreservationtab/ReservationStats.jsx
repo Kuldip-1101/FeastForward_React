@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import SummaryCard from "./SummaryCard";
-import { getStatItems } from "../../constants/adminReservationTabConstant";
+import { getStatItems } from "../../../constants/adminReservationTabConstant";
 
 export default function ReservationStats({ stats, t }) {
   const statItems = getStatItems(stats, t);

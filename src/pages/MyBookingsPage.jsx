@@ -187,7 +187,7 @@ export default function MyBookingsPage() {
           </Typography>
           <Button
             variant="contained"
-            onClick={() => navigate("/book")}
+            onClick={() => navigate("/book-table")}
             sx={{
               mt: 2,
               bgcolor: "#e5a93c",

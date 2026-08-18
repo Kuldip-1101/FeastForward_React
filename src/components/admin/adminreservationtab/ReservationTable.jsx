@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import ReservationRow from "./ReservationRow";
-import { getTableHeaders } from "../../constants/adminReservationTabConstant";
+import { getTableHeaders } from "../../../constants/adminReservationTabConstant";
 
 export default function ReservationTable({
   paginatedBookings,

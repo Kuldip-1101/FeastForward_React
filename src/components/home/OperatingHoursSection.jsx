@@ -57,7 +57,7 @@ export default function OperatingHoursSection({ t, cardBg, borderColor, primaryT
         </Typography>
 
         <Grid container spacing={3}>
-          <Grid item size={{ xs: 12, sm: 6 }}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <HoursCard
               title={t("home.lunchService", "Lunch Service")}
               hours={t("home.lunchHours", "11:30 AM – 2:30 PM")}
@@ -67,7 +67,7 @@ export default function OperatingHoursSection({ t, cardBg, borderColor, primaryT
             />
           </Grid>
 
-          <Grid item size={{ xs: 12, sm: 6 }}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <HoursCard
               title={t("home.dinnerService", "Dinner Service")}
               hours={t("home.dinnerHours", "6:30 PM – 11:00 PM")}

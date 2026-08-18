@@ -13,14 +13,14 @@ import AddIcon from "@mui/icons-material/Add";
 import { useTranslation } from "react-i18next";
 
 //-------------------- Custom Hook---------------------
-import { useAdminReservation } from "../hooks/useAdminReservation";
+import { useAdminReservation } from "../../hooks/useAdminReservation";
 
 //------------------- Modular Components----------------------
-import ReservationStats from "../components/adminreservationtab/ReservationStats";
-import ReservationFilters from "../components/adminreservationtab/ReservationFilters";
-import ReservationTable from "../components/adminreservationtab/ReservationTable";
-import ReservationDetailModal from "../components/adminreservationtab/ReservationDetailModal";
-import PageSEO from "../components/common/PageSEO";
+import ReservationStats from "../../components/admin/adminreservationtab/ReservationStats";
+import ReservationFilters from "../../components/admin/adminreservationtab/ReservationFilters";
+import ReservationTable from "../../components/admin/adminreservationtab/ReservationTable";
+import ReservationDetailModal from "../../components/admin/adminreservationtab/ReservationDetailModal";
+import PageSEO from "../../components/common/PageSEO";
 
 export default function AdminReservationTab() {
   const { t } = useTranslation();

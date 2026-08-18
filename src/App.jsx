@@ -18,10 +18,10 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import ReservationPage from './pages/ReservationPage';
 import MyBookingsPage from './pages/MyBookingsPage';
-import AdminDashboard from './pages/AdminDashboard';
-import AdminReservationTab from './pages/AdminReservationTab';
-import AdminMenuTab from './pages/AdminMenuTab';
-import AdminAnalyticsTab from './pages/AdminAnalyticsTab';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminReservationTab from './pages/admin/AdminReservationTab';
+import AdminMenuTab from './pages/admin/AdminMenuTab';
+import AdminAnalyticsTab from './pages/admin/AdminAnalyticsTab';
 import NotFoundRedirect from './components/navbar/NotFoundRedirect';
 
 

@@ -39,6 +39,7 @@ vendor/
 env/
 venv/
 ENV/
+.env
 
 # ==========================================
 # 4. BUILD OUTPUTS & LOGS

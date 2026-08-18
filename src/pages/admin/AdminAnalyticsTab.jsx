@@ -4,16 +4,16 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
 import { Container, Box, CircularProgress, Alert } from "@mui/material";
 
-import AnalyticsHeader from "../components/adminanalyticstab/AnalyticsHeader";
-import KpiCards from "../components/adminanalyticstab/KpiCards";
-import AnalyticsCharts from "../components/adminanalyticstab/AnalyticsCharts";
-import TopDishesTable from "../components/adminanalyticstab/TopDishesTable";
+import AnalyticsHeader from "../../components/admin/adminanalyticstab/AnalyticsHeader";
+import KpiCards from "../../components/admin/adminanalyticstab/KpiCards";
+import AnalyticsCharts from "../../components/admin/adminanalyticstab/AnalyticsCharts";
+import TopDishesTable from "../../components/admin/adminanalyticstab/TopDishesTable";
 
 import {
   formatLocalizedPrice,
   formatTotalCartPrice,
-} from "../utils/formatCurrency";
-import PageSEO from "../components/common/PageSEO";
+} from "../../utils/formatCurrency";
+import PageSEO from "../../components/common/PageSEO";
 
 export default function AdminAnalyticsTab() {
   const theme = useTheme();

@@ -9,7 +9,7 @@ import {
   MenuItem,
   FormControl,
 } from "@mui/material";
-import { PERIOD_FILTERS } from "../../constants/adminAnalyticsConstant";
+import { PERIOD_FILTERS } from "../../../constants/adminAnalyticsConstant";
 
 export default function AnalyticsHeader({
   periodFilter,
